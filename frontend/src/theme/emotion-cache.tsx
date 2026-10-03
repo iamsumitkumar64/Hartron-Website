@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import createCache, { Options } from "@emotion/cache";
 import { useServerInsertedHTML } from "next/navigation";
-import { CacheProvider } from "@emotion/react";
+import { CacheProvider as EmotionCacheProvider } from "@emotion/react";
 
 export default function NextAppDirEmotionCacheProvider(props: {
   options: Options;
@@ -15,11 +15,14 @@ export default function NextAppDirEmotionCacheProvider(props: {
     const cache = createCache(options);
     cache.compat = true;
     const prevInsert = cache.insert;
-    let inserted: string[] = [];
+    let inserted: { name: string; isGlobal: boolean }[] = [];
     cache.insert = (...args) => {
-      const serialized = args[1];
+      const [selector, serialized, sheet, shouldPersist] = args;
       if (cache.inserted[serialized.name] === undefined) {
-        inserted.push(serialized.name);
+        inserted.push({
+          name: serialized.name,
+          isGlobal: !selector,
+        });
       }
       return prevInsert(...args);
     };
@@ -32,18 +35,20 @@ export default function NextAppDirEmotionCacheProvider(props: {
   });
 
   useServerInsertedHTML(() => {
-    const names = flush();
-    if (names.length === 0) {
+    const inserted = flush();
+    if (inserted.length === 0) {
       return null;
     }
+    let names = "";
     let styles = "";
-    for (const name of names) {
+    for (const { name, isGlobal } of inserted) {
+      names += ` ${name}`;
       styles += cache.inserted[name];
     }
     return (
       <style
         key={cache.key}
-        data-emotion={`${cache.key} ${names.join(" ")}`}
+        data-emotion={`${cache.key}${names}`}
         dangerouslySetInnerHTML={{
           __html: styles,
         }}
@@ -51,5 +56,5 @@ export default function NextAppDirEmotionCacheProvider(props: {
     );
   });
 
-  return <CacheProvider value={cache}>{children}</CacheProvider>;
+  return <EmotionCacheProvider value={cache}>{children}</EmotionCacheProvider>;
 }
