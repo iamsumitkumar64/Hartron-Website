@@ -209,7 +209,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
     <>
       <Navbar />
 
-      <main style={{ overflowX: "hidden" }}>
+      <main>
         {/* Header Hero */}
         <Box
           sx={{

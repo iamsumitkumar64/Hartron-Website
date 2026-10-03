@@ -73,7 +73,7 @@ export default function CoursesDirectoryPage() {
   return (
     <>
       <Navbar />
-      <main style={{ overflowX: "hidden" }}>
+      <main>
         <Box
           sx={{
             backgroundColor: "background.paper",

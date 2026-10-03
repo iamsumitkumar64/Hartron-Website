@@ -33,7 +33,7 @@ export default function Navbar() {
   };
 
   return (
-    <>
+    <Box sx={{ position: "sticky", top: 0, zIndex: 1000, width: "100%" }}>
       <TopBanner />
       <header className={styles.header}>
         <Box className={styles.container}>
@@ -257,6 +257,6 @@ export default function Navbar() {
           </Box>
         </Box>
       </Drawer>
-    </>
+    </Box>
   );
 }
