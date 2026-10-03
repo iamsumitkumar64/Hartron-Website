@@ -10,16 +10,17 @@ export default function NotFound() {
   return (
     <>
       <Navbar />
-      <Box component="main" sx={{ backgroundColor: "#f8fafc", minHeight: "70vh", display: "flex", alignItems: "center", py: 8 }}>
+      <Box component="main" sx={{ backgroundColor: "background.default", minHeight: "70vh", display: "flex", alignItems: "center", py: 8 }}>
         <Container maxWidth="md">
           <Box
             sx={{
-              backgroundColor: "#ffffff",
-              border: "1px solid #e2e8f0",
+              backgroundColor: "background.paper",
+              border: "1px solid",
+              borderColor: "divider",
               borderRadius: 4,
               p: { xs: 3, sm: 6 },
               textAlign: "center",
-              boxShadow: "0 10px 30px -5px rgba(15, 23, 42, 0.05)",
+              boxShadow: "var(--shadow-md)",
             }}
           >
             <Typography
@@ -27,7 +28,7 @@ export default function NotFound() {
               sx={{
                 fontSize: { xs: "4rem", sm: "6rem" },
                 fontWeight: 900,
-                color: "#1e40af",
+                color: "primary.main",
                 lineHeight: 1,
                 mb: 1,
               }}
@@ -39,7 +40,7 @@ export default function NotFound() {
               variant="h4"
               sx={{
                 fontWeight: 800,
-                color: "#0f172a",
+                color: "text.primary",
                 mb: 2,
                 fontSize: { xs: "1.5rem", sm: "2rem" },
               }}
@@ -49,7 +50,7 @@ export default function NotFound() {
 
             <Typography
               sx={{
-                color: "#475569",
+                color: "text.secondary",
                 maxWidth: 540,
                 mx: "auto",
                 mb: 4,
@@ -73,14 +74,13 @@ export default function NotFound() {
                   variant="contained"
                   startIcon={<HomeIcon />}
                   sx={{
-                    backgroundColor: "#1e40af",
-                    color: "#ffffff",
+                    backgroundColor: "primary.main",
+                    color: "var(--text-on-dark)",
                     fontWeight: 900,
                     px: 4,
                     py: 1.5,
                     borderRadius: 2.5,
                     fontSize: "1rem",
-                    "&:hover": { backgroundColor: "#1d4ed8" },
                   }}
                 >
                   Back to Home Page
@@ -92,14 +92,13 @@ export default function NotFound() {
                   variant="outlined"
                   startIcon={<ArrowBackIcon />}
                   sx={{
-                    color: "#0f172a",
-                    borderColor: "#cbd5e1",
+                    color: "text.primary",
+                    borderColor: "divider",
                     fontWeight: 800,
                     px: 3,
                     py: 1.5,
                     borderRadius: 2.5,
                     fontSize: "1rem",
-                    "&:hover": { borderColor: "#1e40af", backgroundColor: "#f8fafc" },
                   }}
                 >
                   View All Courses
