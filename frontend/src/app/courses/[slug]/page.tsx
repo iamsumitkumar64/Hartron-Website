@@ -187,17 +187,6 @@ const COURSES_MAP: Record<string, any> = {
   },
 };
 
-export async function generateStaticParams() {
-  return [
-    { slug: "web-development" },
-    { slug: "cybersecurity" },
-    { slug: "typing-speed" },
-    { slug: "basic-computer" },
-  ];
-}
-
-export const dynamicParams = false;
-
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const course = COURSES_MAP[slug];
