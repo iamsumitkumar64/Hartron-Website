@@ -3,10 +3,11 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Box, MenuItem, TextField, Typography, Alert } from "@mui/material";
+import { Box, MenuItem, Typography, Alert } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { enquirySchema, EnquirySchemaType } from "../../schemas/enquiry";
+import Input from "../common/input";
 import Button from "../common/button";
 import styles from "./enquiry-form.module.css";
 
@@ -71,46 +72,42 @@ export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: st
       )}
 
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-        <TextField
+        <Input
           label="Full Name *"
           fullWidth
           {...register("name")}
           error={!!errors.name}
           helperText={errors.name?.message}
-          variant="outlined"
           className={styles.fullWidthInput}
         />
 
-        <TextField
+        <Input
           label="Phone Number (WhatsApp) *"
           fullWidth
           {...register("phone")}
           error={!!errors.phone}
           helperText={errors.phone?.message}
-          variant="outlined"
           className={styles.fullWidthInput}
         />
 
-        <TextField
+        <Input
           label="Email Address *"
           type="email"
           fullWidth
           {...register("email")}
           error={!!errors.email}
           helperText={errors.email?.message}
-          variant="outlined"
           className={styles.fullWidthInput}
         />
 
-        <TextField
+        <Input
           select
           label="Course Interested In *"
           fullWidth
           defaultValue={defaultCourse || "typing-speed"}
-          onChange={(e) => setValue("course_slug", e.target.value)}
+          onChange={(e) => setValue("course_slug", e.target.value as string)}
           error={!!errors.course_slug}
           helperText={errors.course_slug?.message}
-          variant="outlined"
           className={styles.fullWidthInput}
           slotProps={{
             select: {
@@ -134,15 +131,14 @@ export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: st
               {option.label}
             </MenuItem>
           ))}
-        </TextField>
+        </Input>
 
-        <TextField
+        <Input
           label="Message / Query (Optional)"
           multiline
           rows={3}
           fullWidth
           {...register("message")}
-          variant="outlined"
           className={styles.fullWidthInput}
         />
 
