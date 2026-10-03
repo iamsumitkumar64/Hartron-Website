@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Box, Typography } from "@mui/material";
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 import styles from "./director-section.module.css";
@@ -11,9 +12,11 @@ export default function DirectorSection() {
           <Box className={styles.profileAvatar}>VN</Box>
           <Typography className={styles.name}>Vijender Singh Nara</Typography>
           <Typography className={styles.title}>Director & Head of Institute</Typography>
-          <Box className={styles.locationBadge}>
-            📍 Hartron Skill Centre • Near SD College Panipat
-          </Box>
+          <Link href="/contact" style={{ textDecoration: "none" }}>
+            <Box className={styles.locationBadge} sx={{ "&:hover": { backgroundColor: "#1d4ed8" } }}>
+              📍 Hartron Skill Centre • Near SD College Panipat
+            </Box>
+          </Link>
           <Typography variant="body2" sx={{ opacity: 0.9, mt: 1, fontSize: "0.85rem", lineHeight: 1.5 }}>
             Dedicated to empowering Haryana's youth with official government computer certifications & IT company grade software skills.
           </Typography>

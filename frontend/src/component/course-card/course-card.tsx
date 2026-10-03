@@ -26,19 +26,21 @@ export default function CourseCard({
 
   return (
     <Box className={styles.card}>
-      {/* Badge */}
-      <span
-        className={`${styles.topBadge} ${
-          isItGrade ? styles.itBadge : styles.govtBadge
-        }`}
-      >
-        {isItGrade ? "IT Company Grade" : "Govt Recognized"}
-      </span>
-
       <Box>
-        <Typography variant="h3" className={styles.title}>
-          {title}
-        </Typography>
+        {/* Header with Badge and Title */}
+        <Box className={styles.cardHeader}>
+          <span
+            className={`${styles.topBadge} ${
+              isItGrade ? styles.itBadge : styles.govtBadge
+            }`}
+          >
+            {isItGrade ? "IT Company Grade" : "Govt Recognized"}
+          </span>
+
+          <Typography variant="h3" className={styles.title}>
+            {title}
+          </Typography>
+        </Box>
 
         <Typography className={styles.description}>
           {short_description}

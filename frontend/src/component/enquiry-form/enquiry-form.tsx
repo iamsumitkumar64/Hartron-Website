@@ -46,7 +46,7 @@ export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: st
     const message = `Hello Director Vijender Singh Nara / Hartron Team,\n\nI want to enquire about admission at Hartron Skill Centre near SD College Panipat:\n\n• Name: ${values.name || "Student"}\n• Phone: ${values.phone || "N/A"}\n• Course: ${courseName}\n• Message: ${values.message || "Please share batch details and fee structure."}`;
 
     const encoded = encodeURIComponent(message);
-    window.open(`https://wa.me/919812000000?text=${encoded}`, "_blank");
+    window.open(`https://wa.me/919034127171?text=${encoded}`, "_blank");
   };
 
   return (

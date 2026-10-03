@@ -59,7 +59,7 @@
 .marqueeTrack {
   display: flex;
   white-space: nowrap;
-  animation: marquee 28s linear infinite;
+  animation: marquee 16s linear infinite;
   will-change: transform;
   width: max-content;
   overflow: hidden;

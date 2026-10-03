@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import Navbar from "@/component/navbar/navbar";
 import EnquiryForm from "@/component/enquiry-form/enquiry-form";
@@ -208,16 +209,18 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
     <>
       <Navbar />
 
-      <main>
+      <main style={{ overflowX: "hidden" }}>
         {/* Header Hero */}
         <Box
           sx={{
             backgroundColor: "#eff6ff",
             borderBottom: "1px solid #bfdbfe",
-            padding: { xs: "32px 12px", sm: "48px 16px", md: "64px 24px" },
+            padding: { xs: "24px 14px", sm: "48px 16px", md: "64px 24px" },
+            boxSizing: "border-box",
+            width: "100%",
           }}
         >
-          <Box sx={{ maxWidth: 1100, margin: "0 auto" }}>
+          <Box sx={{ maxWidth: 1100, margin: "0 auto", width: "100%" }}>
             <Box
               sx={{
                 display: "inline-block",
@@ -230,6 +233,8 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                 borderRadius: 9999,
                 mb: 1.5,
                 textTransform: "uppercase",
+                maxWidth: "100%",
+                wordBreak: "break-word",
               }}
             >
               {isItGrade ? "IT Company Industry Grade" : "Government Recognized Course"}
@@ -237,16 +242,39 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
 
             <Typography
               variant="h1"
-              sx={{ fontSize: { xs: "1.6rem", sm: "2.1rem", md: "2.75rem" }, fontWeight: 900, color: "#0f172a", mb: 2 }}
+              sx={{
+                fontSize: { xs: "1.45rem", sm: "2.1rem", md: "2.75rem" },
+                fontWeight: 900,
+                color: "#0f172a",
+                mb: 2,
+                wordBreak: "break-word",
+                lineHeight: 1.3,
+              }}
             >
               {course.title}
             </Typography>
 
-            <Typography sx={{ fontSize: { xs: "0.95rem", md: "1.15rem" }, color: "#334155", lineHeight: 1.6, mb: 3 }}>
+            <Typography
+              sx={{
+                fontSize: { xs: "0.9rem", sm: "1rem", md: "1.15rem" },
+                color: "#334155",
+                lineHeight: 1.6,
+                mb: 3,
+                wordBreak: "break-word",
+              }}
+            >
               {course.description}
             </Typography>
 
-            <Box sx={{ display: "flex", gap: { xs: 1.5, sm: 3 }, alignItems: "stretch", flexDirection: { xs: "column", sm: "row" } }}>
+            <Box
+              sx={{
+                display: "flex",
+                gap: { xs: 1.5, sm: 2 },
+                alignItems: "stretch",
+                flexDirection: { xs: "column", sm: "row" },
+                width: "100%",
+              }}
+            >
               <Box
                 sx={{
                   display: "flex",
@@ -259,86 +287,143 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                   border: "1px solid #bfdbfe",
                   color: "#1e40af",
                   fontWeight: 700,
-                  fontSize: { xs: "0.85rem", sm: "0.95rem" },
+                  fontSize: { xs: "0.825rem", sm: "0.95rem" },
+                  wordBreak: "break-word",
                 }}
               >
                 <AccessTimeIcon fontSize="small" />
                 <span>Duration: {course.duration}</span>
               </Box>
 
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 1,
-                  backgroundColor: "#ffffff",
-                  px: 2,
-                  py: 1,
-                  borderRadius: 2,
-                  border: "1px solid #bfdbfe",
-                  color: "#1e40af",
-                  fontWeight: 700,
-                  fontSize: { xs: "0.85rem", sm: "0.95rem" },
-                }}
-              >
-                <WorkspacePremiumIcon fontSize="small" />
-                <span>Campus: Near SD College Road, Panipat</span>
-              </Box>
+              <Link href="/contact" style={{ textDecoration: "none" }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                    backgroundColor: "#ffffff",
+                    px: 2,
+                    py: 1,
+                    borderRadius: 2,
+                    border: "1px solid #bfdbfe",
+                    color: "#1e40af",
+                    fontWeight: 700,
+                    fontSize: { xs: "0.825rem", sm: "0.95rem" },
+                    wordBreak: "break-word",
+                    "&:hover": { backgroundColor: "#f0f9ff" },
+                  }}
+                >
+                  <WorkspacePremiumIcon fontSize="small" />
+                  <span>Campus: Near SD College Road, Panipat</span>
+                </Box>
+              </Link>
             </Box>
           </Box>
         </Box>
 
         {/* Content & Syllabus Grid */}
-        <section style={{ padding: "36px 12px", backgroundColor: "#ffffff" }}>
+        <Box
+          component="section"
+          sx={{
+            padding: { xs: "24px 14px", sm: "48px 16px", md: "64px 24px" },
+            backgroundColor: "#ffffff",
+            boxSizing: "border-box",
+            width: "100%",
+          }}
+        >
           <Box
             sx={{
               maxWidth: 1280,
               margin: "0 auto",
               display: "grid",
               gridTemplateColumns: { xs: "1fr", md: "1.2fr 0.8fr" },
-              gap: { xs: "32px", md: "48px" },
+              gap: { xs: "24px", md: "48px" },
+              width: "100%",
+              boxSizing: "border-box",
             }}
           >
-            <Box>
-              <Typography variant="h3" sx={{ fontWeight: 900, color: "#0f172a", mb: 2.5, fontSize: { xs: "1.4rem", md: "2rem" } }}>
+            <Box sx={{ width: "100%", boxSizing: "border-box" }}>
+              <Typography
+                variant="h3"
+                sx={{
+                  fontWeight: 900,
+                  color: "#0f172a",
+                  mb: 2.5,
+                  fontSize: { xs: "1.25rem", sm: "1.6rem", md: "2rem" },
+                  wordBreak: "break-word",
+                }}
+              >
                 Course Key Highlights
               </Typography>
 
-              <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5, mb: 4 }}>
+              <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5, mb: 4, width: "100%" }}>
                 {course.highlights.map((item: string, idx: number) => (
-                  <Box key={idx} sx={{ display: "flex", gap: 1, alignItems: "flex-start" }}>
-                    <CheckCircleIcon sx={{ color: "#2563eb", mt: 0.3, fontSize: "1.1rem" }} />
-                    <Typography sx={{ fontSize: { xs: "0.9rem", sm: "1.05rem" }, fontWeight: 600, color: "#1e293b" }}>
+                  <Box key={idx} sx={{ display: "flex", gap: 1, alignItems: "flex-start", width: "100%" }}>
+                    <CheckCircleIcon sx={{ color: "#2563eb", mt: 0.3, fontSize: "1.1rem", flexShrink: 0 }} />
+                    <Typography
+                      sx={{
+                        fontSize: { xs: "0.85rem", sm: "1rem" },
+                        fontWeight: 600,
+                        color: "#1e293b",
+                        wordBreak: "break-word",
+                      }}
+                    >
                       {item}
                     </Typography>
                   </Box>
                 ))}
               </Box>
 
-              <Typography variant="h3" sx={{ fontWeight: 900, color: "#0f172a", mb: 2.5, fontSize: { xs: "1.4rem", md: "2rem" } }}>
+              <Typography
+                variant="h3"
+                sx={{
+                  fontWeight: 900,
+                  color: "#0f172a",
+                  mb: 2.5,
+                  fontSize: { xs: "1.25rem", sm: "1.6rem", md: "2rem" },
+                  wordBreak: "break-word",
+                }}
+              >
                 Detailed Course Syllabus
               </Typography>
 
-              <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+              <Box sx={{ display: "flex", flexDirection: "column", gap: 2, width: "100%" }}>
                 {course.syllabus.map((module: any, idx: number) => (
                   <Box
                     key={idx}
                     sx={{
                       backgroundColor: "#f8fafc",
                       border: "1px solid #e2e8f0",
-                      borderRadius: 3,
+                      borderRadius: { xs: 2, sm: 3 },
                       p: { xs: 2, sm: 3 },
+                      boxSizing: "border-box",
+                      width: "100%",
                     }}
                   >
-                    <Typography variant="h5" sx={{ fontWeight: 800, color: "#1e40af", mb: 1.5, fontSize: { xs: "1.1rem", md: "1.35rem" } }}>
+                    <Typography
+                      variant="h5"
+                      sx={{
+                        fontWeight: 800,
+                        color: "#1e40af",
+                        mb: 1.5,
+                        fontSize: { xs: "1.05rem", sm: "1.25rem", md: "1.35rem" },
+                        wordBreak: "break-word",
+                      }}
+                    >
                       {module.title}
                     </Typography>
-                    <Box component="ul" sx={{ pl: 2.5, margin: 0 }}>
+                    <Box component="ul" sx={{ pl: { xs: 2, sm: 2.5 }, margin: 0, width: "100%" }}>
                       {module.topics.map((topic: string, tIdx: number) => (
                         <Box
                           component="li"
                           key={tIdx}
-                          sx={{ color: "#475569", fontWeight: 600, mb: 0.8, fontSize: { xs: "0.85rem", sm: "0.95rem" } }}
+                          sx={{
+                            color: "#475569",
+                            fontWeight: 600,
+                            mb: 0.8,
+                            fontSize: { xs: "0.825rem", sm: "0.95rem" },
+                            wordBreak: "break-word",
+                          }}
                         >
                           {topic}
                         </Box>
@@ -350,11 +435,11 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
             </Box>
 
             {/* Sidebar Admission Form */}
-            <Box>
+            <Box sx={{ width: "100%", boxSizing: "border-box" }}>
               <EnquiryForm defaultCourse={course.slug} />
             </Box>
           </Box>
-        </section>
+        </Box>
       </main>
 
       <Footer />

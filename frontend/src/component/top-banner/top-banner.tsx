@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Box, Typography } from "@mui/material";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -7,7 +8,7 @@ import styles from "./top-banner.module.css";
 
 export default function TopBanner() {
   const announcementText =
-    "🎯 Admissions Open 2025-26 Batch • Hartron Skill Centre SD College Panipat • Director: Vijender Singh Nara • Govt Recognized DCA & Typing Certification • IT Industry Grade Web Dev & Cybersecurity • Call +91 98120-XXXXX for Batch Timings & Fee Details";
+    "🎯 Admissions Open 2025-26 Batch • Hartron Skill Centre SD College Panipat • Director: Vijender Singh Nara • Govt Recognized DCA & Typing Certification • IT Industry Grade Web Dev & Cybersecurity • Call +91 90341-27171 for Batch Timings & Fee Details";
 
   return (
     <Box className={styles.banner}>
@@ -33,14 +34,14 @@ export default function TopBanner() {
         </Box>
 
         <Box className={styles.contacts}>
-          <a href="tel:+919812000000" className={styles.contactLink}>
+          <a href="tel:+919034127171" className={styles.contactLink}>
             <LocalPhoneIcon sx={{ fontSize: 14 }} />
-            <span>Call: +91 98120-XXXXX</span>
+            <span>Call: +91 90341-27171</span>
           </a>
-          <span className={styles.contactLink}>
+          <Link href="/contact" className={styles.contactLink}>
             <LocationOnIcon sx={{ fontSize: 14 }} />
             <span>Near SD College Road, Panipat</span>
-          </span>
+          </Link>
         </Box>
       </Box>
     </Box>

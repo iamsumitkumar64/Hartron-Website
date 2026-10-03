@@ -45,22 +45,39 @@ export default function TypingTestPreview() {
             </Box>
           </Box>
 
-          <Box sx={{ mt: 2 }}>
-            <Link href="/courses/typing-speed" style={{ textDecoration: "none" }}>
+          <Box sx={{ mt: 2, display: "flex", gap: 2, flexWrap: "wrap" }}>
+            <Link href="/typing-practice" style={{ textDecoration: "none" }}>
               <Button
                 variant="contained"
                 sx={{
                   backgroundColor: "#ffffff",
                   color: "#1e40af",
                   fontWeight: 900,
-                  px: 4,
+                  px: 3,
                   py: 1.5,
                   borderRadius: 2,
                   "&:hover": { backgroundColor: "#f8fafc" },
                 }}
                 startIcon={<KeyboardIcon />}
               >
-                Join Typing Speed Batch
+                Start Free Interactive Demo
+              </Button>
+            </Link>
+
+            <Link href="/courses/typing-speed" style={{ textDecoration: "none" }}>
+              <Button
+                variant="outlined"
+                sx={{
+                  color: "#ffffff",
+                  borderColor: "rgba(255,255,255,0.6)",
+                  fontWeight: 700,
+                  px: 3,
+                  py: 1.5,
+                  borderRadius: 2,
+                  "&:hover": { borderColor: "#ffffff", backgroundColor: "rgba(255,255,255,0.1)" },
+                }}
+              >
+                View Course Syllabus
               </Button>
             </Link>
           </Box>

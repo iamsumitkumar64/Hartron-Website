@@ -36,7 +36,7 @@ export default function Hero() {
               </Button>
             </Link>
 
-            <Link href="/courses/typing-speed" style={{ textDecoration: "none" }}>
+            <Link href="/typing-practice" style={{ textDecoration: "none" }}>
               <Button
                 variant="outlined"
                 className={styles.secondaryCta}

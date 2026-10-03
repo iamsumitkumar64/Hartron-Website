@@ -15,6 +15,7 @@ const NAV_ITEMS = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Courses", href: "/courses" },
+  { label: "Typing Practice", href: "/typing-practice" },
   { label: "Contact Us", href: "/contact" },
 ];
 
@@ -66,7 +67,7 @@ export default function Navbar() {
               variant="outlined"
               className={styles.callBtn}
               startIcon={<PhoneIcon />}
-              href="tel:+919812000000"
+              href="tel:+919034127171"
               sx={{ display: { xs: "none", sm: "inline-flex" } }}
             >
               Contact

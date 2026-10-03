@@ -34,6 +34,9 @@ export default function Footer() {
             <Link href="/courses" className={styles.footerLink}>
               All Courses Directory
             </Link>
+            <Link href="/typing-practice" className={styles.footerLink}>
+              Interactive Typing Demo
+            </Link>
             <Link href="/contact" className={styles.footerLink}>
               Admission Enquiry
             </Link>
@@ -65,15 +68,21 @@ export default function Footer() {
           <Box className={styles.contactInfo}>
             <Box className={styles.infoItem}>
               <LocationOnIcon sx={{ color: "#60a5fa", fontSize: 20 }} />
-              <span>Opp. SD College Road / Near SD Sr. Sec. School, Panipat, Haryana - 132103</span>
+              <Link href="/contact" className={styles.footerLink} style={{ color: "inherit", margin: 0 }}>
+                Opp. SD College Road / Near SD Sr. Sec. School, Panipat, Haryana - 132103
+              </Link>
             </Box>
             <Box className={styles.infoItem}>
               <PhoneIcon sx={{ color: "#60a5fa", fontSize: 20 }} />
-              <span>Director Vijender Singh Nara: +91 98120-XXXXX</span>
+              <a href="tel:+919034127171" className={styles.footerLink} style={{ color: "inherit", margin: 0 }}>
+                Director Vijender Singh Nara: +91 90341-27171
+              </a>
             </Box>
             <Box className={styles.infoItem}>
               <EmailIcon sx={{ color: "#60a5fa", fontSize: 20 }} />
-              <span>info@hartronpanipat.com</span>
+              <a href="mailto:info@hartronpanipat.com" className={styles.footerLink} style={{ color: "inherit", margin: 0 }}>
+                info@hartronpanipat.com
+              </a>
             </Box>
             <Box className={styles.infoItem}>
               <AccessTimeIcon sx={{ color: "#60a5fa", fontSize: 20 }} />

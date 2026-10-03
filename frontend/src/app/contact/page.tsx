@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "@/component/navbar/navbar";
 import EnquiryForm from "@/component/enquiry-form/enquiry-form";
 import Footer from "@/component/footer/footer";
@@ -99,18 +100,24 @@ export default function ContactPage() {
                   <Typography variant="subtitle2" sx={{ fontWeight: 800, color: "#1e40af" }}>
                     ADDRESS & LOCATION
                   </Typography>
-                  <Typography variant="body1" sx={{ color: "#334155", fontWeight: 600 }}>
-                    Opp. SD College Road / Near SD Sr. Sec. School, Panipat, Haryana - 132103
-                  </Typography>
+                  <Link href="https://maps.google.com/?q=Hartron+Skill+Centre+SD+College+Panipat" target="_blank" style={{ textDecoration: "none" }}>
+                    <Typography variant="body1" sx={{ color: "#334155", fontWeight: 600, "&:hover": { color: "#2563eb", textDecoration: "underline" } }}>
+                      Opp. SD College Road / Near SD Sr. Sec. School, Panipat, Haryana - 132103
+                    </Typography>
+                  </Link>
                 </Box>
 
                 <Box>
                   <Typography variant="subtitle2" sx={{ fontWeight: 800, color: "#1e40af" }}>
                     HELPLINE PHONE NUMBERS
                   </Typography>
-                  <Typography variant="body1" sx={{ color: "#334155", fontWeight: 700 }}>
-                    +91 98120-XXXXX / +91 98120-YYYYY
-                  </Typography>
+                  <Box sx={{ display: "flex", gap: 1, flexWrap: "wrap", mt: 0.5 }}>
+                    <a href="tel:+919034127171" style={{ textDecoration: "none" }}>
+                      <Typography variant="body1" sx={{ color: "#1e40af", fontWeight: 700, "&:hover": { textDecoration: "underline" } }}>
+                        +91 90341-27171
+                      </Typography>
+                    </a>
+                  </Box>
                 </Box>
 
                 <Box>

@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "@/component/navbar/navbar";
 import Hero from "@/component/hero/hero";
 import DirectorSection from "@/component/director-section/director-section";
@@ -152,7 +153,7 @@ export default function HomePage() {
               </Typography>
               <Typography
                 variant="h2"
-                sx={{ fontSize: "2.25rem", fontWeight: 900, color: "#0f172a" }}
+                sx={{ fontSize: { xs: "1.75rem", sm: "2.25rem" }, fontWeight: 900, color: "#0f172a" }}
               >
                 Government Recognized & IT Industry Grade Courses
               </Typography>
@@ -185,10 +186,13 @@ export default function HomePage() {
         <WhyChooseUs />
 
         {/* Admission Form Section */}
-        <section
-          style={{
-            padding: "80px 24px",
+        <Box
+          component="section"
+          sx={{
+            padding: { xs: "40px 14px", sm: "80px 24px" },
             backgroundColor: "#ffffff",
+            boxSizing: "border-box",
+            width: "100%",
           }}
         >
           <Box
@@ -197,8 +201,9 @@ export default function HomePage() {
               margin: "0 auto",
               display: "grid",
               gridTemplateColumns: { xs: "1fr", md: "1.1fr 0.9fr" },
-              gap: "48px",
-              alignItems: "center",
+              gap: { xs: "24px", sm: "48px" },
+              alignItems: "stretch",
+              width: "100%",
             }}
           >
             <EnquiryForm />
@@ -207,52 +212,81 @@ export default function HomePage() {
               sx={{
                 backgroundColor: "#f8fafc",
                 border: "1px solid #e2e8f0",
-                borderRadius: "20px",
-                padding: "36px",
+                borderRadius: { xs: "16px", sm: "20px" },
+                padding: { xs: "20px 14px", sm: "36px" },
                 display: "flex",
                 flexDirection: "column",
-                gap: "24px",
+                gap: { xs: "18px", sm: "24px" },
+                boxSizing: "border-box",
+                width: "100%",
               }}
             >
-              <Typography variant="h4" sx={{ fontWeight: 900, color: "#0f172a" }}>
+              <Typography variant="h4" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "1.35rem", sm: "2rem" }, wordBreak: "break-word" }}>
                 Visit Campus Near SD College Panipat
               </Typography>
 
-              <Typography sx={{ color: "#475569", lineHeight: 1.7 }}>
+              <Typography sx={{ color: "#475569", lineHeight: 1.6, fontSize: { xs: "0.875rem", sm: "1rem" }, wordBreak: "break-word" }}>
                 Directly walk into our campus opposite SD College Road, Panipat to inspect our high-speed practical computer labs, meet Director Vijender Singh Nara, and get personalized course guidance.
               </Typography>
 
-              <Box sx={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-                <Box sx={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
-                  <Typography sx={{ fontWeight: 800, color: "#1e40af" }}>
+              <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: "14px", sm: "16px" } }}>
+                <Box sx={{ display: "flex", gap: "10px", alignItems: "flex-start", flexDirection: { xs: "column", sm: "row" } }}>
+                  <Typography sx={{ fontWeight: 800, color: "#1e40af", minWidth: "90px", fontSize: { xs: "0.85rem", sm: "1rem" } }}>
                     📍 Address:
                   </Typography>
-                  <Typography sx={{ color: "#1e293b", fontWeight: 600 }}>
-                    Hartron Skill Centre, Opp. SD College Road / Near SD Sr. Sec. School, Panipat, Haryana - 132103
-                  </Typography>
+                  <Link
+                    href="/contact"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Typography
+                      sx={{
+                        color: "#1e293b",
+                        fontWeight: 600,
+                        fontSize: { xs: "0.85rem", sm: "0.95rem" },
+                        wordBreak: "break-word",
+                        "&:hover": { color: "#2563eb", textDecoration: "underline" },
+                      }}
+                    >
+                      Hartron Skill Centre, Opp. SD College Road / Near SD Sr. Sec. School, Panipat, Haryana - 132103
+                    </Typography>
+                  </Link>
                 </Box>
 
-                <Box sx={{ display: "flex", gap: "12px", alignItems: "center" }}>
-                  <Typography sx={{ fontWeight: 800, color: "#1e40af" }}>
-                    📞 Director Helpline:
+                <Box sx={{ display: "flex", gap: "10px", alignItems: "flex-start", flexDirection: { xs: "column", sm: "row" } }}>
+                  <Typography sx={{ fontWeight: 800, color: "#1e40af", minWidth: "90px", fontSize: { xs: "0.85rem", sm: "1rem" } }}>
+                    📞 Helpline:
                   </Typography>
-                  <Typography sx={{ color: "#1e293b", fontWeight: 700 }}>
-                    +91 98120-XXXXX / +91 98120-YYYYY
-                  </Typography>
+                  <Box sx={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
+                    <Link
+                      href="tel:+919034127171"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <Typography
+                        sx={{
+                          color: "#1e293b",
+                          fontWeight: 700,
+                          fontSize: { xs: "0.85rem", sm: "0.95rem" },
+                          "&:hover": { color: "#2563eb", textDecoration: "underline" },
+                        }}
+                      >
+                        +91 90341-27171
+                      </Typography>
+                    </Link>
+                  </Box>
                 </Box>
 
-                <Box sx={{ display: "flex", gap: "12px", alignItems: "center" }}>
-                  <Typography sx={{ fontWeight: 800, color: "#1e40af" }}>
-                    ⏰ Office Hours:
+                <Box sx={{ display: "flex", gap: "10px", alignItems: "flex-start", flexDirection: { xs: "column", sm: "row" } }}>
+                  <Typography sx={{ fontWeight: 800, color: "#1e40af", minWidth: "90px", fontSize: { xs: "0.85rem", sm: "1rem" } }}>
+                    ⏰ Hours:
                   </Typography>
-                  <Typography sx={{ color: "#1e293b", fontWeight: 600 }}>
+                  <Typography sx={{ color: "#1e293b", fontWeight: 600, fontSize: { xs: "0.85rem", sm: "0.95rem" } }}>
                     Monday - Saturday (8:00 AM to 7:00 PM)
                   </Typography>
                 </Box>
               </Box>
             </Box>
           </Box>
-        </section>
+        </Box>
       </main>
 
       <Footer />
