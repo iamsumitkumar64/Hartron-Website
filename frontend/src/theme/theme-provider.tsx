@@ -21,10 +21,12 @@ const ColorModeContext = createContext<ColorModeContextType>({
 export const useColorMode = () => useContext(ColorModeContext);
 
 export default function AppThemeProvider({ children }: { children: React.ReactNode }) {
-  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)", { noSsr: true });
   const [mode, setModeState] = useState<ThemeMode>("light");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const savedMode = localStorage.getItem("hartron_theme_mode") as ThemeMode | null;
     if (savedMode === "light" || savedMode === "dark") {
       setModeState(savedMode);
@@ -34,8 +36,10 @@ export default function AppThemeProvider({ children }: { children: React.ReactNo
   }, [prefersDarkMode]);
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", mode);
-  }, [mode]);
+    if (mounted) {
+      document.documentElement.setAttribute("data-theme", mode);
+    }
+  }, [mode, mounted]);
 
   const colorMode = useMemo(
     () => ({
