@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import Button from "../common/button";
 import styles from "./course-card.module.css";
 
 export interface CourseCardProps {

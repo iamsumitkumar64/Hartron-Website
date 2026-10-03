@@ -1,9 +1,9 @@
 .container {
-  background-color: #ffffff;
-  border: 1px solid #bfdbfe;
+  background-color: var(--bg-paper);
+  border: 1px solid var(--border-color);
   border-radius: 16px;
   padding: 32px;
-  box-shadow: 0 10px 25px -5px rgba(30, 64, 175, 0.06);
+  box-shadow: var(--shadow-md);
   width: 100%;
   max-width: 100%;
   min-width: 0;

@@ -3,10 +3,11 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Box, Button, MenuItem, TextField, Typography, Alert } from "@mui/material";
+import { Box, MenuItem, TextField, Typography, Alert } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { enquirySchema, EnquirySchemaType } from "../../schemas/enquiry";
+import Button from "../common/button";
 import styles from "./enquiry-form.module.css";
 
 const COURSES_OPTIONS = [
@@ -18,6 +19,7 @@ const COURSES_OPTIONS = [
 
 export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: string }) {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
   const {
     register,
@@ -33,8 +35,12 @@ export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: st
     },
   });
 
-  const onSubmit = (data: EnquirySchemaType) => {
+  const onSubmit = async (data: EnquirySchemaType) => {
+    setSubmitting(true);
+    // Simulate network API submission
+    await new Promise((resolve) => setTimeout(resolve, 800));
     setSubmitted(true);
+    setSubmitting(false);
     reset();
   };
 
@@ -157,6 +163,8 @@ export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: st
             type="submit"
             variant="contained"
             color="primary"
+            isLoading={submitting}
+            loadingText="Submitting..."
             endIcon={<SendIcon />}
             sx={{ flex: 1, minWidth: { sm: "180px" }, py: 1.5, fontSize: "1rem" }}
           >

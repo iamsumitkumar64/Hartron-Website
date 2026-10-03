@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import KeyboardIcon from "@mui/icons-material/Keyboard";
 import VerifiedIcon from "@mui/icons-material/Verified";
+import Button from "../common/button";
 import styles from "./typing-test-preview.module.css";
 
 export default function TypingTestPreview() {

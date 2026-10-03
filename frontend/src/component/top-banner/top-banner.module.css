@@ -23,22 +23,10 @@
 .announcementWrapper {
   display: flex;
   align-items: center;
+  gap: 10px;
   flex: 1;
   overflow: hidden;
   position: relative;
-  max-width: 100%;
-}
-
-.updatesPill {
-  display: flex;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
-  border-radius: 9999px;
-  padding: 3px 6px 3px 3px;
-  overflow: hidden;
-  width: 100%;
   max-width: 100%;
 }
 
@@ -53,7 +41,17 @@
   white-space: nowrap;
   flex-shrink: 0;
   box-shadow: 0 2px 6px rgba(37, 99, 235, 0.4);
-  z-index: 2;
+}
+
+.marqueeContainer {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 3px 6px;
 }
 
 .marqueeTrack {

@@ -3,7 +3,8 @@
 import Link from "next/link";
 import Navbar from "@/component/navbar/navbar";
 import Footer from "@/component/footer/footer";
-import { Box, Button, Typography, Container } from "@mui/material";
+import { Box, Typography, Container } from "@mui/material";
+import Button from "@/component/common/button";
 import HomeIcon from "@mui/icons-material/Home";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 

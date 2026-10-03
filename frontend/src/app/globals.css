@@ -1,5 +1,47 @@
 @import "tailwindcss";
 
+:root {
+  --bg-default: #ffffff;
+  --bg-paper: #f8fafc;
+  --bg-subtle: #eff6ff;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --primary-main: #1e40af;
+  --primary-hover: #1d4ed8;
+  --primary-light: #3b82f6;
+  --primary-bg: #eff6ff;
+  --secondary-main: #2563eb;
+  --border-color: #e2e8f0;
+  --border-light: #f1f5f9;
+  --shadow-sm: 0 2px 4px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.06);
+  --shadow-lg: 0 10px 30px rgba(15, 23, 42, 0.1);
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+}
+
+[data-theme="dark"] {
+  --bg-default: #0f172a;
+  --bg-paper: #1e293b;
+  --bg-subtle: rgba(59, 130, 246, 0.15);
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --primary-main: #3b82f6;
+  --primary-hover: #60a5fa;
+  --primary-light: #93c5fd;
+  --primary-bg: rgba(59, 130, 246, 0.15);
+  --secondary-main: #60a5fa;
+  --border-color: #334155;
+  --border-light: #1e293b;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
 * {
   scroll-behavior: smooth;
   box-sizing: border-box;
@@ -10,11 +52,12 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
-  color: #0f172a;
+  background-color: var(--bg-default);
+  color: var(--text-primary);
   font-family: 'Public Sans', system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
   overflow-y: auto !important;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 button:hover,

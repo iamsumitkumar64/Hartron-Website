@@ -14,12 +14,12 @@ export default function TopBanner() {
     <Box className={styles.banner}>
       <Box className={styles.container}>
         <Box className={styles.announcementWrapper}>
-          <Box className={styles.updatesPill}>
-            <span className={styles.badge}>
-              <CampaignIcon sx={{ fontSize: 14, mr: 0.5, verticalAlign: "middle" }} />
-              Updates
-            </span>
+          <span className={styles.badge}>
+            <CampaignIcon sx={{ fontSize: 14, mr: 0.5, verticalAlign: "middle" }} />
+            Updates
+          </span>
 
+          <Box className={styles.marqueeContainer}>
             <Box className={styles.marqueeTrack}>
               <Typography component="span" className={styles.text}>
                 <VerifiedIcon sx={{ fontSize: 14, verticalAlign: "middle", mr: 0.5, color: "#93c5fd" }} />

@@ -1,7 +1,7 @@
 .heroSection {
-  background: linear-gradient(180deg, #ffffff 0%, #eff6ff 100%);
+  background: var(--bg-default);
   padding: 48px 16px 64px 16px;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .container {
@@ -23,9 +23,9 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #eff6ff;
-  border: 1px solid #bfdbfe;
-  color: #1e40af;
+  background-color: var(--primary-bg);
+  border: 1px solid var(--border-color);
+  color: var(--primary-main);
   font-weight: 800;
   font-size: 0.8rem;
   padding: 6px 14px;
@@ -34,10 +34,7 @@
 }
 
 .heroHighlight {
-  color: #1e40af;
-  background: linear-gradient(120deg, #1e40af, #2563eb);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--primary-main);
 }
 
 .heroCtas {
@@ -53,7 +50,7 @@
   gap: 16px;
   margin-top: 12px;
   padding-top: 20px;
-  border-top: 1px solid #e2e8f0;
+  border-top: 1px solid var(--border-color);
 }
 
 .statItem {
@@ -64,21 +61,21 @@
 .statNumber {
   font-size: 1.5rem;
   font-weight: 900;
-  color: #1e40af;
+  color: var(--primary-main);
 }
 
 .statLabel {
   font-size: 0.8rem;
   font-weight: 700;
-  color: #475569;
+  color: var(--text-secondary);
 }
 
 .rightCard {
-  background: #ffffff;
-  border: 1px solid #bfdbfe;
+  background: var(--bg-paper);
+  border: 1px solid var(--border-color);
   border-radius: 16px;
   padding: 28px;
-  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+  box-shadow: var(--shadow-md);
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -89,13 +86,13 @@
   align-items: center;
   gap: 12px;
   padding-bottom: 14px;
-  border-bottom: 2px solid #eff6ff;
+  border-bottom: 2px solid var(--border-color);
 }
 
 .directorAvatar {
   width: 48px;
   height: 48px;
-  background-color: #1e40af;
+  background-color: var(--primary-main);
   color: #ffffff;
   border-radius: 50%;
   display: flex;
@@ -118,8 +115,8 @@
 }
 
 .checkDot {
-  background-color: #dbeafe;
-  color: #1e40af;
+  background-color: var(--primary-bg);
+  color: var(--primary-main);
   border-radius: 50%;
   width: 22px;
   height: 22px;

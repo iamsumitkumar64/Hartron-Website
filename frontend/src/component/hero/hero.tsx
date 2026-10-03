@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import VerifiedUserIcon from "@mui/icons-material/VerifiedUser";
 import KeyboardIcon from "@mui/icons-material/Keyboard";
+import Button from "../common/button";
 import styles from "./hero.module.css";
 
 export default function Hero() {

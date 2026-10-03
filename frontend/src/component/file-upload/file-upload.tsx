@@ -1,7 +1,8 @@
 "use client"
 
 import React, { useState } from "react";
-import { Box, Button, CircularProgress, Link, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
+import Button from "@/component/common/button";
 import { useAppDispatch } from "@/redux/hooks.ts";
 import { uploadFile } from "@/redux/feature/upload/upload-action";
 import { FileUploadProps } from "./file-upload.interface";
@@ -33,8 +34,8 @@ export default function FileUpload({ onSuccess }: FileUploadProps) {
 
     return (
         <Box className={styles.container}>
-            <Button variant="contained" component="label" disabled={loading} className={styles.button}>
-                {loading ? <CircularProgress size={24} color="inherit" /> : "Upload File"}
+            <Button variant="contained" component="label" isLoading={loading} className={styles.button}>
+                Upload File
                 <Box component="input" type="file" className={styles.hiddenInput} onChange={handleUpload} />
             </Button>
 
