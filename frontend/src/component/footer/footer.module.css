@@ -110,3 +110,14 @@
     text-align: center;
   }
 }
+
+.icon {
+  color: var(--primary-main);
+  font-size: 20px;
+}
+
+.copyrightText {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+

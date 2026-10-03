@@ -126,3 +126,79 @@
     padding: 18px 14px;
   }
 }
+
+.badgeIcon {
+  font-size: 18px;
+}
+
+.mainHeading {
+  color: var(--text-primary);
+  font-weight: 900;
+}
+
+.mainSub {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.buttonGroup {
+  margin-top: 16px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.demoBtn {
+  background-color: var(--primary-main) !important;
+  color: var(--text-on-dark) !important;
+  font-weight: 900 !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+  border-radius: var(--radius-sm) !important;
+}
+
+.demoBtn:hover {
+  background-color: var(--primary-hover) !important;
+}
+
+.syllabusBtn {
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+  font-weight: 700 !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+  border-radius: var(--radius-sm) !important;
+}
+
+.syllabusBtn:hover {
+  border-color: var(--primary-main) !important;
+  color: var(--primary-main) !important;
+  background-color: var(--primary-bg) !important;
+}
+
+.simulatorTitle {
+  font-weight: 900;
+  color: var(--primary-main);
+}
+
+.passageLabel {
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.statsFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+}
+
+.statsSuccess {
+  font-weight: 700;
+  color: #16a34a;
+}
+

@@ -1,0 +1,94 @@
+.headerSection {
+  background-color: var(--bg-paper);
+  padding: 48px 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.headerContainer {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.badge {
+  color: var(--primary-main);
+  font-weight: 800;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 2.75rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  word-break: break-word;
+}
+
+.subTitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.missionSection {
+  padding: 64px 24px;
+  background-color: var(--bg-default);
+}
+
+.missionContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.missionHeading {
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  font-size: 1.75rem;
+}
+
+.missionText {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 900px) {
+  .title {
+    font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .headerSection {
+    padding: 24px 14px;
+  }
+
+  .badge {
+    font-size: 0.8rem;
+  }
+
+  .title {
+    font-size: 1.45rem;
+  }
+
+  .subTitle {
+    font-size: 0.9rem;
+  }
+
+  .missionSection {
+    padding: 32px 14px;
+  }
+
+  .missionHeading {
+    font-size: 1.25rem;
+  }
+
+  .missionText {
+    font-size: 0.9rem;
+  }
+}

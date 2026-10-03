@@ -132,3 +132,22 @@
     padding: 24px 16px;
   }
 }
+
+.bioText {
+  color: var(--text-secondary);
+  margin-top: 8px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.quoteIcon {
+  color: var(--secondary-main);
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.bodyText {
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+

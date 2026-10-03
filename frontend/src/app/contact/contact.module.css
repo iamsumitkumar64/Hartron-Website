@@ -1,0 +1,168 @@
+.headerSection {
+  background-color: var(--bg-paper);
+  padding: 64px 24px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.headerContainer {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.badge {
+  color: var(--primary-main);
+  font-weight: 800;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 2.75rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  word-break: break-word;
+}
+
+.subTitle {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.contactSection {
+  padding: 64px 24px;
+  background-color: var(--bg-default);
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contactGrid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formColumn {
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.infoCard {
+  min-width: 0;
+  background-color: var(--bg-paper);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cardTitle {
+  font-weight: 900;
+  color: var(--text-primary);
+  font-size: 2rem;
+  word-break: break-word;
+}
+
+.infoItems {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.infoGroupTitle {
+  font-weight: 800;
+  color: var(--primary-main);
+}
+
+.infoGroupValue {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.addressLinkText {
+  color: var(--text-secondary);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.addressLinkText:hover {
+  color: var(--primary-main);
+  text-decoration: underline;
+}
+
+.phoneList {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.phoneLinkText {
+  color: var(--primary-main);
+  font-weight: 700;
+  transition: text-decoration 0.2s ease;
+}
+
+.phoneLinkText:hover {
+  text-decoration: underline;
+}
+
+.timingsText {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .headerSection {
+    padding: 36px 16px;
+  }
+
+  .title {
+    font-size: 2.25rem;
+  }
+
+  .subTitle {
+    font-size: 1rem;
+  }
+
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .cardTitle {
+    font-size: 1.5rem;
+  }
+
+  .infoCard {
+    padding: 20px 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.85rem;
+  }
+
+  .contactSection {
+    padding: 32px 14px;
+  }
+
+  .infoCard {
+    border-radius: var(--radius-lg);
+  }
+}

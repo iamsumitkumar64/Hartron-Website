@@ -1,0 +1,385 @@
+.container {
+  padding-bottom: 48px;
+}
+
+.header {
+  background-color: var(--bg-paper);
+  border-bottom: 1px solid var(--border-color);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.accreditationBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--primary-bg);
+  border: 1px solid var(--border-color);
+  color: var(--primary-main);
+  font-weight: 800;
+  font-size: 0.8rem;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  width: fit-content;
+  margin-bottom: 16px;
+}
+
+.verifiedIcon {
+  font-size: 18px !important;
+  color: var(--primary-main);
+}
+
+.title {
+  font-size: 2.75rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  word-break: break-word;
+}
+
+.subTitle {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.contentContainer {
+  margin-top: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.controlPanel {
+  padding: 24px !important;
+  border-radius: var(--radius-lg) !important;
+  background-color: var(--bg-paper) !important;
+  border: 1px solid var(--border-color) !important;
+  margin-bottom: 24px !important;
+}
+
+.controlsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.passageButtonGroup {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.passageButton {
+  border-radius: var(--radius-sm) !important;
+  font-weight: 700 !important;
+}
+
+.rightControls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.timerGroup {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.timerIcon {
+  color: var(--text-secondary);
+}
+
+.durationButton {
+  min-width: 36px !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  font-weight: 800 !important;
+  border-radius: 6px !important;
+}
+
+.switchLabel {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.metricCard {
+  padding: 16px !important;
+  border-radius: 12px !important;
+  background-color: var(--bg-paper) !important;
+  border: 1px solid var(--border-color) !important;
+  text-align: center;
+}
+
+.metricLabel {
+  color: var(--text-secondary);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.metricValuePrimary {
+  font-weight: 900;
+  color: var(--primary-main);
+}
+
+.metricValueAlert {
+  font-weight: 900;
+  color: #dc2626;
+}
+
+.metricValueText {
+  font-weight: 900;
+  color: var(--text-primary);
+}
+
+.metricValueSuccess {
+  font-weight: 900;
+  color: #16a34a;
+}
+
+.metricValueWarning {
+  font-weight: 900;
+  color: #eab308;
+}
+
+.passagePaper {
+  padding: 32px !important;
+  border-radius: var(--radius-lg) !important;
+  background-color: var(--bg-paper) !important;
+  border: 2px solid var(--border-color) !important;
+  cursor: text;
+  position: relative;
+  min-height: 180px;
+  margin-bottom: 24px !important;
+  line-height: 2;
+  font-size: 1.25rem;
+  font-family: monospace;
+  word-break: break-word;
+}
+
+.passagePaperActive {
+  border-color: var(--primary-main) !important;
+}
+
+.actionControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.resetBtn {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  border-radius: var(--radius-md) !important;
+  font-weight: 800 !important;
+}
+
+.hintText {
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.guidanceCard {
+  padding: 24px !important;
+  border-radius: var(--radius-lg) !important;
+  background-color: var(--bg-paper) !important;
+  border: 1px solid var(--border-color) !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.guidanceLeft {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.schoolIcon {
+  font-size: 44px !important;
+  color: var(--primary-main);
+}
+
+.guidanceTitle {
+  font-weight: 900;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+.guidanceSub {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.joinBatchBtn {
+  white-space: nowrap !important;
+  font-weight: 800 !important;
+  border-radius: var(--radius-sm) !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.dialogTitle {
+  text-align: center !important;
+  font-weight: 900 !important;
+  font-size: 1.5rem !important;
+}
+
+.dialogBody {
+  text-align: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.dialogScore {
+  font-weight: 900;
+  color: var(--primary-main);
+  margin-bottom: 4px;
+}
+
+.dialogScoreSub {
+  color: var(--text-secondary);
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.dialogMetrics {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid var(--border-color);
+  padding-top: 16px;
+}
+
+.dialogMetricLabel {
+  color: var(--text-secondary);
+  font-weight: 700;
+}
+
+.dialogAccuracy {
+  font-weight: 900;
+  color: #16a34a;
+}
+
+.dialogWpm {
+  font-weight: 900;
+  color: var(--text-primary);
+}
+
+.dialogStreak {
+  font-weight: 900;
+  color: var(--primary-main);
+}
+
+.dialogActions {
+  justify-content: center !important;
+  padding-bottom: 24px !important;
+}
+
+.tryAgainBtn {
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+  border-radius: var(--radius-md) !important;
+  font-weight: 800 !important;
+}
+
+.hiddenInput {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+@media (max-width: 900px) {
+  .title {
+    font-size: 2.25rem;
+  }
+
+  .guidanceCard {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 24px 14px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subTitle {
+    font-size: 0.875rem;
+  }
+
+  .contentContainer {
+    margin-top: 16px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .controlPanel {
+    padding: 16px !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .metricsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .passagePaper {
+    padding: 20px 14px !important;
+    border-radius: var(--radius-md) !important;
+    font-size: 1rem;
+  }
+
+  .hintText {
+    font-size: 0.8rem;
+  }
+
+  .guidanceCard {
+    padding: 16px !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .schoolIcon {
+    font-size: 32px !important;
+  }
+
+  .guidanceTitle {
+    font-size: 0.95rem;
+  }
+
+  .guidanceSub {
+    font-size: 0.8rem;
+  }
+}

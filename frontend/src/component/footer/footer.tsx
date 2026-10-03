@@ -67,25 +67,25 @@ export default function Footer() {
           <Typography className={styles.colTitle}>Contact & Location</Typography>
           <Box className={styles.contactInfo}>
             <Box className={styles.infoItem}>
-              <LocationOnIcon sx={{ color: "primary.main", fontSize: 20 }} />
+              <LocationOnIcon className={styles.icon} />
               <Link href="/contact" className={styles.footerLink} style={{ color: "inherit", margin: 0 }}>
                 Opp. SD College Road / Near SD Sr. Sec. School, Panipat, Haryana - 132103
               </Link>
             </Box>
             <Box className={styles.infoItem}>
-              <PhoneIcon sx={{ color: "primary.main", fontSize: 20 }} />
+              <PhoneIcon className={styles.icon} />
               <a href="tel:+919034127171" className={styles.footerLink} style={{ color: "inherit", margin: 0 }}>
                 Director Vijender Singh Nara: +91 90341-27171
               </a>
             </Box>
             <Box className={styles.infoItem}>
-              <EmailIcon sx={{ color: "primary.main", fontSize: 20 }} />
+              <EmailIcon className={styles.icon} />
               <a href="mailto:info@hartronpanipat.com" className={styles.footerLink} style={{ color: "inherit", margin: 0 }}>
                 info@hartronpanipat.com
               </a>
             </Box>
             <Box className={styles.infoItem}>
-              <AccessTimeIcon sx={{ color: "primary.main", fontSize: 20 }} />
+              <AccessTimeIcon className={styles.icon} />
               <span>Mon - Sat: 8:00 AM - 7:00 PM</span>
             </Box>
           </Box>
@@ -94,10 +94,10 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <Box className={styles.bottomBar}>
-        <Typography variant="body2" sx={{ color: "text.secondary", fontSize: "0.85rem" }}>
+        <Typography variant="body2" className={styles.copyrightText}>
           © {new Date().getFullYear()} Hartron Skill Centre Panipat. Director: Vijender Singh Nara. All rights reserved.
         </Typography>
-        <Typography variant="body2" sx={{ color: "text.secondary", fontSize: "0.85rem" }}>
+        <Typography variant="body2" className={styles.copyrightText}>
           Developed by Us
         </Typography>
       </Box>

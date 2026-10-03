@@ -5,83 +5,33 @@ import { Box, Typography, Container } from "@mui/material";
 import Button from "@/component/common/button";
 import HomeIcon from "@mui/icons-material/Home";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import styles from "./not-found.module.css";
 
 export default function NotFound() {
   return (
     <>
       <Navbar />
-      <Box component="main" sx={{ backgroundColor: "background.default", minHeight: "70vh", display: "flex", alignItems: "center", py: 8 }}>
+      <Box component="main" className={styles.main}>
         <Container maxWidth="md">
-          <Box
-            sx={{
-              backgroundColor: "background.paper",
-              border: "1px solid",
-              borderColor: "divider",
-              borderRadius: 4,
-              p: { xs: 3, sm: 6 },
-              textAlign: "center",
-              boxShadow: "var(--shadow-md)",
-            }}
-          >
-            <Typography
-              variant="h1"
-              sx={{
-                fontSize: { xs: "4rem", sm: "6rem" },
-                fontWeight: 900,
-                color: "primary.main",
-                lineHeight: 1,
-                mb: 1,
-              }}
-            >
+          <Box className={styles.card}>
+            <Typography variant="h1" className={styles.statusCode}>
               404
             </Typography>
 
-            <Typography
-              variant="h4"
-              sx={{
-                fontWeight: 800,
-                color: "text.primary",
-                mb: 2,
-                fontSize: { xs: "1.5rem", sm: "2rem" },
-              }}
-            >
+            <Typography variant="h4" className={styles.title}>
               Page Not Found
             </Typography>
 
-            <Typography
-              sx={{
-                color: "text.secondary",
-                maxWidth: 540,
-                mx: "auto",
-                mb: 4,
-                fontSize: { xs: "0.95rem", sm: "1.05rem" },
-                lineHeight: 1.6,
-              }}
-            >
+            <Typography className={styles.description}>
               The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
             </Typography>
 
-            <Box
-              sx={{
-                display: "flex",
-                gap: 2,
-                justifyContent: "center",
-                flexWrap: "wrap",
-              }}
-            >
+            <Box className={styles.actions}>
               <Link href="/" style={{ textDecoration: "none" }}>
                 <Button
                   variant="contained"
                   startIcon={<HomeIcon />}
-                  sx={{
-                    backgroundColor: "primary.main",
-                    color: "var(--text-on-dark)",
-                    fontWeight: 900,
-                    px: 4,
-                    py: 1.5,
-                    borderRadius: 2.5,
-                    fontSize: "1rem",
-                  }}
+                  className={styles.homeBtn}
                 >
                   Back to Home Page
                 </Button>
@@ -91,15 +41,7 @@ export default function NotFound() {
                 <Button
                   variant="outlined"
                   startIcon={<ArrowBackIcon />}
-                  sx={{
-                    color: "text.primary",
-                    borderColor: "divider",
-                    fontWeight: 800,
-                    px: 3,
-                    py: 1.5,
-                    borderRadius: 2.5,
-                    fontSize: "1rem",
-                  }}
+                  className={styles.coursesBtn}
                 >
                   View All Courses
                 </Button>

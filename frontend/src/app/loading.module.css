@@ -1,0 +1,49 @@
+.loadingWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 75vh;
+  background-color: var(--bg-default);
+  gap: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: center;
+}
+
+.spinnerContainer {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circularProgress {
+  color: var(--primary-main) !important;
+}
+
+.spinnerCenter {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--primary-main);
+  color: var(--text-on-dark);
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.loadingTitle {
+  font-weight: 900;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.loadingSub {
+  color: var(--text-secondary);
+  font-weight: 600;
+}

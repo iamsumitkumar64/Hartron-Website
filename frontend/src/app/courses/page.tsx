@@ -3,6 +3,7 @@ import Navbar from "@/component/navbar/navbar";
 import CourseCard from "@/component/course-card/course-card";
 import Footer from "@/component/footer/footer";
 import { Box, Typography } from "@mui/material";
+import styles from "./courses.module.css";
 
 export const metadata: Metadata = {
   title: "All Computer Courses | Hartron Skill Centre Panipat | Director Vijender Singh Nara",
@@ -74,49 +75,23 @@ export default function CoursesDirectoryPage() {
     <>
       <Navbar />
       <main>
-        <Box
-          sx={{
-            backgroundColor: "background.paper",
-            padding: { xs: "24px 14px", sm: "48px 20px" },
-            textAlign: "center",
-            borderBottom: "1px solid",
-            borderColor: "divider",
-          }}
-        >
-          <Box sx={{ maxWidth: 900, margin: "0 auto" }}>
-            <Typography
-              sx={{
-                color: "primary.main",
-                fontWeight: 800,
-                fontSize: { xs: "0.8rem", sm: "0.9rem" },
-                textTransform: "uppercase",
-                letterSpacing: "0.08em",
-                mb: 1,
-              }}
-            >
+        <Box className={styles.headerSection}>
+          <Box className={styles.headerContainer}>
+            <Typography className={styles.badge}>
               Course Directory
             </Typography>
-            <Typography
-              variant="h1"
-              sx={{ fontSize: { xs: "1.45rem", sm: "2.1rem", md: "2.75rem" }, fontWeight: 900, color: "text.primary", mb: 2, wordBreak: "break-word" }}
-            >
+            <Typography variant="h1" className={styles.title}>
               Government Recognized & IT Industry Training Courses
             </Typography>
-            <Typography sx={{ fontSize: { xs: "0.9rem", sm: "1.1rem" }, color: "text.secondary", lineHeight: 1.6 }}>
+            <Typography className={styles.subTitle}>
               Study under the direction of Director <strong>Vijender Singh Nara</strong> at Hartron Skill Centre, SD College Road, Panipat.
             </Typography>
           </Box>
         </Box>
 
-        <Box component="section" sx={{ padding: { xs: "32px 14px", sm: "64px 24px" }, backgroundColor: "background.default" }}>
-          <Box sx={{ maxWidth: 1280, margin: "0 auto" }}>
-            <Box
-              sx={{
-                display: "grid",
-                gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
-                gap: { xs: "20px", sm: "32px" },
-              }}
-            >
+        <Box component="section" className={styles.directorySection}>
+          <Box className={styles.directoryContainer}>
+            <Box className={styles.coursesGrid}>
               {COURSES_DATA.map((course) => (
                 <CourseCard
                   key={course.slug}

@@ -38,17 +38,17 @@ export default function CourseCard({
             {isItGrade ? "IT Company Grade" : "Govt Recognized"}
           </span>
 
-          <Typography variant="h3" sx={{ wordBreak: "break-word", mb: 1 }}>
+          <Typography variant="h3" className={styles.cardTitle}>
             {title}
           </Typography>
         </Box>
 
-        <Typography variant="body1" sx={{ color: "#475569", mb: 2 }}>
+        <Typography variant="body1" className={styles.cardDescription}>
           {short_description}
         </Typography>
 
         <Box className={styles.durationBox}>
-          <AccessTimeIcon sx={{ fontSize: 18 }} />
+          <AccessTimeIcon className={styles.timeIcon} />
           <span>{duration}</span>
         </Box>
 
@@ -70,7 +70,7 @@ export default function CourseCard({
             variant="contained"
             color="primary"
             fullWidth
-            sx={{ py: 1.2 }}
+            className={styles.enquireBtn}
           >
             Enquire Now
           </Button>
@@ -80,7 +80,7 @@ export default function CourseCard({
           <Button
             variant="outlined"
             endIcon={<ArrowForwardIcon />}
-            sx={{ py: 1.2, borderColor: "divider", color: "text.primary" }}
+            className={styles.syllabusBtn}
           >
             Syllabus
           </Button>

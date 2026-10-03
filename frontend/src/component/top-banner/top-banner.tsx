@@ -15,18 +15,18 @@ export default function TopBanner() {
       <Box className={styles.container}>
         <Box className={styles.announcementWrapper}>
           <span className={styles.badge}>
-            <CampaignIcon sx={{ fontSize: 14, mr: 0.5, verticalAlign: "middle" }} />
+            <CampaignIcon className={styles.campaignIcon} />
             Updates
           </span>
 
           <Box className={styles.marqueeContainer}>
             <Box className={styles.marqueeTrack}>
               <Typography component="span" className={styles.text}>
-                <VerifiedIcon sx={{ fontSize: 14, verticalAlign: "middle", mr: 0.5, color: "primary.main" }} />
+                <VerifiedIcon className={styles.verifiedIcon} />
                 {announcementText}
               </Typography>
               <Typography component="span" className={styles.text}>
-                <VerifiedIcon sx={{ fontSize: 14, verticalAlign: "middle", mr: 0.5, color: "primary.main" }} />
+                <VerifiedIcon className={styles.verifiedIcon} />
                 {announcementText}
               </Typography>
             </Box>
@@ -35,11 +35,11 @@ export default function TopBanner() {
 
         <Box className={styles.contacts}>
           <a href="tel:+919034127171" className={styles.contactLink}>
-            <LocalPhoneIcon sx={{ fontSize: 14 }} />
+            <LocalPhoneIcon className={styles.contactIcon} />
             <span>Call: +91 90341-27171</span>
           </a>
           <Link href="/contact" className={styles.contactLink}>
-            <LocationOnIcon sx={{ fontSize: 14 }} />
+            <LocationOnIcon className={styles.contactIcon} />
             <span>Near SD College Road, Panipat</span>
           </Link>
         </Box>

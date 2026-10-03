@@ -12,15 +12,15 @@ export default function TypingTestPreview() {
         {/* Left Column */}
         <Box className={styles.leftText}>
           <Box className={styles.badge}>
-            <VerifiedIcon sx={{ fontSize: 18 }} />
+            <VerifiedIcon className={styles.badgeIcon} />
             HSSC • HKRN • SSC • High Court Clerical Typing Exam Software
           </Box>
 
-          <Typography variant="h2" sx={{ color: "#ffffff" }}>
+          <Typography variant="h2" className={styles.mainHeading}>
             Master Government Exam Typing Speed with 95%+ Accuracy
           </Typography>
 
-          <Typography variant="subtitle1" sx={{ color: "#dbeafe" }}>
+          <Typography variant="subtitle1" className={styles.mainSub}>
             Our Panipat center provides dedicated high-speed typing software that exactly mirrors official government exam interfaces. Practice English and Hindi (Mangal/Kruti Dev) with instant WPM scoring and error diagnostic reports.
           </Typography>
 
@@ -46,19 +46,11 @@ export default function TypingTestPreview() {
             </Box>
           </Box>
 
-          <Box sx={{ mt: 2, display: "flex", gap: 2, flexWrap: "wrap" }}>
+          <Box className={styles.buttonGroup}>
             <Link href="/typing-practice" style={{ textDecoration: "none" }}>
               <Button
                 variant="contained"
-                sx={{
-                  backgroundColor: "#ffffff",
-                  color: "#1e40af",
-                  fontWeight: 900,
-                  px: 3,
-                  py: 1.5,
-                  borderRadius: 2,
-                  "&:hover": { backgroundColor: "#f8fafc" },
-                }}
+                className={styles.demoBtn}
                 startIcon={<KeyboardIcon />}
               >
                 Start Free Interactive Demo
@@ -68,15 +60,7 @@ export default function TypingTestPreview() {
             <Link href="/courses/typing-speed" style={{ textDecoration: "none" }}>
               <Button
                 variant="outlined"
-                sx={{
-                  color: "#ffffff",
-                  borderColor: "rgba(255,255,255,0.6)",
-                  fontWeight: 700,
-                  px: 3,
-                  py: 1.5,
-                  borderRadius: 2,
-                  "&:hover": { borderColor: "#ffffff", backgroundColor: "rgba(255,255,255,0.1)" },
-                }}
+                className={styles.syllabusBtn}
               >
                 View Course Syllabus
               </Button>
@@ -87,13 +71,13 @@ export default function TypingTestPreview() {
         {/* Right Column (Software Interface Preview Card) */}
         <Box className={styles.softwareCard}>
           <Box className={styles.screenHeader}>
-            <Typography variant="h6" sx={{ fontWeight: 900, color: "#1e40af" }}>
+            <Typography variant="h6" className={styles.simulatorTitle}>
               HARTRON Govt Exam Simulator
             </Typography>
             <Box className={styles.metricBadge}>Timer: 09:42 | Speed: 42 WPM</Box>
           </Box>
 
-          <Typography variant="body2" sx={{ fontWeight: 700, color: "#475569" }}>
+          <Typography variant="body2" className={styles.passageLabel}>
             Passage Preview (HSSC Clerical Pattern):
           </Typography>
 
@@ -104,8 +88,8 @@ export default function TypingTestPreview() {
             </span>
           </Box>
 
-          <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", pt: 1 }}>
-            <Typography variant="body2" sx={{ fontWeight: 700, color: "#16a34a" }}>
+          <Box className={styles.statsFooter}>
+            <Typography variant="body2" className={styles.statsSuccess}>
               ✓ Accuracy: 98.4% • Gross Speed: 44 WPM • Net Speed: 42 WPM
             </Typography>
           </Box>

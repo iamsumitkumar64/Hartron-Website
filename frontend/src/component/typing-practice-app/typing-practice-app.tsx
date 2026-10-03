@@ -28,6 +28,7 @@ import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import VolumeOffIcon from "@mui/icons-material/VolumeOff";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import SchoolIcon from "@mui/icons-material/School";
+import styles from "./typing-practice-app.module.css";
 
 const SAMPLE_PASSAGES = {
   govt: "The Haryana State Electronics Development Corporation Limited (HARTRON) is the premier agency for promoting IT education and recruitment testing across Haryana state. Under the guidance of Director Vijender Singh Nara at Hartron Skill Centre Panipat, candidate students undergo rigorous daily typing speed practice to clear HSSC, HKRN, and High Court clerical examinations with 100% accuracy and speed exceeding 35 words per minute.",
@@ -164,84 +165,41 @@ export default function TypingPracticeApp() {
   const metrics = calculateMetrics();
 
   return (
-    <Box sx={{ pb: 6 }}>
+    <Box className={styles.container}>
       {/* Page Header */}
-      <Box
-        sx={{
-          backgroundColor: "background.paper",
-          borderBottom: "1px solid",
-          borderColor: "divider",
-          padding: { xs: "24px 14px", sm: "40px 20px" },
-          textAlign: "center",
-        }}
-      >
+      <Box className={styles.header}>
         <Container maxWidth="lg">
-          <Chip
-            icon={<VerifiedIcon sx={{ fontSize: "16px !important", color: "primary.main" }} />}
-            label="Official Govt Exam Speed Simulator"
-            sx={{
-              backgroundColor: "primary.bg",
-              color: "primary.main",
-              fontWeight: 800,
-              fontSize: "0.75rem",
-              mb: 1.5,
-              textTransform: "uppercase",
-            }}
-          />
+          <Box className={styles.accreditationBadge}>
+            <VerifiedIcon className={styles.verifiedIcon} />
+            Official Govt Exam Speed Simulator • Director: Vijender Singh Nara
+          </Box>
           <Typography
             variant="h1"
-            sx={{
-              fontSize: { xs: "1.5rem", sm: "2.25rem", md: "2.75rem" },
-              fontWeight: 900,
-              color: "text.primary",
-              mb: 1.5,
-              wordBreak: "break-word",
-            }}
+            className={styles.title}
           >
             Interactive Government Typing Speed Practice
           </Typography>
           <Typography
-            sx={{
-              color: "text.secondary",
-              fontSize: { xs: "0.875rem", sm: "1.05rem" },
-              maxWidth: 800,
-              mx: "auto",
-              lineHeight: 1.6,
-            }}
+            className={styles.subTitle}
           >
             Master high-speed touch typing for Haryana Government Recruitment Exams under Director <strong>Vijender Singh Nara</strong> at Hartron Skill Centre Panipat.
           </Typography>
         </Container>
       </Box>
 
-      <Container maxWidth="lg" sx={{ mt: { xs: 2, sm: 3 }, px: { xs: 1.5, sm: 3 } }}>
+      <Container maxWidth="lg" className={styles.contentContainer}>
         {/* Main Control Panel */}
         <Paper
           elevation={0}
-          sx={{
-            p: { xs: 2, sm: 3 },
-            borderRadius: { xs: "10px", sm: "16px" },
-            backgroundColor: "background.paper",
-            border: "1px solid",
-            borderColor: "divider",
-            mb: 3,
-          }}
+          className={styles.controlPanel}
         >
-          <Box
-            sx={{
-              display: "flex",
-              flexWrap: "wrap",
-              alignItems: "center",
-              justifyContent: "space-between",
-              gap: 2,
-            }}
-          >
-            <Box sx={{ display: "flex", gap: 1, flexWrap: "wrap" }}>
+          <Box className={styles.controlsWrapper}>
+            <Box className={styles.passageButtonGroup}>
               <Button
                 variant={passageType === "govt" ? "contained" : "outlined"}
                 size="small"
                 onClick={() => handlePassageChange("govt")}
-                sx={{ borderRadius: "8px", fontWeight: 700 }}
+                className={styles.passageButton}
               >
                 Govt Exam Passage
               </Button>
@@ -249,7 +207,7 @@ export default function TypingPracticeApp() {
                 variant={passageType === "sprint" ? "contained" : "outlined"}
                 size="small"
                 onClick={() => handlePassageChange("sprint")}
-                sx={{ borderRadius: "8px", fontWeight: 700 }}
+                className={styles.passageButton}
               >
                 Speed Sprint
               </Button>
@@ -257,22 +215,22 @@ export default function TypingPracticeApp() {
                 variant={passageType === "hindi" ? "contained" : "outlined"}
                 size="small"
                 onClick={() => handlePassageChange("hindi")}
-                sx={{ borderRadius: "8px", fontWeight: 700 }}
+                className={styles.passageButton}
               >
                 हिंदी टाइपिंग (Hindi)
               </Button>
             </Box>
 
-            <Box sx={{ display: "flex", alignItems: "center", gap: 2, flexWrap: "wrap" }}>
-              <Box sx={{ display: "flex", gap: 0.5, alignItems: "center" }}>
-                <TimerIcon fontSize="small" sx={{ color: "text.secondary" }} />
+            <Box className={styles.rightControls}>
+              <Box className={styles.timerGroup}>
+                <TimerIcon fontSize="small" className={styles.timerIcon} />
                 {[30, 60, 120].map((d) => (
                   <Button
                     key={d}
                     size="small"
                     variant={duration === d ? "contained" : "text"}
                     onClick={() => setDuration(d as ExamDuration)}
-                    sx={{ minWidth: 36, px: 1, fontWeight: 800, borderRadius: "6px" }}
+                    className={styles.durationButton}
                   >
                     {d}s
                   </Button>
@@ -288,7 +246,7 @@ export default function TypingPracticeApp() {
                   />
                 }
                 label={
-                  <Typography variant="caption" sx={{ fontWeight: 700, color: "text.primary" }}>
+                  <Typography variant="caption" className={styles.switchLabel}>
                     Strict Backspace
                   </Typography>
                 }
@@ -302,86 +260,51 @@ export default function TypingPracticeApp() {
         </Paper>
 
         {/* Realtime Metrics Cards */}
-        <Box
-          sx={{
-            display: "grid",
-            gridTemplateColumns: { xs: "repeat(2, 1fr)", sm: "repeat(4, 1fr)" },
-            gap: { xs: 1.5, sm: 2 },
-            mb: 3,
-          }}
-        >
+        <Box className={styles.metricsGrid}>
           <Paper
             elevation={0}
-            sx={{
-              p: 2,
-              borderRadius: "12px",
-              backgroundColor: "background.paper",
-              border: "1px solid",
-              borderColor: "divider",
-              textAlign: "center",
-            }}
+            className={styles.metricCard}
           >
-            <Typography variant="caption" sx={{ color: "text.secondary", fontWeight: 800, textTransform: "uppercase" }}>
+            <Typography variant="caption" className={styles.metricLabel}>
               Time Left
             </Typography>
-            <Typography variant="h4" sx={{ fontWeight: 900, color: timeLeft <= 10 ? "error.main" : "primary.main" }}>
+            <Typography variant="h4" className={timeLeft <= 10 ? styles.metricValueAlert : styles.metricValuePrimary}>
               {timeLeft}s
             </Typography>
           </Paper>
 
           <Paper
             elevation={0}
-            sx={{
-              p: 2,
-              borderRadius: "12px",
-              backgroundColor: "background.paper",
-              border: "1px solid",
-              borderColor: "divider",
-              textAlign: "center",
-            }}
+            className={styles.metricCard}
           >
-            <Typography variant="caption" sx={{ color: "text.secondary", fontWeight: 800, textTransform: "uppercase" }}>
+            <Typography variant="caption" className={styles.metricLabel}>
               Net WPM
             </Typography>
-            <Typography variant="h4" sx={{ fontWeight: 900, color: "text.primary" }}>
+            <Typography variant="h4" className={styles.metricValueText}>
               {metrics.netWpm}
             </Typography>
           </Paper>
 
           <Paper
             elevation={0}
-            sx={{
-              p: 2,
-              borderRadius: "12px",
-              backgroundColor: "background.paper",
-              border: "1px solid",
-              borderColor: "divider",
-              textAlign: "center",
-            }}
+            className={styles.metricCard}
           >
-            <Typography variant="caption" sx={{ color: "text.secondary", fontWeight: 800, textTransform: "uppercase" }}>
+            <Typography variant="caption" className={styles.metricLabel}>
               Accuracy
             </Typography>
-            <Typography variant="h4" sx={{ fontWeight: 900, color: metrics.accuracy >= 95 ? "success.main" : "warning.main" }}>
+            <Typography variant="h4" className={metrics.accuracy >= 95 ? styles.metricValueSuccess : styles.metricValueWarning}>
               {metrics.accuracy}%
             </Typography>
           </Paper>
 
           <Paper
             elevation={0}
-            sx={{
-              p: 2,
-              borderRadius: "12px",
-              backgroundColor: "background.paper",
-              border: "1px solid",
-              borderColor: "divider",
-              textAlign: "center",
-            }}
+            className={styles.metricCard}
           >
-            <Typography variant="caption" sx={{ color: "text.secondary", fontWeight: 800, textTransform: "uppercase" }}>
+            <Typography variant="caption" className={styles.metricLabel}>
               Key Streak
             </Typography>
-            <Typography variant="h4" sx={{ fontWeight: 900, color: "primary.main" }}>
+            <Typography variant="h4" className={styles.metricValuePrimary}>
               🔥 {streak}
             </Typography>
           </Paper>
@@ -391,21 +314,7 @@ export default function TypingPracticeApp() {
         <Paper
           elevation={0}
           onClick={() => inputRef.current?.focus()}
-          sx={{
-            p: { xs: 2.5, sm: 4 },
-            borderRadius: { xs: "12px", sm: "16px" },
-            backgroundColor: "background.paper",
-            border: "2px solid",
-            borderColor: isActive ? "primary.main" : "divider",
-            cursor: "text",
-            position: "relative",
-            minHeight: 180,
-            mb: 3,
-            lineHeight: 2,
-            fontSize: { xs: "1rem", sm: "1.25rem" },
-            fontFamily: "monospace",
-            wordBreak: "break-word",
-          }}
+          className={`${styles.passagePaper} ${isActive ? styles.passagePaperActive : ""}`}
         >
           {text.split("").map((char, index) => {
             let color = "text.secondary";
@@ -444,31 +353,23 @@ export default function TypingPracticeApp() {
             value={userInput}
             onChange={handleInputChange}
             disabled={isFinished}
-            style={{
-              position: "absolute",
-              opacity: 0,
-              pointerEvents: "none",
-              left: 0,
-              top: 0,
-              width: "100%",
-              height: "100%",
-            }}
+            className={styles.hiddenInput}
           />
         </Paper>
 
         {/* Action Controls */}
-        <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 4, flexWrap: "wrap", gap: 2 }}>
+        <Box className={styles.actionControls}>
           <Button
             variant="contained"
             color="primary"
             startIcon={<RestartAltIcon />}
             onClick={resetTest}
-            sx={{ py: 1.2, px: 3, borderRadius: "10px", fontWeight: 800 }}
+            className={styles.resetBtn}
           >
             Reset / Restart Drill
           </Button>
 
-          <Typography variant="body2" sx={{ color: "text.secondary", fontWeight: 600, fontSize: { xs: "0.8rem", sm: "0.875rem" } }}>
+          <Typography variant="body2" className={styles.hintText}>
             💡 Direct Campus Lab Practice available at <strong>Hartron Panipat</strong>
           </Typography>
         </Box>
@@ -476,26 +377,15 @@ export default function TypingPracticeApp() {
         {/* Quick Guidance Box */}
         <Paper
           elevation={0}
-          sx={{
-            p: { xs: 2, sm: 3 },
-            borderRadius: { xs: "10px", sm: "16px" },
-            backgroundColor: "background.paper",
-            border: "1px solid",
-            borderColor: "divider",
-            display: "flex",
-            flexDirection: { xs: "column", md: "row" },
-            alignItems: "center",
-            justifyContent: "space-between",
-            gap: 2,
-          }}
+          className={styles.guidanceCard}
         >
-          <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
-            <SchoolIcon sx={{ fontSize: { xs: 32, sm: 44 }, color: "primary.main" }} />
+          <Box className={styles.guidanceLeft}>
+            <SchoolIcon className={styles.schoolIcon} />
             <Box>
-              <Typography variant="h6" sx={{ fontWeight: 900, color: "text.primary", fontSize: { xs: "0.95rem", sm: "1.1rem" } }}>
+              <Typography variant="h6" className={styles.guidanceTitle}>
                 Want 100% Guaranteed Typing Speed in Govt Exams?
               </Typography>
-              <Typography variant="body2" sx={{ color: "text.secondary", fontSize: { xs: "0.8rem", sm: "0.875rem" } }}>
+              <Typography variant="body2" className={styles.guidanceSub}>
                 Join Director Vijender Singh Nara's specialized lab batch in Panipat with official HARTRON exam software.
               </Typography>
             </Box>
@@ -504,13 +394,7 @@ export default function TypingPracticeApp() {
           <Link href="/contact?course=typing-speed" style={{ textDecoration: "none" }}>
             <Button
               variant="contained"
-              sx={{
-                whiteSpace: "nowrap",
-                fontWeight: 800,
-                borderRadius: "8px",
-                px: 3,
-                py: 1.2,
-              }}
+              className={styles.joinBatchBtn}
             >
               Join Campus Lab Batch
             </Button>
@@ -520,48 +404,48 @@ export default function TypingPracticeApp() {
 
       {/* Results Dialog */}
       <Dialog open={isFinished} onClose={resetTest} maxWidth="xs" fullWidth>
-        <DialogTitle sx={{ textAlign: "center", fontWeight: 900, fontSize: "1.5rem" }}>
+        <DialogTitle className={styles.dialogTitle}>
           🏆 Test Results Summary
         </DialogTitle>
         <DialogContent>
-          <Box sx={{ textAlign: "center", py: 2 }}>
-            <Typography variant="h3" sx={{ fontWeight: 900, color: "primary.main", mb: 0.5 }}>
+          <Box className={styles.dialogBody}>
+            <Typography variant="h3" className={styles.dialogScore}>
               {metrics.netWpm} WPM
             </Typography>
-            <Typography variant="body2" sx={{ color: "text.secondary", fontWeight: 700, mb: 3 }}>
+            <Typography variant="body2" className={styles.dialogScoreSub}>
               Net Speed (Target: 35 WPM for Haryana Govt)
             </Typography>
 
-            <Box sx={{ display: "flex", justifyContent: "space-around", borderTop: "1px solid", borderColor: "divider", pt: 2 }}>
+            <Box className={styles.dialogMetrics}>
               <Box>
-                <Typography variant="caption" sx={{ color: "text.secondary", fontWeight: 700 }}>
+                <Typography variant="caption" className={styles.dialogMetricLabel}>
                   ACCURACY
                 </Typography>
-                <Typography variant="h6" sx={{ fontWeight: 900, color: "success.main" }}>
+                <Typography variant="h6" className={styles.dialogAccuracy}>
                   {metrics.accuracy}%
                 </Typography>
               </Box>
               <Box>
-                <Typography variant="caption" sx={{ color: "text.secondary", fontWeight: 700 }}>
+                <Typography variant="caption" className={styles.dialogMetricLabel}>
                   GROSS SPEED
                 </Typography>
-                <Typography variant="h6" sx={{ fontWeight: 900, color: "text.primary" }}>
+                <Typography variant="h6" className={styles.dialogWpm}>
                   {metrics.grossWpm} WPM
                 </Typography>
               </Box>
               <Box>
-                <Typography variant="caption" sx={{ color: "text.secondary", fontWeight: 700 }}>
+                <Typography variant="caption" className={styles.dialogMetricLabel}>
                   MAX STREAK
                 </Typography>
-                <Typography variant="h6" sx={{ fontWeight: 900, color: "primary.main" }}>
+                <Typography variant="h6" className={styles.dialogStreak}>
                   🔥 {maxStreak}
                 </Typography>
               </Box>
             </Box>
           </Box>
         </DialogContent>
-        <DialogActions sx={{ justifyContent: "center", pb: 3 }}>
-          <Button variant="contained" onClick={resetTest} startIcon={<RestartAltIcon />} sx={{ px: 4, borderRadius: "10px", fontWeight: 800 }}>
+        <DialogActions className={styles.dialogActions}>
+          <Button variant="contained" onClick={resetTest} startIcon={<RestartAltIcon />} className={styles.tryAgainBtn}>
             Try Again
           </Button>
         </DialogActions>

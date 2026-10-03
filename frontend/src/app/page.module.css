@@ -1,0 +1,210 @@
+.coursesSection {
+  padding: 64px 24px;
+  background-color: var(--bg-paper);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.coursesContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.coursesHeader {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.coursesBadge {
+  color: var(--primary-main);
+  font-weight: 800;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.coursesTitle {
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  word-break: break-word;
+}
+
+.coursesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.admissionSection {
+  padding: 64px 24px;
+  background-color: var(--bg-default);
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+}
+
+.admissionContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: stretch;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formWrapper {
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.infoCard {
+  min-width: 0;
+  background-color: var(--bg-paper);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.infoTitle {
+  font-weight: 900;
+  color: var(--text-primary);
+  font-size: 2rem;
+  word-break: break-word;
+}
+
+.infoDescription {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.infoRow {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.infoLabel {
+  font-weight: 800;
+  color: var(--primary-main);
+  min-width: 90px;
+  font-size: 1rem;
+}
+
+.infoLinkText {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  word-break: break-word;
+  transition: color 0.2s ease;
+}
+
+.infoLinkText:hover {
+  color: var(--primary-main);
+  text-decoration: underline;
+}
+
+.phoneList {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.phoneLinkText {
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.phoneLinkText:hover {
+  color: var(--primary-main);
+  text-decoration: underline;
+}
+
+.hoursText {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .coursesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .admissionContainer {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .coursesSection {
+    padding: 32px 14px;
+  }
+
+  .coursesHeader {
+    margin-bottom: 24px;
+  }
+
+  .coursesBadge {
+    font-size: 0.8rem;
+  }
+
+  .coursesTitle {
+    font-size: 1.35rem;
+  }
+
+  .admissionSection {
+    padding: 32px 14px;
+  }
+
+  .infoCard {
+    padding: 20px 14px;
+    border-radius: var(--radius-lg);
+    gap: 18px;
+  }
+
+  .infoTitle {
+    font-size: 1.35rem;
+  }
+
+  .infoDescription {
+    font-size: 0.875rem;
+  }
+
+  .infoList {
+    gap: 14px;
+  }
+
+  .infoRow {
+    flex-direction: column;
+  }
+
+  .infoLabel {
+    font-size: 0.85rem;
+  }
+
+  .infoLinkText,
+  .phoneLinkText,
+  .hoursText {
+    font-size: 0.85rem;
+  }
+}

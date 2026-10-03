@@ -12,7 +12,7 @@ export default function Hero() {
         {/* Left Column */}
         <Box className={styles.leftContent}>
           <Box className={styles.accreditationBadge}>
-            <VerifiedUserIcon sx={{ fontSize: 18 }} />
+            <VerifiedUserIcon className={styles.badgeIcon} />
             Official HARTRON Skill Centre • Director: Vijender Singh Nara
           </Box>
 
@@ -21,7 +21,7 @@ export default function Hero() {
             <span className={styles.heroHighlight}>Govt Computer Diplomas</span> & IT Industry Skills
           </Typography>
 
-          <Typography variant="body1" sx={{ color: "text.secondary", lineHeight: 1.6 }}>
+          <Typography variant="body1" className={styles.heroDescription}>
             Transform your career right next to SD College, Panipat. Specialized training in{" "}
             <strong>Government Typing Speed Tests (HSSC/HKRN)</strong>, <strong>Web Development</strong>,{" "}
             <strong>Cybersecurity</strong>, and <strong>DCA Computer Courses</strong> with 100% practical lab practice.
@@ -32,7 +32,7 @@ export default function Hero() {
               <Button
                 variant="contained"
                 color="primary"
-                sx={{ py: 1.5, px: 3, fontSize: "1rem" }}
+                className={styles.exploreBtn}
               >
                 Explore All Courses
               </Button>
@@ -42,7 +42,7 @@ export default function Hero() {
               <Button
                 variant="outlined"
                 startIcon={<KeyboardIcon />}
-                sx={{ py: 1.5, px: 3, fontSize: "1rem", backgroundColor: "background.paper" }}
+                className={styles.typingBtn}
               >
                 Govt Typing Practice
               </Button>
@@ -71,44 +71,44 @@ export default function Hero() {
           <Box className={styles.cardHeader}>
             <Box className={styles.directorAvatar}>VN</Box>
             <Box>
-              <Typography variant="h6" sx={{ fontWeight: 800, color: "text.primary" }}>
+              <Typography variant="h6" className={styles.cardTitle}>
                 Director's Vision
               </Typography>
-              <Typography variant="body2" sx={{ color: "primary.main", fontWeight: 700 }}>
+              <Typography variant="body2" className={styles.directorName}>
                 Vijender Singh Nara
               </Typography>
             </Box>
           </Box>
 
-          <Typography variant="body2" sx={{ color: "text.secondary", fontStyle: "italic", lineHeight: 1.6 }}>
+          <Typography variant="body2" className={styles.cardQuote}>
             "At Hartron Skill Centre Panipat, our commitment is to equip every student with high-speed exam typing precision and high-demand IT software skills to guarantee career success."
           </Typography>
 
           <Box className={styles.cardFeatureList}>
             <Box className={styles.cardFeatureItem}>
               <span className={styles.checkDot}>✓</span>
-              <Typography variant="body2" sx={{ fontWeight: 700, color: "text.primary" }}>
+              <Typography variant="body2" className={styles.featureText}>
                 HSSC / HKRN / SSC Government Typing Test Software Drills
               </Typography>
             </Box>
 
             <Box className={styles.cardFeatureItem}>
               <span className={styles.checkDot}>✓</span>
-              <Typography variant="body2" sx={{ fontWeight: 700, color: "text.primary" }}>
+              <Typography variant="body2" className={styles.featureText}>
                 IT Company Industry Grade Web Development & Cybersecurity
               </Typography>
             </Box>
 
             <Box className={styles.cardFeatureItem}>
               <span className={styles.checkDot}>✓</span>
-              <Typography variant="body2" sx={{ fontWeight: 700, color: "text.primary" }}>
+              <Typography variant="body2" className={styles.featureText}>
                 Government Recognized DCA & Tally Prime Certificates
               </Typography>
             </Box>
 
             <Box className={styles.cardFeatureItem}>
               <span className={styles.checkDot}>✓</span>
-              <Typography variant="body2" sx={{ fontWeight: 700, color: "text.primary" }}>
+              <Typography variant="body2" className={styles.featureText}>
                 Prime Location: SD College Road, Panipat (Flexi Timings)
               </Typography>
             </Box>

@@ -114,19 +114,45 @@
   gap: 10px;
 }
 
-.checkDot {
-  background-color: var(--primary-bg);
+.badgeIcon {
+  font-size: 18px;
+}
+
+.heroDescription {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.exploreBtn {
+  padding: 12px 24px !important;
+  font-size: 1rem !important;
+}
+
+.typingBtn {
+  padding: 12px 24px !important;
+  font-size: 1rem !important;
+  background-color: var(--bg-paper) !important;
+}
+
+.cardTitle {
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.directorName {
   color: var(--primary-main);
-  border-radius: 50%;
-  width: 22px;
-  height: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 900;
-  font-size: 0.8rem;
-  flex-shrink: 0;
-  margin-top: 1px;
+  font-weight: 700;
+}
+
+.cardQuote {
+  color: var(--text-secondary);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.featureText {
+  font-weight: 700;
+  color: var(--text-primary);
 }
 
 @media (max-width: 960px) {

@@ -8,6 +8,7 @@ import { Box, Typography } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
+import styles from "./course-detail.module.css";
 
 const COURSES_MAP: Record<string, any> = {
   "web-development": {
@@ -211,110 +212,28 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
 
       <main>
         {/* Header Hero */}
-        <Box
-          sx={{
-            backgroundColor: "background.paper",
-            borderBottom: "1px solid",
-            borderColor: "divider",
-            padding: { xs: "24px 14px", sm: "48px 16px", md: "64px 24px" },
-            boxSizing: "border-box",
-            width: "100%",
-          }}
-        >
-          <Box sx={{ maxWidth: 1100, margin: "0 auto", width: "100%" }}>
-            <Box
-              sx={{
-                display: "inline-block",
-                backgroundColor: "primary.main",
-                color: "#ffffff",
-                fontWeight: 800,
-                fontSize: { xs: "0.7rem", sm: "0.8rem" },
-                px: 1.5,
-                py: 0.5,
-                borderRadius: 9999,
-                mb: 1.5,
-                textTransform: "uppercase",
-                maxWidth: "100%",
-                wordBreak: "break-word",
-              }}
-            >
+        <Box className={styles.headerHero}>
+          <Box className={styles.heroContainer}>
+            <Box className={styles.gradeBadge}>
               {isItGrade ? "IT Company Industry Grade" : "Government Recognized Course"}
             </Box>
 
-            <Typography
-              variant="h1"
-              sx={{
-                fontSize: { xs: "1.45rem", sm: "2.1rem", md: "2.75rem" },
-                fontWeight: 900,
-                color: "text.primary",
-                mb: 2,
-                wordBreak: "break-word",
-                lineHeight: 1.3,
-              }}
-            >
+            <Typography variant="h1" className={styles.courseTitle}>
               {course.title}
             </Typography>
 
-            <Typography
-              sx={{
-                fontSize: { xs: "0.9rem", sm: "1rem", md: "1.15rem" },
-                color: "text.secondary",
-                lineHeight: 1.6,
-                mb: 3,
-                wordBreak: "break-word",
-              }}
-            >
+            <Typography className={styles.courseDescription}>
               {course.description}
             </Typography>
 
-            <Box
-              sx={{
-                display: "flex",
-                gap: { xs: 1.5, sm: 2 },
-                alignItems: "stretch",
-                flexDirection: { xs: "column", sm: "row" },
-                width: "100%",
-              }}
-            >
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 1,
-                  backgroundColor: "background.default",
-                  px: 2,
-                  py: 1,
-                  borderRadius: 2,
-                  border: "1px solid",
-                  borderColor: "divider",
-                  color: "primary.main",
-                  fontWeight: 700,
-                  fontSize: { xs: "0.825rem", sm: "0.95rem" },
-                  wordBreak: "break-word",
-                }}
-              >
+            <Box className={styles.metaRow}>
+              <Box className={styles.metaChip}>
                 <AccessTimeIcon fontSize="small" />
                 <span>Duration: {course.duration}</span>
               </Box>
 
               <Link href="/contact" style={{ textDecoration: "none" }}>
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 1,
-                    backgroundColor: "background.default",
-                    px: 2,
-                    py: 1,
-                    borderRadius: 2,
-                    border: "1px solid",
-                    borderColor: "divider",
-                    color: "primary.main",
-                    fontWeight: 700,
-                    fontSize: { xs: "0.825rem", sm: "0.95rem" },
-                    wordBreak: "break-word",
-                  }}
-                >
+                <Box className={styles.metaChip}>
                   <WorkspacePremiumIcon fontSize="small" />
                   <span>Campus: Near SD College Road, Panipat</span>
                 </Box>
@@ -324,111 +243,37 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
         </Box>
 
         {/* Content & Syllabus Grid */}
-        <Box
-          component="section"
-          sx={{
-            padding: { xs: "24px 14px", sm: "48px 16px", md: "64px 24px" },
-            backgroundColor: "background.default",
-            boxSizing: "border-box",
-            width: "100%",
-            overflow: "hidden",
-          }}
-        >
-          <Box
-            sx={{
-              maxWidth: 1280,
-              margin: "0 auto",
-              display: "grid",
-              gridTemplateColumns: { xs: "1fr", md: "1.2fr 0.8fr" },
-              gap: { xs: "24px", md: "48px" },
-              width: "100%",
-              boxSizing: "border-box",
-            }}
-          >
-            <Box sx={{ minWidth: 0, width: "100%", boxSizing: "border-box" }}>
-              <Typography
-                variant="h3"
-                sx={{
-                  fontWeight: 900,
-                  color: "text.primary",
-                  mb: 2.5,
-                  fontSize: { xs: "1.25rem", sm: "1.6rem", md: "2rem" },
-                  wordBreak: "break-word",
-                }}
-              >
+        <Box component="section" className={styles.contentSection}>
+          <Box className={styles.contentGrid}>
+            <Box className={styles.mainColumn}>
+              <Typography variant="h3" className={styles.sectionHeading}>
                 Course Key Highlights
               </Typography>
 
-              <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5, mb: 4, width: "100%" }}>
+              <Box className={styles.highlightsList}>
                 {course.highlights.map((item: string, idx: number) => (
-                  <Box key={idx} sx={{ display: "flex", gap: 1, alignItems: "flex-start", width: "100%" }}>
-                    <CheckCircleIcon sx={{ color: "primary.main", mt: 0.3, fontSize: "1.1rem", flexShrink: 0 }} />
-                    <Typography
-                      sx={{
-                        fontSize: { xs: "0.85rem", sm: "1rem" },
-                        fontWeight: 600,
-                        color: "text.primary",
-                        wordBreak: "break-word",
-                      }}
-                    >
+                  <Box key={idx} className={styles.highlightItem}>
+                    <CheckCircleIcon className={styles.checkIcon} />
+                    <Typography className={styles.highlightText}>
                       {item}
                     </Typography>
                   </Box>
                 ))}
               </Box>
 
-              <Typography
-                variant="h3"
-                sx={{
-                  fontWeight: 900,
-                  color: "text.primary",
-                  mb: 2.5,
-                  fontSize: { xs: "1.25rem", sm: "1.6rem", md: "2rem" },
-                  wordBreak: "break-word",
-                }}
-              >
+              <Typography variant="h3" className={styles.sectionHeading}>
                 Detailed Course Syllabus
               </Typography>
 
-              <Box sx={{ display: "flex", flexDirection: "column", gap: 2, width: "100%" }}>
+              <Box className={styles.syllabusList}>
                 {course.syllabus.map((module: any, idx: number) => (
-                  <Box
-                    key={idx}
-                    sx={{
-                      backgroundColor: "background.paper",
-                      border: "1px solid",
-                      borderColor: "divider",
-                      borderRadius: { xs: 2, sm: 3 },
-                      p: { xs: 2, sm: 3 },
-                      boxSizing: "border-box",
-                      width: "100%",
-                    }}
-                  >
-                    <Typography
-                      variant="h5"
-                      sx={{
-                        fontWeight: 800,
-                        color: "primary.main",
-                        mb: 1.5,
-                        fontSize: { xs: "1.05rem", sm: "1.25rem", md: "1.35rem" },
-                        wordBreak: "break-word",
-                      }}
-                    >
+                  <Box key={idx} className={styles.moduleCard}>
+                    <Typography variant="h5" className={styles.moduleTitle}>
                       {module.title}
                     </Typography>
-                    <Box component="ul" sx={{ pl: { xs: 2, sm: 2.5 }, margin: 0, width: "100%" }}>
+                    <Box component="ul" className={styles.topicsList}>
                       {module.topics.map((topic: string, tIdx: number) => (
-                        <Box
-                          component="li"
-                          key={tIdx}
-                          sx={{
-                            color: "text.secondary",
-                            fontWeight: 600,
-                            mb: 0.8,
-                            fontSize: { xs: "0.825rem", sm: "0.95rem" },
-                            wordBreak: "break-word",
-                          }}
-                        >
+                        <Box component="li" key={tIdx} className={styles.topicItem}>
                           {topic}
                         </Box>
                       ))}
@@ -439,7 +284,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
             </Box>
 
             {/* Sidebar Admission Form */}
-            <Box sx={{ minWidth: 0, width: "100%", boxSizing: "border-box" }}>
+            <Box className={styles.sidebarColumn}>
               <EnquiryForm defaultCourse={course.slug} />
             </Box>
           </Box>

@@ -11,7 +11,7 @@
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 10px 16px;
+  padding: 10px var(--page-padding-right) 10px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -188,3 +188,192 @@
     padding: 6px 8px !important;
   }
 }
+
+.stickyHeaderWrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.themeToggleBtnDesktop {
+  display: inline-flex;
+  border: 1px solid var(--border-color);
+  padding: 4px;
+}
+
+@media (max-width: 959px) {
+  .themeToggleBtnDesktop {
+    display: none;
+  }
+}
+
+.menuIconButton {
+  color: var(--primary-main);
+  margin-left: 4px;
+}
+
+@media (min-width: 960px) {
+  .menuIconButton {
+    display: none;
+  }
+}
+
+.darkIcon {
+  color: #fbbf24;
+  font-size: 18px;
+}
+
+.lightIcon {
+  color: var(--primary-main);
+  font-size: 18px;
+}
+
+.callBtnHideMobile {
+  display: inline-flex;
+}
+
+@media (max-width: 599px) {
+  .callBtnHideMobile {
+    display: none;
+  }
+}
+
+.drawerPaper {
+  width: 320px;
+  max-width: 85vw;
+  border-radius: 0;
+  background-color: var(--bg-paper);
+  background-image: none;
+  color: var(--text-primary);
+  box-shadow: var(--shadow-lg);
+}
+
+.drawerContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+}
+
+.drawerHeader {
+  padding: 20px;
+  background-color: var(--bg-paper);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.drawerBrandBox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.drawerBadge {
+  background-color: var(--primary-main);
+  color: var(--text-on-dark);
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+
+.drawerTitle {
+  color: var(--text-primary);
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.drawerSubtitle {
+  color: var(--primary-main);
+  font-size: 0.725rem;
+  font-weight: 700;
+}
+
+.drawerActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.closeIconBtn {
+  color: var(--text-secondary);
+}
+
+.drawerBody {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  background-color: var(--bg-default);
+}
+
+.drawerListItem {
+  margin-bottom: 8px;
+}
+
+.drawerListLink {
+  text-decoration: none;
+  width: 100%;
+}
+
+.drawerItemButton {
+  border-radius: 10px;
+  padding: 10px 16px;
+  transition: all 0.2s;
+}
+
+.drawerItemButton:hover {
+  background-color: var(--bg-paper);
+}
+
+.drawerItemButtonSelected {
+  background-color: var(--primary-bg) !important;
+  color: var(--primary-main) !important;
+  border-left: 4px solid var(--primary-main);
+}
+
+.drawerText {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.drawerTextActive {
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--primary-main);
+}
+
+.drawerFooter {
+  padding: 20px;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--bg-paper);
+}
+
+.drawerApplyBtn {
+  background-color: var(--primary-main) !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  padding: 11px 0 !important;
+  border-radius: 10px !important;
+  font-size: 0.95rem !important;
+  box-shadow: var(--shadow-md) !important;
+  width: 100% !important;
+}
+
+.drawerFooterText {
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+

@@ -9,6 +9,7 @@ import TypingTestPreview from "@/component/typing-test-preview/typing-test-previ
 import EnquiryForm from "@/component/enquiry-form/enquiry-form";
 import Footer from "@/component/footer/footer";
 import { Box, Typography } from "@mui/material";
+import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "Hartron Skill Centre SD College Panipat | Director Vijender Singh Nara",
@@ -130,44 +131,18 @@ export default function HomePage() {
         <DirectorSection />
 
         {/* Featured Courses Section */}
-        <Box
-          component="section"
-          sx={{
-            padding: { xs: "32px 14px", sm: "64px 24px" },
-            backgroundColor: "background.paper",
-            borderBottom: "1px solid",
-            borderColor: "divider",
-          }}
-        >
-          <Box sx={{ maxWidth: 1280, margin: "0 auto" }}>
-            <Box sx={{ textAlign: "center", marginBottom: { xs: "24px", sm: "48px" } }}>
-              <Typography
-                sx={{
-                  color: "primary.main",
-                  fontWeight: 800,
-                  fontSize: { xs: "0.8rem", sm: "0.9rem" },
-                  textTransform: "uppercase",
-                  letterSpacing: "0.08em",
-                  marginBottom: "8px",
-                }}
-              >
+        <Box component="section" className={styles.coursesSection}>
+          <Box className={styles.coursesContainer}>
+            <Box className={styles.coursesHeader}>
+              <Typography className={styles.coursesBadge}>
                 Our Training Programs
               </Typography>
-              <Typography
-                variant="h2"
-                sx={{ fontSize: { xs: "1.35rem", sm: "1.85rem", md: "2.25rem" }, fontWeight: 900, color: "text.primary", wordBreak: "break-word" }}
-              >
+              <Typography variant="h2" className={styles.coursesTitle}>
                 Government Recognized & IT Industry Grade Courses
               </Typography>
             </Box>
 
-            <Box
-              sx={{
-                display: "grid",
-                gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
-                gap: "32px",
-              }}
-            >
+            <Box className={styles.coursesGrid}>
               {COURSES_DATA.map((course) => (
                 <CourseCard
                   key={course.slug}
@@ -188,106 +163,57 @@ export default function HomePage() {
         <WhyChooseUs />
 
         {/* Admission Form Section */}
-        <Box
-          component="section"
-          sx={{
-            padding: { xs: "32px 14px", sm: "64px 24px" },
-            backgroundColor: "background.default",
-            boxSizing: "border-box",
-            width: "100%",
-            overflow: "hidden",
-          }}
-        >
-          <Box
-            sx={{
-              maxWidth: 1280,
-              margin: "0 auto",
-              display: "grid",
-              gridTemplateColumns: { xs: "1fr", md: "1.1fr 0.9fr" },
-              gap: { xs: "24px", sm: "48px" },
-              alignItems: "stretch",
-              width: "100%",
-              boxSizing: "border-box",
-            }}
-          >
-            <Box sx={{ minWidth: 0, width: "100%", boxSizing: "border-box" }}>
+        <Box component="section" className={styles.admissionSection}>
+          <Box className={styles.admissionContainer}>
+            <Box className={styles.formWrapper}>
               <EnquiryForm />
             </Box>
 
-            <Box
-              sx={{
-                minWidth: 0,
-                backgroundColor: "background.paper",
-                border: "1px solid",
-                borderColor: "divider",
-                borderRadius: { xs: "14px", sm: "20px" },
-                padding: { xs: "20px 14px", sm: "36px" },
-                display: "flex",
-                flexDirection: "column",
-                gap: { xs: "18px", sm: "24px" },
-                boxSizing: "border-box",
-                width: "100%",
-              }}
-            >
-              <Typography variant="h4" sx={{ fontWeight: 900, color: "text.primary", fontSize: { xs: "1.35rem", sm: "2rem" }, wordBreak: "break-word" }}>
+            <Box className={styles.infoCard}>
+              <Typography variant="h4" className={styles.infoTitle}>
                 Visit Campus Near SD College Panipat
               </Typography>
 
-              <Typography sx={{ color: "text.secondary", lineHeight: 1.6, fontSize: { xs: "0.875rem", sm: "1rem" }, wordBreak: "break-word" }}>
+              <Typography className={styles.infoDescription}>
                 Directly walk into our campus opposite SD College Road, Panipat to inspect our high-speed practical computer labs, meet Director Vijender Singh Nara, and get personalized course guidance.
               </Typography>
 
-              <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: "14px", sm: "16px" } }}>
-                <Box sx={{ display: "flex", gap: "10px", alignItems: "flex-start", flexDirection: { xs: "column", sm: "row" } }}>
-                  <Typography sx={{ fontWeight: 800, color: "primary.main", minWidth: "90px", fontSize: { xs: "0.85rem", sm: "1rem" } }}>
+              <Box className={styles.infoList}>
+                <Box className={styles.infoRow}>
+                  <Typography className={styles.infoLabel}>
                     📍 Address:
                   </Typography>
                   <Link
                     href="/contact"
                     style={{ textDecoration: "none" }}
                   >
-                    <Typography
-                      sx={{
-                        color: "text.primary",
-                        fontWeight: 600,
-                        fontSize: { xs: "0.85rem", sm: "0.95rem" },
-                        wordBreak: "break-word",
-                        "&:hover": { color: "primary.main", textDecoration: "underline" },
-                      }}
-                    >
+                    <Typography className={styles.infoLinkText}>
                       Hartron Skill Centre, Opp. SD College Road / Near SD Sr. Sec. School, Panipat, Haryana - 132103
                     </Typography>
                   </Link>
                 </Box>
 
-                <Box sx={{ display: "flex", gap: "10px", alignItems: "flex-start", flexDirection: { xs: "column", sm: "row" } }}>
-                  <Typography sx={{ fontWeight: 800, color: "primary.main", minWidth: "90px", fontSize: { xs: "0.85rem", sm: "1rem" } }}>
+                <Box className={styles.infoRow}>
+                  <Typography className={styles.infoLabel}>
                     📞 Helpline:
                   </Typography>
-                  <Box sx={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
+                  <Box className={styles.phoneList}>
                     <Link
                       href="tel:+919034127171"
                       style={{ textDecoration: "none" }}
                     >
-                      <Typography
-                        sx={{
-                          color: "text.primary",
-                          fontWeight: 700,
-                          fontSize: { xs: "0.85rem", sm: "0.95rem" },
-                          "&:hover": { color: "primary.main", textDecoration: "underline" },
-                        }}
-                      >
+                      <Typography className={styles.phoneLinkText}>
                         +91 90341-27171
                       </Typography>
                     </Link>
                   </Box>
                 </Box>
 
-                <Box sx={{ display: "flex", gap: "10px", alignItems: "flex-start", flexDirection: { xs: "column", sm: "row" } }}>
-                  <Typography sx={{ fontWeight: 800, color: "primary.main", minWidth: "90px", fontSize: { xs: "0.85rem", sm: "1rem" } }}>
+                <Box className={styles.infoRow}>
+                  <Typography className={styles.infoLabel}>
                     ⏰ Hours:
                   </Typography>
-                  <Typography sx={{ color: "text.primary", fontWeight: 600, fontSize: { xs: "0.85rem", sm: "0.95rem" } }}>
+                  <Typography className={styles.hoursText}>
                     Monday - Saturday (8:00 AM to 7:00 PM)
                   </Typography>
                 </Box>

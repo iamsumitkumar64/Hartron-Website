@@ -101,3 +101,30 @@
     align-items: stretch;
   }
 }
+
+.cardTitle {
+  word-break: break-word;
+  margin-bottom: 8px;
+}
+
+.cardDescription {
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.timeIcon {
+  font-size: 18px;
+}
+
+.enquireBtn {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.syllabusBtn {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+

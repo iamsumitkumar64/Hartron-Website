@@ -57,15 +57,15 @@ export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: st
 
   return (
     <Box className={styles.container}>
-      <Typography variant="h3" sx={{ mb: 1, wordBreak: "break-word" }}>
+      <Typography variant="h3" className={styles.title}>
         Admission / Course Enquiry
       </Typography>
-      <Typography variant="body1" sx={{ color: "text.secondary", mb: 3, wordBreak: "break-word" }}>
+      <Typography variant="body1" className={styles.subtitle}>
         Fill out your details to receive course syllabus, batch timings, and fee guidance from Director Vijender Singh Nara's team at SD College Panipat.
       </Typography>
 
       {submitted && (
-        <Alert severity="success" sx={{ mb: 3, borderRadius: 2, fontWeight: 700 }}>
+        <Alert severity="success" className={styles.successAlert}>
           Thank you! Your enquiry has been received. Director Vijender Singh Nara's office at Hartron SD College Panipat will call you shortly.
         </Alert>
       )}
@@ -78,7 +78,7 @@ export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: st
           error={!!errors.name}
           helperText={errors.name?.message}
           variant="outlined"
-          sx={{ minWidth: 0, maxWidth: "100%", width: "100%", boxSizing: "border-box" }}
+          className={styles.fullWidthInput}
         />
 
         <TextField
@@ -88,7 +88,7 @@ export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: st
           error={!!errors.phone}
           helperText={errors.phone?.message}
           variant="outlined"
-          sx={{ minWidth: 0, maxWidth: "100%", width: "100%", boxSizing: "border-box" }}
+          className={styles.fullWidthInput}
         />
 
         <TextField
@@ -99,7 +99,7 @@ export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: st
           error={!!errors.email}
           helperText={errors.email?.message}
           variant="outlined"
-          sx={{ minWidth: 0, maxWidth: "100%", width: "100%", boxSizing: "border-box" }}
+          className={styles.fullWidthInput}
         />
 
         <TextField
@@ -111,21 +111,14 @@ export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: st
           error={!!errors.course_slug}
           helperText={errors.course_slug?.message}
           variant="outlined"
-          sx={{ minWidth: 0, maxWidth: "100%", width: "100%", boxSizing: "border-box" }}
+          className={styles.fullWidthInput}
           slotProps={{
             select: {
-              sx: {
-                whiteSpace: "normal",
-                wordBreak: "break-word",
-                "& .MuiSelect-select": {
-                  whiteSpace: "normal",
-                  wordBreak: "break-word",
-                },
-              },
+              className: styles.selectInput,
               MenuProps: {
                 slotProps: {
                   paper: {
-                    style: { maxWidth: 300 },
+                    className: styles.selectMenuPaper,
                   },
                 },
               },
@@ -136,12 +129,7 @@ export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: st
             <MenuItem
               key={option.value}
               value={option.value}
-              sx={{
-                whiteSpace: "normal",
-                wordBreak: "break-word",
-                fontSize: { xs: "0.85rem", sm: "0.95rem" },
-                py: 1,
-              }}
+              className={styles.menuItemOption}
             >
               {option.label}
             </MenuItem>
@@ -155,18 +143,18 @@ export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: st
           fullWidth
           {...register("message")}
           variant="outlined"
-          sx={{ minWidth: 0, maxWidth: "100%", width: "100%", boxSizing: "border-box" }}
+          className={styles.fullWidthInput}
         />
 
-        <Box sx={{ display: "flex", gap: 1.5, flexDirection: { xs: "column", sm: "row" }, mt: 1, width: "100%", alignItems: "center" }}>
+        <Box className={styles.btnGroup}>
           <Button
             type="submit"
             variant="contained"
             color="primary"
             isLoading={submitting}
             loadingText="Submitting..."
-            endIcon={<SendIcon sx={{ fontSize: "1rem !important" }} />}
-            sx={{ flex: 1, width: "100%", py: 1, fontSize: { xs: "0.825rem", sm: "0.875rem" }, whiteSpace: "nowrap" }}
+            endIcon={<SendIcon className={styles.sendIcon} />}
+            className={styles.submitBtn}
           >
             Submit Enquiry
           </Button>
@@ -174,22 +162,8 @@ export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: st
           <Button
             variant="outlined"
             onClick={handleWhatsAppSubmit}
-            startIcon={<WhatsAppIcon sx={{ fontSize: "1.1rem !important" }} />}
-            sx={{
-              borderColor: "#16a34a",
-              color: "#16a34a",
-              fontWeight: 800,
-              py: 1,
-              flex: 1,
-              width: "100%",
-              fontSize: { xs: "0.825rem", sm: "0.875rem" },
-              whiteSpace: "nowrap",
-              justifyContent: "center",
-              "&:hover": {
-                borderColor: "#15803d",
-                backgroundColor: "rgba(22, 163, 74, 0.08)",
-              },
-            }}
+            startIcon={<WhatsAppIcon className={styles.whatsappIcon} />}
+            className={styles.whatsappBtn}
           >
             WhatsApp Inquiry
           </Button>
