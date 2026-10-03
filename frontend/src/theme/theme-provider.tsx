@@ -28,8 +28,8 @@ export default function AppThemeProvider({ children }: { children: React.ReactNo
     const savedMode = localStorage.getItem("hartron_theme_mode") as ThemeMode | null;
     if (savedMode === "light" || savedMode === "dark") {
       setModeState(savedMode);
-    } else if (prefersDarkMode) {
-      setModeState("dark");
+    } else {
+      setModeState(prefersDarkMode ? "dark" : "light");
     }
   }, [prefersDarkMode]);
 
