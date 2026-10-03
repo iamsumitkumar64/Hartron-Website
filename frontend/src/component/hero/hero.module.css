@@ -1,0 +1,239 @@
+.heroSection {
+  background: linear-gradient(180deg, #ffffff 0%, #eff6ff 100%);
+  padding: 64px 24px 80px 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.leftContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.accreditationBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1e40af;
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  width: fit-content;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.heroHighlight {
+  color: #1e40af;
+  background: linear-gradient(120deg, #1e40af, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroSubtitle {
+  font-size: 1.15rem;
+  color: #334155;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.heroCtas {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.primaryCta {
+  background-color: #1e40af !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  font-size: 1.05rem !important;
+  padding: 12px 28px !important;
+  border-radius: 10px !important;
+  box-shadow: 0 10px 15px -3px rgba(30, 64, 175, 0.3) !important;
+}
+
+.secondaryCta {
+  border-color: #2563eb !important;
+  color: #2563eb !important;
+  font-weight: 800 !important;
+  font-size: 1.05rem !important;
+  padding: 12px 24px !important;
+  border-radius: 10px !important;
+  background-color: #ffffff !important;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+  padding-top: 24px;
+  border-top: 1px solid #cbd5e1;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.statNumber {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: #1e40af;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #475569;
+}
+
+.rightCard {
+  background: #ffffff;
+  border: 1px solid #bfdbfe;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #eff6ff;
+}
+
+.directorAvatar {
+  width: 56px;
+  height: 56px;
+  background-color: #1e40af;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.cardFeatureList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cardFeatureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.checkDot {
+  background-color: #dbeafe;
+  color: #1e40af;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 960px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .heroTitle {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroSection {
+    padding: 32px 12px 40px 12px;
+  }
+  .heroTitle {
+    font-size: 1.65rem;
+    line-height: 1.2;
+  }
+  .heroSubtitle {
+    font-size: 0.95rem;
+  }
+  .heroCtas {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 10px;
+  }
+  .primaryCta, .secondaryCta {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+    font-size: 0.95rem !important;
+    padding: 10px 16px !important;
+  }
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .statNumber {
+    font-size: 1.5rem;
+  }
+  .rightCard {
+    padding: 16px 12px;
+  }
+  .accreditationBadge {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .heroSection {
+    padding: 24px 8px 32px 8px;
+  }
+  .heroTitle {
+    font-size: 1.4rem;
+  }
+  .heroSubtitle {
+    font-size: 0.85rem;
+  }
+  .primaryCta, .secondaryCta {
+    font-size: 0.85rem !important;
+    padding: 8px 12px !important;
+  }
+  .statNumber {
+    font-size: 1.35rem;
+  }
+  .rightCard {
+    padding: 12px 8px;
+  }
+}

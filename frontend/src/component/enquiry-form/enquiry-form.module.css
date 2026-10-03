@@ -1,0 +1,82 @@
+.container {
+  background-color: #ffffff;
+  border: 1px solid #bfdbfe;
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: 0 10px 25px -5px rgba(30, 64, 175, 0.08);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: #0f172a;
+  margin-bottom: 8px;
+  word-break: break-word;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: #475569;
+  margin-bottom: 24px;
+  word-break: break-word;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.submitBtn {
+  background-color: #1e40af !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  font-size: 1.05rem !important;
+  padding: 12px 24px !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 6px -1px rgba(30, 64, 175, 0.25) !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.submitBtn:hover {
+  background-color: #1d4ed8 !important;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 16px 12px;
+    border-radius: 14px;
+  }
+  .title {
+    font-size: 1.25rem;
+  }
+  .subtitle {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  .submitBtn, .whatsappBtn {
+    width: 100% !important;
+    font-size: 0.85rem !important;
+    padding: 10px 10px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding: 14px 8px;
+  }
+  .title {
+    font-size: 1.1rem;
+  }
+  .subtitle {
+    font-size: 0.775rem;
+  }
+}

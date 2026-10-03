@@ -1,0 +1,142 @@
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  border-color: #2563eb;
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.1);
+}
+
+.topBadge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.itBadge {
+  background-color: #1e40af;
+  color: #ffffff;
+}
+
+.govtBadge {
+  background-color: #eff6ff;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+}
+
+.title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.durationBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  background-color: #f8fafc;
+  padding: 8px 12px;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.highlightsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: #334155;
+  font-weight: 600;
+}
+
+.checkIcon {
+  color: #2563eb;
+  font-size: 1.1rem !important;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.footerActions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 20px;
+}
+
+.enrollBtn {
+  flex: 1;
+  background-color: #1e40af !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  border-radius: 8px !important;
+  padding: 10px 16px !important;
+}
+
+.enrollBtn:hover {
+  background-color: #1d4ed8 !important;
+}
+
+.detailBtn {
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+  padding: 10px 16px !important;
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 20px 16px;
+  }
+  .title {
+    font-size: 1.2rem;
+  }
+  .footerActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .enrollBtn, .detailBtn {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+}

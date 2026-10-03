@@ -1,0 +1,192 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.04);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logoBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logoBadge {
+  background-color: #1e40af;
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 6px -1px rgba(30, 64, 175, 0.2);
+  flex-shrink: 0;
+}
+
+.logoTextContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandTitle {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #1e40af;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.brandSubtitle {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #2563eb;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navLink {
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 0.925rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  position: relative;
+  padding: 4px 0;
+  white-space: nowrap;
+}
+
+.navLink:hover {
+  color: #2563eb;
+}
+
+.navLinkActive {
+  color: #1e40af;
+  font-weight: 800;
+}
+
+.navLinkActive::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background-color: #2563eb;
+  border-radius: 2px;
+}
+
+.ctaBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.callBtn {
+  border-color: #1e40af !important;
+  color: #1e40af !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+  padding: 6px 14px !important;
+}
+
+.enrollBtn {
+  background-color: #1e40af !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+  padding: 6px 16px !important;
+  box-shadow: 0 4px 6px -1px rgba(30, 64, 175, 0.2) !important;
+  white-space: nowrap !important;
+}
+
+.enrollBtn:hover {
+  background-color: #1d4ed8 !important;
+}
+
+@media (max-width: 960px) {
+  .navLinks {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .brandSubtitle {
+    display: none;
+  }
+  .brandTitle {
+    font-size: 1rem;
+  }
+  .logoBadge {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+    border-radius: 6px;
+  }
+  .container {
+    padding: 6px 10px;
+  }
+  .enrollBtn {
+    font-size: 0.75rem !important;
+    padding: 5px 10px !important;
+  }
+  .ctaBox {
+    gap: 4px;
+  }
+}
+
+@media (max-width: 360px) {
+  .brandTitle {
+    font-size: 0.9rem;
+  }
+  .enrollBtn {
+    font-size: 0.7rem !important;
+    padding: 4px 8px !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    padding: 4px 6px;
+  }
+  .brandTitle {
+    font-size: 0.825rem;
+  }
+  .logoBadge {
+    width: 28px;
+    height: 28px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+  }
+  .enrollBtn {
+    font-size: 0.65rem !important;
+    padding: 3px 6px !important;
+  }
+}
