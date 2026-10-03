@@ -8,8 +8,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import PhoneIcon from "@mui/icons-material/Phone";
 import SchoolIcon from "@mui/icons-material/School";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import LightModeIcon from "@mui/icons-material/LightMode";
 import TopBanner from "../top-banner/top-banner";
 import Button from "../common/button";
+import { useColorMode } from "@/theme/theme-provider";
 import styles from "./navbar.module.css";
 
 const NAV_ITEMS = [
@@ -23,6 +26,7 @@ const NAV_ITEMS = [
 export default function Navbar() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { mode, toggleColorMode } = useColorMode();
 
   const toggleDrawer = (open: boolean) => () => {
     setMobileOpen(open);
@@ -41,7 +45,7 @@ export default function Navbar() {
                 HARTRON
               </Typography>
               <Typography component="span" className={styles.brandSubtitle}>
-                Skill Centre • SD College Panipat
+                Skill Centre • Panipat
               </Typography>
             </Box>
           </Link>
@@ -64,6 +68,17 @@ export default function Navbar() {
 
           {/* CTA Box */}
           <Box className={styles.ctaBox}>
+            {/* Theme Toggle Button Desktop */}
+            <IconButton
+              onClick={toggleColorMode}
+              color="inherit"
+              sx={{ display: { xs: "none", md: "inline-flex" }, border: "1px solid", borderColor: "var(--border-color)", p: 1 }}
+              aria-label="Toggle light/dark theme"
+              title={`Switch to ${mode === "light" ? "Dark" : "Light"} Mode`}
+            >
+              {mode === "dark" ? <LightModeIcon sx={{ color: "#fbbf24" }} /> : <DarkModeIcon sx={{ color: "var(--primary-main)" }} />}
+            </IconButton>
+
             <Button
               variant="outlined"
               className={styles.callBtn}
@@ -85,7 +100,7 @@ export default function Navbar() {
             </Link>
 
             <IconButton
-              sx={{ display: { md: "none" }, color: "#1e40af", ml: 1 }}
+              sx={{ display: { md: "none" }, color: "var(--primary-main)", ml: 0.5 }}
               onClick={toggleDrawer(true)}
               aria-label="open drawer"
             >
@@ -105,9 +120,11 @@ export default function Navbar() {
             sx: {
               width: { xs: "85vw", sm: 320 },
               maxWidth: 320,
-              borderRadius: 0, // Sharp square edges for drawer container
-              backgroundColor: "#ffffff",
-              boxShadow: "-8px 0 30px rgba(15, 23, 42, 0.15)",
+              borderRadius: 0,
+              backgroundColor: "background.paper",
+              backgroundImage: "none",
+              color: "text.primary",
+              boxShadow: "var(--shadow-lg)",
             },
           },
         }}
@@ -117,8 +134,9 @@ export default function Navbar() {
           <Box
             sx={{
               p: 2.5,
-              backgroundColor: "#ffffff",
-              borderBottom: "1px solid #e2e8f0",
+              backgroundColor: "background.paper",
+              borderBottom: "1px solid",
+              borderColor: "divider",
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
@@ -127,8 +145,8 @@ export default function Navbar() {
             <Box sx={{ display: "flex", alignItems: "center", gap: 1.5 }}>
               <Box
                 sx={{
-                  backgroundColor: "#1e40af",
-                  color: "#ffffff",
+                  backgroundColor: "primary.main",
+                  color: "var(--text-on-dark)",
                   width: 34,
                   height: 34,
                   borderRadius: "8px",
@@ -142,22 +160,28 @@ export default function Navbar() {
                 H
               </Box>
               <Box>
-                <Typography variant="h6" sx={{ color: "#0f172a", fontWeight: 900, fontSize: "1rem", lineHeight: 1.2 }}>
+                <Typography variant="h6" sx={{ color: "text.primary", fontWeight: 900, fontSize: "1rem", lineHeight: 1.2 }}>
                   HARTRON
                 </Typography>
-                <Typography variant="caption" sx={{ color: "#2563eb", fontSize: "0.725rem", fontWeight: 700 }}>
-                  SD College Panipat
+                <Typography variant="caption" sx={{ color: "primary.main", fontSize: "0.725rem", fontWeight: 700 }}>
+                  Panipat Campus
                 </Typography>
               </Box>
             </Box>
 
-            <IconButton onClick={toggleDrawer(false)} sx={{ color: "#64748b" }}>
-              <CloseIcon />
-            </IconButton>
+            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              {/* Theme Toggle Button Mobile Sidebar */}
+              <IconButton onClick={toggleColorMode} color="inherit" size="small" aria-label="Toggle theme">
+                {mode === "dark" ? <LightModeIcon sx={{ color: "#fbbf24" }} /> : <DarkModeIcon sx={{ color: "primary.main" }} />}
+              </IconButton>
+              <IconButton onClick={toggleDrawer(false)} sx={{ color: "text.secondary" }}>
+                <CloseIcon />
+              </IconButton>
+            </Box>
           </Box>
 
           {/* Nav List */}
-          <Box sx={{ flex: 1, p: 2, overflowY: "auto" }}>
+          <Box sx={{ flex: 1, p: 2, overflowY: "auto", backgroundColor: "background.default" }}>
             <List disablePadding>
               {NAV_ITEMS.map((item) => {
                 const isActive = pathname === item.href;
@@ -172,16 +196,17 @@ export default function Navbar() {
                           px: 2,
                           transition: "all 0.2s",
                           "&.Mui-selected": {
-                            backgroundColor: "#eff6ff",
-                            color: "#1e40af",
-                            borderLeft: "4px solid #1e40af",
+                            backgroundColor: "var(--primary-bg)",
+                            color: "primary.main",
+                            borderLeft: "4px solid",
+                            borderColor: "primary.main",
                             "& .MuiTypography-root": {
                               fontWeight: 800,
-                              color: "#1e40af",
+                              color: "primary.main",
                             },
                           },
                           "&:hover": {
-                            backgroundColor: "#f8fafc",
+                            backgroundColor: "background.paper",
                           },
                         }}
                       >
@@ -192,7 +217,7 @@ export default function Navbar() {
                               sx: {
                                 fontWeight: isActive ? 800 : 700,
                                 fontSize: "0.95rem",
-                                color: isActive ? "#1e40af" : "#334155",
+                                color: isActive ? "primary.main" : "text.primary",
                               },
                             },
                           }}
@@ -206,26 +231,27 @@ export default function Navbar() {
           </Box>
 
           {/* Drawer Footer CTA */}
-          <Box sx={{ p: 2.5, borderTop: "1px solid #e2e8f0", backgroundColor: "#f8fafc" }}>
+          <Box sx={{ p: 2.5, borderTop: "1px solid", borderColor: "divider", backgroundColor: "background.paper" }}>
             <Link href="/contact" style={{ textDecoration: "none", width: "100%" }} onClick={toggleDrawer(false)}>
               <Button
                 variant="contained"
                 fullWidth
                 startIcon={<SchoolIcon />}
                 sx={{
-                  backgroundColor: "#1e40af",
+                  backgroundColor: "primary.main",
+                  color: "#ffffff",
                   fontWeight: 800,
                   py: 1.4,
-                  borderRadius: "10px", // Keeps border-radius on buttons!
+                  borderRadius: "10px",
                   fontSize: "0.95rem",
-                  boxShadow: "0 4px 12px rgba(30, 64, 175, 0.25)",
+                  boxShadow: "var(--shadow-md)",
                 }}
               >
                 Apply / Enquiry Now
               </Button>
             </Link>
 
-            <Typography variant="caption" sx={{ display: "block", textAlign: "center", mt: 1.5, color: "#64748b", fontWeight: 600 }}>
+            <Typography variant="caption" sx={{ display: "block", textAlign: "center", mt: 1.5, color: "text.secondary", fontWeight: 600 }}>
               Director Vijender Singh Nara • +91 90341-27171
             </Typography>
           </Box>

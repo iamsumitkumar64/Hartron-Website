@@ -60,7 +60,7 @@ export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: st
       <Typography variant="h3" sx={{ mb: 1, wordBreak: "break-word" }}>
         Admission / Course Enquiry
       </Typography>
-      <Typography variant="body1" sx={{ color: "#475569", mb: 3, wordBreak: "break-word" }}>
+      <Typography variant="body1" sx={{ color: "text.secondary", mb: 3, wordBreak: "break-word" }}>
         Fill out your details to receive course syllabus, batch timings, and fee guidance from Director Vijender Singh Nara's team at SD College Panipat.
       </Typography>
 
@@ -158,15 +158,15 @@ export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: st
           sx={{ minWidth: 0, maxWidth: "100%", width: "100%", boxSizing: "border-box" }}
         />
 
-        <Box sx={{ display: "flex", gap: 2, flexDirection: { xs: "column", sm: "row" }, mt: 1, width: "100%", alignItems: "stretch" }}>
+        <Box sx={{ display: "flex", gap: 1.5, flexDirection: { xs: "column", sm: "row" }, mt: 1, width: "100%", alignItems: "center" }}>
           <Button
             type="submit"
             variant="contained"
             color="primary"
             isLoading={submitting}
             loadingText="Submitting..."
-            endIcon={<SendIcon />}
-            sx={{ flex: 1, minWidth: { sm: "180px" }, py: 1.5, fontSize: "1rem" }}
+            endIcon={<SendIcon sx={{ fontSize: "1rem !important" }} />}
+            sx={{ flex: 1, width: "100%", py: 1, fontSize: { xs: "0.825rem", sm: "0.875rem" }, whiteSpace: "nowrap" }}
           >
             Submit Enquiry
           </Button>
@@ -174,19 +174,20 @@ export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: st
           <Button
             variant="outlined"
             onClick={handleWhatsAppSubmit}
-            startIcon={<WhatsAppIcon />}
+            startIcon={<WhatsAppIcon sx={{ fontSize: "1.1rem !important" }} />}
             sx={{
               borderColor: "#16a34a",
               color: "#16a34a",
               fontWeight: 800,
-              py: 1.5,
+              py: 1,
               flex: 1,
-              minWidth: { sm: "180px" },
-              fontSize: "1rem",
+              width: "100%",
+              fontSize: { xs: "0.825rem", sm: "0.875rem" },
+              whiteSpace: "nowrap",
               justifyContent: "center",
               "&:hover": {
                 borderColor: "#15803d",
-                backgroundColor: "#f0fdf4",
+                backgroundColor: "rgba(22, 163, 74, 0.08)",
               },
             }}
           >

@@ -14,10 +14,10 @@ export default function Footer() {
         <Box className={styles.brandCol}>
           <Box>
             <Typography className={styles.logoTitle}>HARTRON SKILL CENTRE</Typography>
-            <Typography className={styles.subTitle}>SD College Panipat Campus</Typography>
+            <Typography className={styles.subTitle}>Panipat Campus</Typography>
           </Box>
           <Typography className={styles.description}>
-            Authorized government computer training center near SD College Panipat. Under the leadership of Director Vijender Singh Nara, we specialize in government typing speed exams, IT industry web development, cybersecurity, and DCA courses.
+            Authorized government computer training center in Panipat. Under the leadership of Director Vijender Singh Nara, we specialize in government typing speed exams, IT industry web development, cybersecurity, and DCA courses.
           </Typography>
         </Box>
 
@@ -67,25 +67,25 @@ export default function Footer() {
           <Typography className={styles.colTitle}>Contact & Location</Typography>
           <Box className={styles.contactInfo}>
             <Box className={styles.infoItem}>
-              <LocationOnIcon sx={{ color: "#60a5fa", fontSize: 20 }} />
+              <LocationOnIcon sx={{ color: "primary.main", fontSize: 20 }} />
               <Link href="/contact" className={styles.footerLink} style={{ color: "inherit", margin: 0 }}>
                 Opp. SD College Road / Near SD Sr. Sec. School, Panipat, Haryana - 132103
               </Link>
             </Box>
             <Box className={styles.infoItem}>
-              <PhoneIcon sx={{ color: "#60a5fa", fontSize: 20 }} />
+              <PhoneIcon sx={{ color: "primary.main", fontSize: 20 }} />
               <a href="tel:+919034127171" className={styles.footerLink} style={{ color: "inherit", margin: 0 }}>
                 Director Vijender Singh Nara: +91 90341-27171
               </a>
             </Box>
             <Box className={styles.infoItem}>
-              <EmailIcon sx={{ color: "#60a5fa", fontSize: 20 }} />
+              <EmailIcon sx={{ color: "primary.main", fontSize: 20 }} />
               <a href="mailto:info@hartronpanipat.com" className={styles.footerLink} style={{ color: "inherit", margin: 0 }}>
                 info@hartronpanipat.com
               </a>
             </Box>
             <Box className={styles.infoItem}>
-              <AccessTimeIcon sx={{ color: "#60a5fa", fontSize: 20 }} />
+              <AccessTimeIcon sx={{ color: "primary.main", fontSize: 20 }} />
               <span>Mon - Sat: 8:00 AM - 7:00 PM</span>
             </Box>
           </Box>
@@ -94,11 +94,11 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <Box className={styles.bottomBar}>
-        <Typography variant="body2" sx={{ color: "#cbd5e1", fontSize: "0.85rem" }}>
-          © {new Date().getFullYear()} Hartron Skill Centre SD College Panipat. Director: Vijender Singh Nara. All rights reserved.
+        <Typography variant="body2" sx={{ color: "text.secondary", fontSize: "0.85rem" }}>
+          © {new Date().getFullYear()} Hartron Skill Centre Panipat. Director: Vijender Singh Nara. All rights reserved.
         </Typography>
-        <Typography variant="body2" sx={{ color: "#cbd5e1", fontSize: "0.85rem" }}>
-          Developed by Xubble AI
+        <Typography variant="body2" sx={{ color: "text.secondary", fontSize: "0.85rem" }}>
+          Developed by Us
         </Typography>
       </Box>
     </footer>

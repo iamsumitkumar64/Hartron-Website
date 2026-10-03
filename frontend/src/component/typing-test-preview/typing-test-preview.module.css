@@ -1,7 +1,8 @@
 .section {
   padding: 64px 16px;
-  background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
-  color: #ffffff;
+  background-color: var(--bg-default);
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .container {
@@ -23,9 +24,9 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: #ffffff;
+  background-color: var(--primary-bg);
+  border: 1px solid var(--border-color);
+  color: var(--primary-main);
   font-weight: 800;
   font-size: 0.8rem;
   padding: 6px 14px;
@@ -41,8 +42,8 @@
 }
 
 .featureBox {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: var(--bg-paper);
+  border: 1px solid var(--border-color);
   padding: 14px;
   border-radius: 12px;
 }
@@ -50,21 +51,22 @@
 .featureTitle {
   font-size: 0.95rem;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--text-primary);
   margin-bottom: 2px;
 }
 
 .featureSub {
   font-size: 0.8rem;
-  color: #dbeafe;
+  color: var(--text-secondary);
 }
 
 .softwareCard {
-  background-color: #ffffff;
-  color: #0f172a;
+  background-color: var(--bg-paper);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 16px;
   padding: 28px;
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-md);
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -74,13 +76,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #eff6ff;
+  border-bottom: 2px solid var(--border-color);
   padding-bottom: 12px;
 }
 
 .metricBadge {
-  background-color: #eff6ff;
-  color: #1e40af;
+  background-color: var(--primary-bg);
+  color: var(--primary-main);
   font-weight: 900;
   padding: 4px 10px;
   border-radius: 8px;
@@ -88,21 +90,21 @@
 }
 
 .samplePassage {
-  background-color: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background-color: var(--bg-default);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   padding: 16px;
   font-family: monospace;
   font-size: 0.9rem;
   line-height: 1.6;
-  color: #334155;
+  color: var(--text-secondary);
   word-break: break-word;
 }
 
 .typedText {
-  color: #1e40af;
+  color: var(--primary-main);
   font-weight: 700;
-  background-color: #dbeafe;
+  background-color: var(--primary-bg);
   padding: 0 2px;
 }
 

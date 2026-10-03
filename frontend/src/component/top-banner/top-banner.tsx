@@ -8,7 +8,7 @@ import styles from "./top-banner.module.css";
 
 export default function TopBanner() {
   const announcementText =
-    "🎯 Admissions Open 2025-26 Batch • Hartron Skill Centre SD College Panipat • Director: Vijender Singh Nara • Govt Recognized DCA & Typing Certification • IT Industry Grade Web Dev & Cybersecurity • Call +91 90341-27171 for Batch Timings & Fee Details";
+    "🎯 Admissions Open 2025-26 Batch • Hartron Skill Centre Panipat • Director: Vijender Singh Nara • Govt Recognized DCA & Typing Certification • IT Industry Grade Web Dev & Cybersecurity • Call +91 90341-27171 for Batch Timings & Fee Details";
 
   return (
     <Box className={styles.banner}>
@@ -22,11 +22,11 @@ export default function TopBanner() {
           <Box className={styles.marqueeContainer}>
             <Box className={styles.marqueeTrack}>
               <Typography component="span" className={styles.text}>
-                <VerifiedIcon sx={{ fontSize: 14, verticalAlign: "middle", mr: 0.5, color: "#93c5fd" }} />
+                <VerifiedIcon sx={{ fontSize: 14, verticalAlign: "middle", mr: 0.5, color: "primary.main" }} />
                 {announcementText}
               </Typography>
               <Typography component="span" className={styles.text}>
-                <VerifiedIcon sx={{ fontSize: 14, verticalAlign: "middle", mr: 0.5, color: "#93c5fd" }} />
+                <VerifiedIcon sx={{ fontSize: 14, verticalAlign: "middle", mr: 0.5, color: "primary.main" }} />
                 {announcementText}
               </Typography>
             </Box>

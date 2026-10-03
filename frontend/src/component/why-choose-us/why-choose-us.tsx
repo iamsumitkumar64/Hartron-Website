@@ -55,10 +55,10 @@ export default function WhyChooseUs() {
           {FEATURES.map((feature, idx) => (
             <Box key={idx} className={styles.card}>
               <Box className={styles.iconBox}>{feature.icon}</Box>
-              <Typography variant="h4" sx={{ color: "#0f172a" }}>
+              <Typography variant="h4" sx={{ color: "text.primary" }}>
                 {feature.title}
               </Typography>
-              <Typography variant="body2" sx={{ color: "#475569", lineHeight: 1.6 }}>
+              <Typography variant="body2" sx={{ color: "text.secondary", lineHeight: 1.6 }}>
                 {feature.text}
               </Typography>
             </Box>

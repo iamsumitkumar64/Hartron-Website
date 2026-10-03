@@ -21,7 +21,7 @@ export default function Hero() {
             <span className={styles.heroHighlight}>Govt Computer Diplomas</span> & IT Industry Skills
           </Typography>
 
-          <Typography variant="body1" sx={{ color: "#334155", lineHeight: 1.6 }}>
+          <Typography variant="body1" sx={{ color: "text.secondary", lineHeight: 1.6 }}>
             Transform your career right next to SD College, Panipat. Specialized training in{" "}
             <strong>Government Typing Speed Tests (HSSC/HKRN)</strong>, <strong>Web Development</strong>,{" "}
             <strong>Cybersecurity</strong>, and <strong>DCA Computer Courses</strong> with 100% practical lab practice.
@@ -42,7 +42,7 @@ export default function Hero() {
               <Button
                 variant="outlined"
                 startIcon={<KeyboardIcon />}
-                sx={{ py: 1.5, px: 3, fontSize: "1rem", backgroundColor: "#ffffff" }}
+                sx={{ py: 1.5, px: 3, fontSize: "1rem", backgroundColor: "background.paper" }}
               >
                 Govt Typing Practice
               </Button>
@@ -71,44 +71,44 @@ export default function Hero() {
           <Box className={styles.cardHeader}>
             <Box className={styles.directorAvatar}>VN</Box>
             <Box>
-              <Typography variant="h6" sx={{ fontWeight: 800, color: "#0f172a" }}>
+              <Typography variant="h6" sx={{ fontWeight: 800, color: "text.primary" }}>
                 Director's Vision
               </Typography>
-              <Typography variant="body2" sx={{ color: "#2563eb", fontWeight: 700 }}>
+              <Typography variant="body2" sx={{ color: "primary.main", fontWeight: 700 }}>
                 Vijender Singh Nara
               </Typography>
             </Box>
           </Box>
 
-          <Typography variant="body2" sx={{ color: "#334155", fontStyle: "italic", lineHeight: 1.6 }}>
-            "At Hartron Skill Centre SD College Panipat, our commitment is to equip every student with high-speed exam typing precision and high-demand IT software skills to guarantee career success."
+          <Typography variant="body2" sx={{ color: "text.secondary", fontStyle: "italic", lineHeight: 1.6 }}>
+            "At Hartron Skill Centre Panipat, our commitment is to equip every student with high-speed exam typing precision and high-demand IT software skills to guarantee career success."
           </Typography>
 
           <Box className={styles.cardFeatureList}>
             <Box className={styles.cardFeatureItem}>
               <span className={styles.checkDot}>✓</span>
-              <Typography variant="body2" sx={{ fontWeight: 700, color: "#0f172a" }}>
+              <Typography variant="body2" sx={{ fontWeight: 700, color: "text.primary" }}>
                 HSSC / HKRN / SSC Government Typing Test Software Drills
               </Typography>
             </Box>
 
             <Box className={styles.cardFeatureItem}>
               <span className={styles.checkDot}>✓</span>
-              <Typography variant="body2" sx={{ fontWeight: 700, color: "#0f172a" }}>
+              <Typography variant="body2" sx={{ fontWeight: 700, color: "text.primary" }}>
                 IT Company Industry Grade Web Development & Cybersecurity
               </Typography>
             </Box>
 
             <Box className={styles.cardFeatureItem}>
               <span className={styles.checkDot}>✓</span>
-              <Typography variant="body2" sx={{ fontWeight: 700, color: "#0f172a" }}>
+              <Typography variant="body2" sx={{ fontWeight: 700, color: "text.primary" }}>
                 Government Recognized DCA & Tally Prime Certificates
               </Typography>
             </Box>
 
             <Box className={styles.cardFeatureItem}>
               <span className={styles.checkDot}>✓</span>
-              <Typography variant="body2" sx={{ fontWeight: 700, color: "#0f172a" }}>
+              <Typography variant="body2" sx={{ fontWeight: 700, color: "text.primary" }}>
                 Prime Location: SD College Road, Panipat (Flexi Timings)
               </Typography>
             </Box>

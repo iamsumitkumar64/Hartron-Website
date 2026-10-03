@@ -134,15 +134,16 @@ export default function HomePage() {
           component="section"
           sx={{
             padding: { xs: "32px 14px", sm: "64px 24px" },
-            backgroundColor: "#ffffff",
-            borderBottom: "1px solid #e2e8f0",
+            backgroundColor: "background.paper",
+            borderBottom: "1px solid",
+            borderColor: "divider",
           }}
         >
           <Box sx={{ maxWidth: 1280, margin: "0 auto" }}>
             <Box sx={{ textAlign: "center", marginBottom: { xs: "24px", sm: "48px" } }}>
               <Typography
                 sx={{
-                  color: "#2563eb",
+                  color: "primary.main",
                   fontWeight: 800,
                   fontSize: { xs: "0.8rem", sm: "0.9rem" },
                   textTransform: "uppercase",
@@ -154,7 +155,7 @@ export default function HomePage() {
               </Typography>
               <Typography
                 variant="h2"
-                sx={{ fontSize: { xs: "1.35rem", sm: "1.85rem", md: "2.25rem" }, fontWeight: 900, color: "#0f172a", wordBreak: "break-word" }}
+                sx={{ fontSize: { xs: "1.35rem", sm: "1.85rem", md: "2.25rem" }, fontWeight: 900, color: "text.primary", wordBreak: "break-word" }}
               >
                 Government Recognized & IT Industry Grade Courses
               </Typography>
@@ -191,7 +192,7 @@ export default function HomePage() {
           component="section"
           sx={{
             padding: { xs: "32px 14px", sm: "64px 24px" },
-            backgroundColor: "#ffffff",
+            backgroundColor: "background.default",
             boxSizing: "border-box",
             width: "100%",
             overflow: "hidden",
@@ -216,8 +217,9 @@ export default function HomePage() {
             <Box
               sx={{
                 minWidth: 0,
-                backgroundColor: "#f8fafc",
-                border: "1px solid #e2e8f0",
+                backgroundColor: "background.paper",
+                border: "1px solid",
+                borderColor: "divider",
                 borderRadius: { xs: "14px", sm: "20px" },
                 padding: { xs: "20px 14px", sm: "36px" },
                 display: "flex",
@@ -227,17 +229,17 @@ export default function HomePage() {
                 width: "100%",
               }}
             >
-              <Typography variant="h4" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "1.35rem", sm: "2rem" }, wordBreak: "break-word" }}>
+              <Typography variant="h4" sx={{ fontWeight: 900, color: "text.primary", fontSize: { xs: "1.35rem", sm: "2rem" }, wordBreak: "break-word" }}>
                 Visit Campus Near SD College Panipat
               </Typography>
 
-              <Typography sx={{ color: "#475569", lineHeight: 1.6, fontSize: { xs: "0.875rem", sm: "1rem" }, wordBreak: "break-word" }}>
+              <Typography sx={{ color: "text.secondary", lineHeight: 1.6, fontSize: { xs: "0.875rem", sm: "1rem" }, wordBreak: "break-word" }}>
                 Directly walk into our campus opposite SD College Road, Panipat to inspect our high-speed practical computer labs, meet Director Vijender Singh Nara, and get personalized course guidance.
               </Typography>
 
               <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: "14px", sm: "16px" } }}>
                 <Box sx={{ display: "flex", gap: "10px", alignItems: "flex-start", flexDirection: { xs: "column", sm: "row" } }}>
-                  <Typography sx={{ fontWeight: 800, color: "#1e40af", minWidth: "90px", fontSize: { xs: "0.85rem", sm: "1rem" } }}>
+                  <Typography sx={{ fontWeight: 800, color: "primary.main", minWidth: "90px", fontSize: { xs: "0.85rem", sm: "1rem" } }}>
                     📍 Address:
                   </Typography>
                   <Link
@@ -246,11 +248,11 @@ export default function HomePage() {
                   >
                     <Typography
                       sx={{
-                        color: "#1e293b",
+                        color: "text.primary",
                         fontWeight: 600,
                         fontSize: { xs: "0.85rem", sm: "0.95rem" },
                         wordBreak: "break-word",
-                        "&:hover": { color: "#2563eb", textDecoration: "underline" },
+                        "&:hover": { color: "primary.main", textDecoration: "underline" },
                       }}
                     >
                       Hartron Skill Centre, Opp. SD College Road / Near SD Sr. Sec. School, Panipat, Haryana - 132103
@@ -259,7 +261,7 @@ export default function HomePage() {
                 </Box>
 
                 <Box sx={{ display: "flex", gap: "10px", alignItems: "flex-start", flexDirection: { xs: "column", sm: "row" } }}>
-                  <Typography sx={{ fontWeight: 800, color: "#1e40af", minWidth: "90px", fontSize: { xs: "0.85rem", sm: "1rem" } }}>
+                  <Typography sx={{ fontWeight: 800, color: "primary.main", minWidth: "90px", fontSize: { xs: "0.85rem", sm: "1rem" } }}>
                     📞 Helpline:
                   </Typography>
                   <Box sx={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
@@ -269,10 +271,10 @@ export default function HomePage() {
                     >
                       <Typography
                         sx={{
-                          color: "#1e293b",
+                          color: "text.primary",
                           fontWeight: 700,
                           fontSize: { xs: "0.85rem", sm: "0.95rem" },
-                          "&:hover": { color: "#2563eb", textDecoration: "underline" },
+                          "&:hover": { color: "primary.main", textDecoration: "underline" },
                         }}
                       >
                         +91 90341-27171
@@ -282,10 +284,10 @@ export default function HomePage() {
                 </Box>
 
                 <Box sx={{ display: "flex", gap: "10px", alignItems: "flex-start", flexDirection: { xs: "column", sm: "row" } }}>
-                  <Typography sx={{ fontWeight: 800, color: "#1e40af", minWidth: "90px", fontSize: { xs: "0.85rem", sm: "1rem" } }}>
+                  <Typography sx={{ fontWeight: 800, color: "primary.main", minWidth: "90px", fontSize: { xs: "0.85rem", sm: "1rem" } }}>
                     ⏰ Hours:
                   </Typography>
-                  <Typography sx={{ color: "#1e293b", fontWeight: 600, fontSize: { xs: "0.85rem", sm: "0.95rem" } }}>
+                  <Typography sx={{ color: "text.primary", fontWeight: 600, fontSize: { xs: "0.85rem", sm: "0.95rem" } }}>
                     Monday - Saturday (8:00 AM to 7:00 PM)
                   </Typography>
                 </Box>

@@ -4,9 +4,13 @@
   --bg-default: #ffffff;
   --bg-paper: #f8fafc;
   --bg-subtle: #eff6ff;
+  --bg-dark-surface: #0f172a;
+  --bg-dark-paper: #1e293b;
   --text-primary: #0f172a;
   --text-secondary: #334155;
   --text-muted: #64748b;
+  --text-on-dark: #ffffff;
+  --text-on-dark-subtle: #cbd5e1;
   --primary-main: #1e40af;
   --primary-hover: #1d4ed8;
   --primary-light: #3b82f6;
@@ -27,9 +31,13 @@
   --bg-default: #0f172a;
   --bg-paper: #1e293b;
   --bg-subtle: rgba(59, 130, 246, 0.15);
+  --bg-dark-surface: #020617;
+  --bg-dark-paper: #0f172a;
   --text-primary: #f8fafc;
   --text-secondary: #cbd5e1;
   --text-muted: #94a3b8;
+  --text-on-dark: #ffffff;
+  --text-on-dark-subtle: #94a3b8;
   --primary-main: #3b82f6;
   --primary-hover: #60a5fa;
   --primary-light: #93c5fd;

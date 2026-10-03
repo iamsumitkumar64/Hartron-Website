@@ -80,7 +80,7 @@ export default function CourseCard({
           <Button
             variant="outlined"
             endIcon={<ArrowForwardIcon />}
-            sx={{ py: 1.2, borderColor: "#cbd5e1", color: "#0f172a" }}
+            sx={{ py: 1.2, borderColor: "divider", color: "text.primary" }}
           >
             Syllabus
           </Button>

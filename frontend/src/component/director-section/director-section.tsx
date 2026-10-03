@@ -13,8 +13,9 @@ export default function DirectorSection() {
           <Typography className={styles.name}>Vijender Singh Nara</Typography>
           <Typography className={styles.title}>Director & Head of Institute</Typography>
           <Link href="/contact" style={{ textDecoration: "none" }}>
-            <Box className={styles.locationBadge} sx={{ "&:hover": { backgroundColor: "#1d4ed8" } }}>
-              📍 Hartron Skill Centre • Near SD College Panipat
+            <Box className={styles.locationBadge}>
+              <span>🏢 Hartron Skill Centre</span>
+              <span>📍 Near SD College Panipat</span>
             </Box>
           </Link>
           <Typography variant="body2" sx={{ color: "#ffffff", mt: 1, fontSize: "0.85rem", lineHeight: 1.5, opacity: 0.95 }}>
@@ -31,7 +32,7 @@ export default function DirectorSection() {
 
           <Box className={styles.quoteBox}>
             <FormatQuoteIcon sx={{ color: "#2563eb", verticalAlign: "middle", mr: 1 }} />
-            "Our objective at Hartron Skill Centre SD College Panipat is to build unwavering confidence in every student. Whether you are aiming for a Haryana Govt clerk typing exam or looking to break into full stack web development and cybersecurity, we ensure 100% practical lab practice and individual guidance."
+            "Our objective at Hartron Skill Centre Panipat is to build unwavering confidence in every student. Whether you are aiming for a Haryana Govt clerk typing exam or looking to break into full stack web development and cybersecurity, we ensure 100% practical lab practice and individual guidance."
           </Box>
 
           <Typography variant="body1" sx={{ color: "#475569", lineHeight: 1.65 }}>

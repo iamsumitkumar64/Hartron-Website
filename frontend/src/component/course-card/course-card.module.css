@@ -38,7 +38,7 @@
 
 .itBadge {
   background-color: var(--primary-main);
-  color: #ffffff;
+  color: var(--text-on-dark);
 }
 
 .govtBadge {
@@ -73,12 +73,12 @@
   align-items: flex-start;
   gap: 8px;
   font-size: 0.875rem;
-  color: #334155;
+  color: var(--text-secondary);
   font-weight: 600;
 }
 
 .checkIcon {
-  color: #2563eb;
+  color: var(--secondary-main);
   font-size: 1.1rem !important;
   flex-shrink: 0;
   margin-top: 2px;
@@ -88,7 +88,7 @@
   display: flex;
   gap: 12px;
   align-items: center;
-  border-top: 1px solid #f1f5f9;
+  border-top: 1px solid var(--border-color);
   padding-top: 20px;
 }
 

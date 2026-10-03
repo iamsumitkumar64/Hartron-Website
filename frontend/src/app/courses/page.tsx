@@ -5,9 +5,9 @@ import Footer from "@/component/footer/footer";
 import { Box, Typography } from "@mui/material";
 
 export const metadata: Metadata = {
-  title: "All Computer Courses | Hartron Skill Centre SD College Panipat | Director Vijender Singh Nara",
+  title: "All Computer Courses | Hartron Skill Centre Panipat | Director Vijender Singh Nara",
   description:
-    "Explore Web Development, Cybersecurity, Government Typing Speed Test, and DCA Basic Computer Courses offered by Hartron Skill Centre SD College Panipat under Director Vijender Singh Nara.",
+    "Explore Web Development, Cybersecurity, Government Typing Speed Test, and DCA Basic Computer Courses offered by Hartron Skill Centre Panipat under Director Vijender Singh Nara.",
 };
 
 const COURSES_DATA = [
@@ -76,16 +76,17 @@ export default function CoursesDirectoryPage() {
       <main style={{ overflowX: "hidden" }}>
         <Box
           sx={{
-            backgroundColor: "#eff6ff",
+            backgroundColor: "background.paper",
             padding: { xs: "24px 14px", sm: "48px 20px" },
             textAlign: "center",
-            borderBottom: "1px solid #bfdbfe",
+            borderBottom: "1px solid",
+            borderColor: "divider",
           }}
         >
           <Box sx={{ maxWidth: 900, margin: "0 auto" }}>
             <Typography
               sx={{
-                color: "#2563eb",
+                color: "primary.main",
                 fontWeight: 800,
                 fontSize: { xs: "0.8rem", sm: "0.9rem" },
                 textTransform: "uppercase",
@@ -97,17 +98,17 @@ export default function CoursesDirectoryPage() {
             </Typography>
             <Typography
               variant="h1"
-              sx={{ fontSize: { xs: "1.45rem", sm: "2.1rem", md: "2.75rem" }, fontWeight: 900, color: "#0f172a", mb: 2, wordBreak: "break-word" }}
+              sx={{ fontSize: { xs: "1.45rem", sm: "2.1rem", md: "2.75rem" }, fontWeight: 900, color: "text.primary", mb: 2, wordBreak: "break-word" }}
             >
               Government Recognized & IT Industry Training Courses
             </Typography>
-            <Typography sx={{ fontSize: { xs: "0.9rem", sm: "1.1rem" }, color: "#334155", lineHeight: 1.6 }}>
+            <Typography sx={{ fontSize: { xs: "0.9rem", sm: "1.1rem" }, color: "text.secondary", lineHeight: 1.6 }}>
               Study under the direction of Director <strong>Vijender Singh Nara</strong> at Hartron Skill Centre, SD College Road, Panipat.
             </Typography>
           </Box>
         </Box>
 
-        <Box component="section" sx={{ padding: { xs: "32px 14px", sm: "64px 24px" }, backgroundColor: "#ffffff" }}>
+        <Box component="section" sx={{ padding: { xs: "32px 14px", sm: "64px 24px" }, backgroundColor: "background.default" }}>
           <Box sx={{ maxWidth: 1280, margin: "0 auto" }}>
             <Box
               sx={{

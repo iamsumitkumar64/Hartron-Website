@@ -6,9 +6,9 @@ import Footer from "@/component/footer/footer";
 import { Box, Typography } from "@mui/material";
 
 export const metadata: Metadata = {
-  title: "About Us | Director Vijender Singh Nara | Hartron Skill Centre SD College Panipat",
+  title: "About Us | Director Vijender Singh Nara | Hartron Skill Centre Panipat",
   description:
-    "Learn about Hartron Skill Centre near SD College Panipat and Director Vijender Singh Nara's mission to provide government recognized computer courses & IT company grade training.",
+    "Learn about Hartron Skill Centre Panipat and Director Vijender Singh Nara's mission to provide government recognized computer courses & IT company grade training.",
 };
 
 export default function AboutPage() {
@@ -18,16 +18,17 @@ export default function AboutPage() {
       <main>
         <Box
           sx={{
-            backgroundColor: "#eff6ff",
+            backgroundColor: "background.paper",
             padding: { xs: "24px 14px", sm: "48px 20px" },
             textAlign: "center",
-            borderBottom: "1px solid #bfdbfe",
+            borderBottom: "1px solid",
+            borderColor: "divider",
           }}
         >
           <Box sx={{ maxWidth: 900, margin: "0 auto" }}>
             <Typography
               sx={{
-                color: "#2563eb",
+                color: "primary.main",
                 fontWeight: 800,
                 fontSize: { xs: "0.8rem", sm: "0.9rem" },
                 textTransform: "uppercase",
@@ -39,27 +40,27 @@ export default function AboutPage() {
             </Typography>
             <Typography
               variant="h1"
-              sx={{ fontSize: { xs: "1.45rem", sm: "2.1rem", md: "2.75rem" }, fontWeight: 900, color: "#0f172a", mb: 2, wordBreak: "break-word" }}
+              sx={{ fontSize: { xs: "1.45rem", sm: "2.1rem", md: "2.75rem" }, fontWeight: 900, color: "text.primary", mb: 2, wordBreak: "break-word" }}
             >
-              About Hartron Skill Centre • SD College Panipat
+              About Hartron Skill Centre Panipat
             </Typography>
-            <Typography sx={{ fontSize: { xs: "0.9rem", sm: "1.1rem" }, color: "#334155", lineHeight: 1.6 }}>
-              Directed by <strong>Vijender Singh Nara</strong>, our center is Panipat's premier computer education institution located right next to SD College campus.
+            <Typography sx={{ fontSize: { xs: "0.9rem", sm: "1.1rem" }, color: "text.secondary", lineHeight: 1.6 }}>
+              Directed by <strong>Vijender Singh Nara</strong>, our center is Panipat's premier computer education institution.
             </Typography>
           </Box>
         </Box>
 
         <DirectorSection />
 
-        <Box sx={{ padding: { xs: "32px 14px", sm: "64px 24px" }, backgroundColor: "#ffffff" }}>
+        <Box sx={{ padding: { xs: "32px 14px", sm: "64px 24px" }, backgroundColor: "background.default" }}>
           <Box sx={{ maxWidth: 1000, margin: "0 auto" }}>
-            <Typography variant="h3" sx={{ fontWeight: 900, color: "#0f172a", mb: 3, fontSize: { xs: "1.25rem", sm: "1.75rem" } }}>
+            <Typography variant="h3" sx={{ fontWeight: 900, color: "text.primary", mb: 3, fontSize: { xs: "1.25rem", sm: "1.75rem" } }}>
               Our Educational Mission
             </Typography>
-            <Typography sx={{ fontSize: { xs: "0.9rem", sm: "1.05rem" }, color: "#475569", lineHeight: 1.8, mb: 3 }}>
-              For over two decades, Hartron Skill Centre near SD College Panipat has stood as a beacon of technological empowerment. Under Director Vijender Singh Nara, we bridge the gap between traditional academic degrees and real-world employment.
+            <Typography sx={{ fontSize: { xs: "0.9rem", sm: "1.05rem" }, color: "text.secondary", lineHeight: 1.8, mb: 3 }}>
+              For over two decades, Hartron Skill Centre Panipat has stood as a beacon of technological empowerment. Under Director Vijender Singh Nara, we bridge the gap between traditional academic degrees and real-world employment.
             </Typography>
-            <Typography sx={{ fontSize: { xs: "0.9rem", sm: "1.05rem" }, color: "#475569", lineHeight: 1.8, mb: 3 }}>
+            <Typography sx={{ fontSize: { xs: "0.9rem", sm: "1.05rem" }, color: "text.secondary", lineHeight: 1.8, mb: 3 }}>
               We specialize in preparing candidates for Haryana Government competitive exams requiring certified typing speed tests (HSSC / HKRN / High Court Clerical) as well as modern IT Industry grade software careers in Web Development and Cybersecurity.
             </Typography>
           </Box>

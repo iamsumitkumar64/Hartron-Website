@@ -213,8 +213,9 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
         {/* Header Hero */}
         <Box
           sx={{
-            backgroundColor: "#eff6ff",
-            borderBottom: "1px solid #bfdbfe",
+            backgroundColor: "background.paper",
+            borderBottom: "1px solid",
+            borderColor: "divider",
             padding: { xs: "24px 14px", sm: "48px 16px", md: "64px 24px" },
             boxSizing: "border-box",
             width: "100%",
@@ -224,7 +225,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
             <Box
               sx={{
                 display: "inline-block",
-                backgroundColor: isItGrade ? "#1e40af" : "#2563eb",
+                backgroundColor: "primary.main",
                 color: "#ffffff",
                 fontWeight: 800,
                 fontSize: { xs: "0.7rem", sm: "0.8rem" },
@@ -245,7 +246,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
               sx={{
                 fontSize: { xs: "1.45rem", sm: "2.1rem", md: "2.75rem" },
                 fontWeight: 900,
-                color: "#0f172a",
+                color: "text.primary",
                 mb: 2,
                 wordBreak: "break-word",
                 lineHeight: 1.3,
@@ -257,7 +258,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
             <Typography
               sx={{
                 fontSize: { xs: "0.9rem", sm: "1rem", md: "1.15rem" },
-                color: "#334155",
+                color: "text.secondary",
                 lineHeight: 1.6,
                 mb: 3,
                 wordBreak: "break-word",
@@ -280,12 +281,13 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                   display: "flex",
                   alignItems: "center",
                   gap: 1,
-                  backgroundColor: "#ffffff",
+                  backgroundColor: "background.default",
                   px: 2,
                   py: 1,
                   borderRadius: 2,
-                  border: "1px solid #bfdbfe",
-                  color: "#1e40af",
+                  border: "1px solid",
+                  borderColor: "divider",
+                  color: "primary.main",
                   fontWeight: 700,
                   fontSize: { xs: "0.825rem", sm: "0.95rem" },
                   wordBreak: "break-word",
@@ -301,16 +303,16 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                     display: "flex",
                     alignItems: "center",
                     gap: 1,
-                    backgroundColor: "#ffffff",
+                    backgroundColor: "background.default",
                     px: 2,
                     py: 1,
                     borderRadius: 2,
-                    border: "1px solid #bfdbfe",
-                    color: "#1e40af",
+                    border: "1px solid",
+                    borderColor: "divider",
+                    color: "primary.main",
                     fontWeight: 700,
                     fontSize: { xs: "0.825rem", sm: "0.95rem" },
                     wordBreak: "break-word",
-                    "&:hover": { backgroundColor: "#f0f9ff" },
                   }}
                 >
                   <WorkspacePremiumIcon fontSize="small" />
@@ -326,7 +328,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
           component="section"
           sx={{
             padding: { xs: "24px 14px", sm: "48px 16px", md: "64px 24px" },
-            backgroundColor: "#ffffff",
+            backgroundColor: "background.default",
             boxSizing: "border-box",
             width: "100%",
             overflow: "hidden",
@@ -348,7 +350,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                 variant="h3"
                 sx={{
                   fontWeight: 900,
-                  color: "#0f172a",
+                  color: "text.primary",
                   mb: 2.5,
                   fontSize: { xs: "1.25rem", sm: "1.6rem", md: "2rem" },
                   wordBreak: "break-word",
@@ -360,12 +362,12 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
               <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5, mb: 4, width: "100%" }}>
                 {course.highlights.map((item: string, idx: number) => (
                   <Box key={idx} sx={{ display: "flex", gap: 1, alignItems: "flex-start", width: "100%" }}>
-                    <CheckCircleIcon sx={{ color: "#2563eb", mt: 0.3, fontSize: "1.1rem", flexShrink: 0 }} />
+                    <CheckCircleIcon sx={{ color: "primary.main", mt: 0.3, fontSize: "1.1rem", flexShrink: 0 }} />
                     <Typography
                       sx={{
                         fontSize: { xs: "0.85rem", sm: "1rem" },
                         fontWeight: 600,
-                        color: "#1e293b",
+                        color: "text.primary",
                         wordBreak: "break-word",
                       }}
                     >
@@ -379,7 +381,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                 variant="h3"
                 sx={{
                   fontWeight: 900,
-                  color: "#0f172a",
+                  color: "text.primary",
                   mb: 2.5,
                   fontSize: { xs: "1.25rem", sm: "1.6rem", md: "2rem" },
                   wordBreak: "break-word",
@@ -393,8 +395,9 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                   <Box
                     key={idx}
                     sx={{
-                      backgroundColor: "#f8fafc",
-                      border: "1px solid #e2e8f0",
+                      backgroundColor: "background.paper",
+                      border: "1px solid",
+                      borderColor: "divider",
                       borderRadius: { xs: 2, sm: 3 },
                       p: { xs: 2, sm: 3 },
                       boxSizing: "border-box",
@@ -405,7 +408,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                       variant="h5"
                       sx={{
                         fontWeight: 800,
-                        color: "#1e40af",
+                        color: "primary.main",
                         mb: 1.5,
                         fontSize: { xs: "1.05rem", sm: "1.25rem", md: "1.35rem" },
                         wordBreak: "break-word",
@@ -419,7 +422,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                           component="li"
                           key={tIdx}
                           sx={{
-                            color: "#475569",
+                            color: "text.secondary",
                             fontWeight: 600,
                             mb: 0.8,
                             fontSize: { xs: "0.825rem", sm: "0.95rem" },

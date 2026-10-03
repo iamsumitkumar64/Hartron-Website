@@ -2,9 +2,9 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e2e8f0;
-  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.04);
+  background-color: var(--bg-default);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
   width: 100%;
   box-sizing: border-box;
 }
@@ -30,8 +30,8 @@
 }
 
 .logoBadge {
-  background-color: #1e40af;
-  color: #ffffff;
+  background-color: var(--primary-main);
+  color: var(--text-on-dark);
   width: 38px;
   height: 38px;
   border-radius: 10px;
@@ -40,7 +40,7 @@
   justify-content: center;
   font-weight: 900;
   font-size: 1.2rem;
-  box-shadow: 0 4px 6px -1px rgba(30, 64, 175, 0.2);
+  box-shadow: var(--shadow-sm);
   flex-shrink: 0;
 }
 
@@ -52,7 +52,7 @@
 .brandTitle {
   font-size: 1.2rem;
   font-weight: 900;
-  color: #1e40af;
+  color: var(--primary-main);
   line-height: 1.15;
   letter-spacing: -0.02em;
 }
@@ -60,7 +60,7 @@
 .brandSubtitle {
   font-size: 0.7rem;
   font-weight: 700;
-  color: #2563eb;
+  color: var(--secondary-main);
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -72,7 +72,7 @@
 }
 
 .navLink {
-  color: #0f172a;
+  color: var(--text-primary);
   font-weight: 700;
   font-size: 0.925rem;
   text-decoration: none;
@@ -83,11 +83,11 @@
 }
 
 .navLink:hover {
-  color: #2563eb;
+  color: var(--secondary-main);
 }
 
 .navLinkActive {
-  color: #1e40af;
+  color: var(--primary-main);
   font-weight: 800;
 }
 
@@ -98,7 +98,7 @@
   left: 0;
   width: 100%;
   height: 2.5px;
-  background-color: #2563eb;
+  background-color: var(--secondary-main);
   border-radius: 2px;
 }
 
@@ -110,8 +110,8 @@
 }
 
 .callBtn {
-  border-color: #1e40af !important;
-  color: #1e40af !important;
+  border-color: var(--primary-main) !important;
+  color: var(--primary-main) !important;
   font-weight: 700 !important;
   border-radius: 8px !important;
   padding: 8px 14px !important;
@@ -119,18 +119,18 @@
 }
 
 .enrollBtn {
-  background-color: #1e40af !important;
-  color: #ffffff !important;
+  background-color: var(--primary-main) !important;
+  color: var(--text-on-dark) !important;
   font-weight: 800 !important;
   border-radius: 8px !important;
   padding: 8px 16px !important;
   font-size: 0.875rem !important;
-  box-shadow: 0 4px 6px -1px rgba(30, 64, 175, 0.2) !important;
+  box-shadow: var(--shadow-sm) !important;
   white-space: nowrap !important;
 }
 
 .enrollBtn:hover {
-  background-color: #1d4ed8 !important;
+  background-color: var(--primary-hover) !important;
 }
 
 @media (max-width: 960px) {
