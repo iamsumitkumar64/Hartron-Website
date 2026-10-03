@@ -12,16 +12,16 @@ export default function proxy(req: NextRequest) {
     const isAuthBlock = authBlockRoutes.some((route) => pathname === route || pathname.startsWith(`${route}/`));
     const isAuthenticated = Boolean(credentials);
 
-    if (isAuthenticated && isAuthBlock) {
-        return NextResponse.redirect(new URL("/", req.url));
-    }
-    if (isPublic) {
-        return NextResponse.next();
-    }
+    // if (isAuthenticated && isAuthBlock) {
+    // return NextResponse.redirect(new URL("/", req.url));
+    // }
+    // if (isPublic) {
+    //     return NextResponse.next();
+    // }
 
-    if (!isAuthenticated && !isPublic) {
-        return NextResponse.redirect(new URL("/signup", req.url));
-    }
+    // if (!isAuthenticated && !isPublic) {
+    //     return NextResponse.redirect(new URL("/signup", req.url));
+    // }
 
     return NextResponse.next();
 }
