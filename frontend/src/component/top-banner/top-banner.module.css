@@ -59,10 +59,10 @@
 .marqueeTrack {
   display: flex;
   white-space: nowrap;
-  animation: marquee 16s linear infinite;
+  animation: marquee 20s linear infinite;
   will-change: transform;
   width: max-content;
-  overflow: hidden;
+  flex-shrink: 0;
 }
 
 .marqueeTrack:hover {

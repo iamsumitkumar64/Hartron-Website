@@ -15,12 +15,12 @@ export default function Hero() {
             Official HARTRON Skill Centre • Director: Vijender Singh Nara
           </Box>
 
-          <Typography variant="h1" className={styles.heroTitle}>
+          <Typography variant="h1">
             Empowering Panipat Students with{" "}
             <span className={styles.heroHighlight}>Govt Computer Diplomas</span> & IT Industry Skills
           </Typography>
 
-          <Typography className={styles.heroSubtitle}>
+          <Typography variant="body1" sx={{ color: "#334155", lineHeight: 1.6 }}>
             Transform your career right next to SD College, Panipat. Specialized training in{" "}
             <strong>Government Typing Speed Tests (HSSC/HKRN)</strong>, <strong>Web Development</strong>,{" "}
             <strong>Cybersecurity</strong>, and <strong>DCA Computer Courses</strong> with 100% practical lab practice.
@@ -30,7 +30,8 @@ export default function Hero() {
             <Link href="/courses" style={{ textDecoration: "none" }}>
               <Button
                 variant="contained"
-                className={styles.primaryCta}
+                color="primary"
+                sx={{ py: 1.5, px: 3, fontSize: "1rem" }}
               >
                 Explore All Courses
               </Button>
@@ -39,8 +40,8 @@ export default function Hero() {
             <Link href="/typing-practice" style={{ textDecoration: "none" }}>
               <Button
                 variant="outlined"
-                className={styles.secondaryCta}
                 startIcon={<KeyboardIcon />}
+                sx={{ py: 1.5, px: 3, fontSize: "1rem", backgroundColor: "#ffffff" }}
               >
                 Govt Typing Practice
               </Button>

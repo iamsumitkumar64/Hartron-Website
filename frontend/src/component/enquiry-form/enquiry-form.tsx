@@ -51,10 +51,10 @@ export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: st
 
   return (
     <Box className={styles.container}>
-      <Typography variant="h3" className={styles.title}>
+      <Typography variant="h3" sx={{ mb: 1, wordBreak: "break-word" }}>
         Admission / Course Enquiry
       </Typography>
-      <Typography className={styles.subtitle}>
+      <Typography variant="body1" sx={{ color: "#475569", mb: 3, wordBreak: "break-word" }}>
         Fill out your details to receive course syllabus, batch timings, and fee guidance from Director Vijender Singh Nara's team at SD College Panipat.
       </Typography>
 
@@ -72,7 +72,7 @@ export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: st
           error={!!errors.name}
           helperText={errors.name?.message}
           variant="outlined"
-          sx={{ backgroundColor: "#ffffff", maxWidth: "100%", boxSizing: "border-box" }}
+          sx={{ minWidth: 0, maxWidth: "100%", width: "100%", boxSizing: "border-box" }}
         />
 
         <TextField
@@ -82,7 +82,7 @@ export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: st
           error={!!errors.phone}
           helperText={errors.phone?.message}
           variant="outlined"
-          sx={{ backgroundColor: "#ffffff", maxWidth: "100%", boxSizing: "border-box" }}
+          sx={{ minWidth: 0, maxWidth: "100%", width: "100%", boxSizing: "border-box" }}
         />
 
         <TextField
@@ -93,7 +93,7 @@ export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: st
           error={!!errors.email}
           helperText={errors.email?.message}
           variant="outlined"
-          sx={{ backgroundColor: "#ffffff", maxWidth: "100%", boxSizing: "border-box" }}
+          sx={{ minWidth: 0, maxWidth: "100%", width: "100%", boxSizing: "border-box" }}
         />
 
         <TextField
@@ -105,11 +105,23 @@ export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: st
           error={!!errors.course_slug}
           helperText={errors.course_slug?.message}
           variant="outlined"
-          sx={{ backgroundColor: "#ffffff", maxWidth: "100%", boxSizing: "border-box" }}
+          sx={{ minWidth: 0, maxWidth: "100%", width: "100%", boxSizing: "border-box" }}
           slotProps={{
             select: {
+              sx: {
+                whiteSpace: "normal",
+                wordBreak: "break-word",
+                "& .MuiSelect-select": {
+                  whiteSpace: "normal",
+                  wordBreak: "break-word",
+                },
+              },
               MenuProps: {
-                style: { maxWidth: 300 },
+                slotProps: {
+                  paper: {
+                    style: { maxWidth: 300 },
+                  },
+                },
               },
             },
           }}
@@ -137,16 +149,16 @@ export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: st
           fullWidth
           {...register("message")}
           variant="outlined"
-          sx={{ backgroundColor: "#ffffff", maxWidth: "100%", boxSizing: "border-box" }}
+          sx={{ minWidth: 0, maxWidth: "100%", width: "100%", boxSizing: "border-box" }}
         />
 
         <Box sx={{ display: "flex", gap: 2, flexDirection: { xs: "column", sm: "row" }, mt: 1, width: "100%", alignItems: "stretch" }}>
           <Button
             type="submit"
             variant="contained"
-            className={styles.submitBtn}
+            color="primary"
             endIcon={<SendIcon />}
-            sx={{ flex: 1, minWidth: { sm: "180px" }, width: { xs: "100%", sm: "auto" } }}
+            sx={{ flex: 1, minWidth: { sm: "180px" }, py: 1.5, fontSize: "1rem" }}
           >
             Submit Enquiry
           </Button>
@@ -155,17 +167,14 @@ export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: st
             variant="outlined"
             onClick={handleWhatsAppSubmit}
             startIcon={<WhatsAppIcon />}
-            className={styles.whatsappBtn}
             sx={{
               borderColor: "#16a34a",
               color: "#16a34a",
               fontWeight: 800,
-              borderRadius: "10px",
-              px: 3,
               py: 1.5,
               flex: 1,
               minWidth: { sm: "180px" },
-              width: { xs: "100%", sm: "auto" },
+              fontSize: "1rem",
               justifyContent: "center",
               "&:hover": {
                 borderColor: "#15803d",

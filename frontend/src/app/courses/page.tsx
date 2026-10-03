@@ -73,11 +73,11 @@ export default function CoursesDirectoryPage() {
   return (
     <>
       <Navbar />
-      <main>
+      <main style={{ overflowX: "hidden" }}>
         <Box
           sx={{
             backgroundColor: "#eff6ff",
-            padding: "64px 24px",
+            padding: { xs: "24px 14px", sm: "48px 20px" },
             textAlign: "center",
             borderBottom: "1px solid #bfdbfe",
           }}
@@ -87,7 +87,7 @@ export default function CoursesDirectoryPage() {
               sx={{
                 color: "#2563eb",
                 fontWeight: 800,
-                fontSize: "0.9rem",
+                fontSize: { xs: "0.8rem", sm: "0.9rem" },
                 textTransform: "uppercase",
                 letterSpacing: "0.08em",
                 mb: 1,
@@ -97,23 +97,23 @@ export default function CoursesDirectoryPage() {
             </Typography>
             <Typography
               variant="h1"
-              sx={{ fontSize: "2.75rem", fontWeight: 900, color: "#0f172a", mb: 2 }}
+              sx={{ fontSize: { xs: "1.45rem", sm: "2.1rem", md: "2.75rem" }, fontWeight: 900, color: "#0f172a", mb: 2, wordBreak: "break-word" }}
             >
               Government Recognized & IT Industry Training Courses
             </Typography>
-            <Typography sx={{ fontSize: "1.15rem", color: "#334155", lineHeight: 1.6 }}>
+            <Typography sx={{ fontSize: { xs: "0.9rem", sm: "1.1rem" }, color: "#334155", lineHeight: 1.6 }}>
               Study under the direction of Director <strong>Vijender Singh Nara</strong> at Hartron Skill Centre, SD College Road, Panipat.
             </Typography>
           </Box>
         </Box>
 
-        <section style={{ padding: "80px 24px", backgroundColor: "#ffffff" }}>
+        <Box component="section" sx={{ padding: { xs: "32px 14px", sm: "64px 24px" }, backgroundColor: "#ffffff" }}>
           <Box sx={{ maxWidth: 1280, margin: "0 auto" }}>
             <Box
               sx={{
                 display: "grid",
                 gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
-                gap: "32px",
+                gap: { xs: "20px", sm: "32px" },
               }}
             >
               {COURSES_DATA.map((course) => (
@@ -129,7 +129,7 @@ export default function CoursesDirectoryPage() {
               ))}
             </Box>
           </Box>
-        </section>
+        </Box>
       </main>
       <Footer />
     </>

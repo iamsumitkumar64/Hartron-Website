@@ -1,5 +1,5 @@
 .section {
-  padding: 80px 24px;
+  padding: 64px 16px;
   background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
   color: #ffffff;
 }
@@ -9,14 +9,14 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  gap: 40px;
   align-items: center;
 }
 
 .leftText {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 .badge {
@@ -27,60 +27,47 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: #ffffff;
   font-weight: 800;
-  font-size: 0.85rem;
-  padding: 6px 16px;
+  font-size: 0.8rem;
+  padding: 6px 14px;
   border-radius: 9999px;
   width: fit-content;
-}
-
-.title {
-  font-size: 2.5rem;
-  font-weight: 900;
-  color: #ffffff;
-  line-height: 1.2;
-}
-
-.description {
-  font-size: 1.1rem;
-  color: #dbeafe;
-  line-height: 1.6;
 }
 
 .featuresGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-top: 12px;
+  gap: 14px;
+  margin-top: 8px;
 }
 
 .featureBox {
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 16px;
+  padding: 14px;
   border-radius: 12px;
 }
 
 .featureTitle {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 800;
   color: #ffffff;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .featureSub {
-  font-size: 0.85rem;
-  color: #93c5fd;
+  font-size: 0.8rem;
+  color: #dbeafe;
 }
 
 .softwareCard {
   background-color: #ffffff;
   color: #0f172a;
-  border-radius: 20px;
-  padding: 32px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 .screenHeader {
@@ -95,24 +82,25 @@
   background-color: #eff6ff;
   color: #1e40af;
   font-weight: 900;
-  padding: 6px 12px;
+  padding: 4px 10px;
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .samplePassage {
   background-color: #f8fafc;
   border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 20px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.95rem;
+  border-radius: 10px;
+  padding: 16px;
+  font-family: monospace;
+  font-size: 0.9rem;
   line-height: 1.6;
   color: #334155;
+  word-break: break-word;
 }
 
 .typedText {
-  color: #2563eb;
+  color: #1e40af;
   font-weight: 700;
   background-color: #dbeafe;
   padding: 0 2px;
@@ -121,29 +109,18 @@
 @media (max-width: 960px) {
   .container {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 32px;
   }
 }
 
 @media (max-width: 640px) {
   .section {
-    padding: 48px 16px;
-  }
-  .title {
-    font-size: 1.85rem;
-  }
-  .description {
-    font-size: 1rem;
+    padding: 36px 14px;
   }
   .featuresGrid {
     grid-template-columns: 1fr;
   }
   .softwareCard {
-    padding: 20px 16px;
-  }
-  .samplePassage {
-    padding: 14px;
-    font-size: 0.85rem;
-    overflow-x: auto;
+    padding: 18px 14px;
   }
 }

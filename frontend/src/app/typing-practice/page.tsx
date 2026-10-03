@@ -204,16 +204,15 @@ export default function TypingPracticePage() {
     <>
       <Navbar />
 
-      <main style={{ backgroundColor: "#f8fafc", minHeight: "85vh", paddingBottom: "60px" }}>
-        {/* Banner */}
+      <main style={{ backgroundColor: "#f8fafc", minHeight: "85vh", paddingBottom: "60px", overflowX: "hidden" }}>
+        {/* Banner - Light Theme Matching All Other Pages */}
         <Box
           sx={{
-            background: "linear-gradient(135deg, #0f172a 0%, #1e40af 100%)",
-            color: "#ffffff",
-            py: { xs: 3, md: 5 },
-            px: 2,
+            backgroundColor: "#eff6ff",
+            borderBottom: "1px solid #bfdbfe",
+            py: { xs: 3, sm: 5 },
+            px: { xs: 1.5, sm: 2 },
             textAlign: "center",
-            boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
           }}
         >
           <Container maxWidth="lg">
@@ -222,15 +221,16 @@ export default function TypingPracticePage() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 1,
-                backgroundColor: "rgba(255,255,255,0.15)",
-                px: 2,
+                backgroundColor: "#1e40af",
+                color: "#ffffff",
+                px: 1.5,
                 py: 0.5,
                 borderRadius: 9999,
                 mb: 1.5,
               }}
             >
-              <VerifiedIcon sx={{ fontSize: 18, color: "#93c5fd" }} />
-              <Typography variant="body2" sx={{ fontWeight: 800, letterSpacing: "0.05em", color: "#e0f2fe" }}>
+              <VerifiedIcon sx={{ fontSize: 16, color: "#93c5fd" }} />
+              <Typography variant="body2" sx={{ fontWeight: 800, letterSpacing: "0.05em", color: "#ffffff", fontSize: { xs: "0.7rem", sm: "0.8rem" } }}>
                 OFFICIAL HARTRON HSSC / HKRN GOVT EXAM SIMULATOR
               </Typography>
             </Box>
@@ -238,9 +238,11 @@ export default function TypingPracticePage() {
             <Typography
               variant="h1"
               sx={{
-                fontSize: { xs: "1.75rem", sm: "2.5rem", md: "3rem" },
+                fontSize: { xs: "1.5rem", sm: "2.25rem", md: "2.85rem" },
                 fontWeight: 900,
+                color: "#0f172a",
                 mb: 1,
+                wordBreak: "break-word",
               }}
             >
               Interactive Government Typing Practice Demo
@@ -248,10 +250,11 @@ export default function TypingPracticePage() {
 
             <Typography
               sx={{
-                color: "#cbd5e1",
-                fontSize: { xs: "0.9rem", sm: "1.1rem" },
+                color: "#334155",
+                fontSize: { xs: "0.875rem", sm: "1.05rem" },
                 maxWidth: 800,
                 mx: "auto",
+                lineHeight: 1.6,
               }}
             >
               Master high-speed touch typing for Haryana Government Recruitment Exams under Director <strong>Vijender Singh Nara</strong> at Hartron Skill Centre SD College Panipat.
@@ -259,13 +262,13 @@ export default function TypingPracticePage() {
           </Container>
         </Box>
 
-        <Container maxWidth="lg" sx={{ mt: -3 }}>
+        <Container maxWidth="lg" sx={{ mt: { xs: 2, sm: 3 }, px: { xs: 1.5, sm: 3 } }}>
           {/* Main Control Panel */}
           <Paper
-            elevation={3}
+            elevation={0}
             sx={{
-              p: { xs: 2, sm: 3 },
-              borderRadius: 4,
+              p: { xs: 1.5, sm: 3 },
+              borderRadius: { xs: "10px", sm: "16px" },
               backgroundColor: "#ffffff",
               border: "1px solid #e2e8f0",
               mb: 3,
@@ -355,8 +358,8 @@ export default function TypingPracticePage() {
               sx={{
                 display: "grid",
                 gridTemplateColumns: { xs: "repeat(2, 1fr)", sm: "repeat(4, 1fr)" },
-                gap: 2,
-                my: 3,
+                gap: { xs: 1, sm: 2 },
+                my: { xs: 2, sm: 3 },
               }}
             >
               {/* Metric 1: Time Left */}
@@ -365,13 +368,13 @@ export default function TypingPracticePage() {
                   backgroundColor: timeLeft <= 10 && isActive ? "#fef2f2" : "#f8fafc",
                   border: "1px solid",
                   borderColor: timeLeft <= 10 && isActive ? "#fca5a5" : "#e2e8f0",
-                  borderRadius: 3,
-                  p: 2,
+                  borderRadius: { xs: "8px", sm: "12px" },
+                  p: { xs: 1.2, sm: 2 },
                   textAlign: "center",
                   transition: "all 0.3s",
                 }}
               >
-                <Typography variant="caption" sx={{ color: "#64748b", fontWeight: 800, textTransform: "uppercase" }}>
+                <Typography variant="caption" sx={{ color: "#64748b", fontWeight: 800, textTransform: "uppercase", fontSize: { xs: "0.65rem", sm: "0.75rem" } }}>
                   Time Remaining
                 </Typography>
                 <Typography
@@ -379,6 +382,7 @@ export default function TypingPracticePage() {
                   sx={{
                     fontWeight: 900,
                     color: timeLeft <= 10 && isActive ? "#dc2626" : "#1e40af",
+                    fontSize: { xs: "1.4rem", sm: "2rem" },
                   }}
                 >
                   {timeLeft}s
@@ -390,16 +394,16 @@ export default function TypingPracticePage() {
                 sx={{
                   backgroundColor: "#f0fdf4",
                   border: "1px solid #bbf7d0",
-                  borderRadius: 3,
-                  p: 2,
+                  borderRadius: { xs: "8px", sm: "12px" },
+                  p: { xs: 1.2, sm: 2 },
                   textAlign: "center",
                 }}
               >
-                <Typography variant="caption" sx={{ color: "#166534", fontWeight: 800, textTransform: "uppercase" }}>
-                  Net Speed (WPM)
+                <Typography variant="caption" sx={{ color: "#166534", fontWeight: 800, textTransform: "uppercase", fontSize: { xs: "0.65rem", sm: "0.75rem" } }}>
+                  Net Speed
                 </Typography>
-                <Typography variant="h4" sx={{ fontWeight: 900, color: "#15803d" }}>
-                  {netWPM} <span style={{ fontSize: "0.9rem", fontWeight: 600 }}>WPM</span>
+                <Typography variant="h4" sx={{ fontWeight: 900, color: "#15803d", fontSize: { xs: "1.4rem", sm: "2rem" } }}>
+                  {netWPM} <span style={{ fontSize: "0.75rem", fontWeight: 600 }}>WPM</span>
                 </Typography>
               </Box>
 
@@ -409,15 +413,15 @@ export default function TypingPracticePage() {
                   backgroundColor: accuracy >= 95 ? "#eff6ff" : "#fffbebe",
                   border: "1px solid",
                   borderColor: accuracy >= 95 ? "#bfdbfe" : "#fde68a",
-                  borderRadius: 3,
-                  p: 2,
+                  borderRadius: { xs: "8px", sm: "12px" },
+                  p: { xs: 1.2, sm: 2 },
                   textAlign: "center",
                 }}
               >
-                <Typography variant="caption" sx={{ color: "#1e40af", fontWeight: 800, textTransform: "uppercase" }}>
+                <Typography variant="caption" sx={{ color: "#1e40af", fontWeight: 800, textTransform: "uppercase", fontSize: { xs: "0.65rem", sm: "0.75rem" } }}>
                   Accuracy
                 </Typography>
-                <Typography variant="h4" sx={{ fontWeight: 900, color: accuracy >= 95 ? "#1d4ed8" : "#b45309" }}>
+                <Typography variant="h4" sx={{ fontWeight: 900, color: accuracy >= 95 ? "#1d4ed8" : "#b45309", fontSize: { xs: "1.4rem", sm: "2rem" } }}>
                   {accuracy}%
                 </Typography>
               </Box>
@@ -427,22 +431,22 @@ export default function TypingPracticePage() {
                 sx={{
                   backgroundColor: "#faf5ff",
                   border: "1px solid #e9d5ff",
-                  borderRadius: 3,
-                  p: 2,
+                  borderRadius: { xs: "8px", sm: "12px" },
+                  p: { xs: 1.2, sm: 2 },
                   textAlign: "center",
                 }}
               >
-                <Typography variant="caption" sx={{ color: "#7e22ce", fontWeight: 800, textTransform: "uppercase" }}>
+                <Typography variant="caption" sx={{ color: "#7e22ce", fontWeight: 800, textTransform: "uppercase", fontSize: { xs: "0.65rem", sm: "0.75rem" } }}>
                   Key Streak
                 </Typography>
-                <Typography variant="h4" sx={{ fontWeight: 900, color: "#7e22ce" }}>
+                <Typography variant="h4" sx={{ fontWeight: 900, color: "#7e22ce", fontSize: { xs: "1.4rem", sm: "2rem" } }}>
                   🔥 {streak}
                 </Typography>
               </Box>
             </Box>
 
             {/* Linear Progress Indicator */}
-            <Box sx={{ mb: 3 }}>
+            <Box sx={{ mb: 2 }}>
               <Box sx={{ display: "flex", justifyContent: "space-between", mb: 0.5 }}>
                 <Typography variant="caption" sx={{ fontWeight: 700, color: "#64748b" }}>
                   Exam Passage Completion: {userInput.length} / {text.length} chars
@@ -454,7 +458,7 @@ export default function TypingPracticePage() {
               <LinearProgress
                 variant="determinate"
                 value={Math.min(100, (userInput.length / text.length) * 100)}
-                sx={{ height: 10, borderRadius: 5, backgroundColor: "#f1f5f9" }}
+                sx={{ height: 8, borderRadius: 4, backgroundColor: "#f1f5f9" }}
               />
             </Box>
 
@@ -466,17 +470,17 @@ export default function TypingPracticePage() {
                 backgroundColor: "#f8fafc",
                 border: "2px solid",
                 borderColor: isActive ? "#2563eb" : "#cbd5e1",
-                borderRadius: 3,
-                p: { xs: 2, sm: 3 },
-                fontSize: { xs: "1.1rem", sm: "1.35rem" },
+                borderRadius: { xs: "8px", sm: "12px" },
+                p: { xs: 1.5, sm: 2.5 },
+                fontSize: { xs: "1rem", sm: "1.25rem" },
                 fontFamily: "monospace",
-                lineHeight: 1.8,
-                minHeight: 160,
-                maxHeight: 240,
+                lineHeight: 1.7,
+                minHeight: { xs: 120, sm: 160 },
+                maxHeight: 220,
                 overflowY: "auto",
                 cursor: "text",
                 letterSpacing: "0.03em",
-                boxShadow: isActive ? "0 0 0 4px rgba(37, 99, 235, 0.15)" : "none",
+                boxShadow: isActive ? "0 0 0 3px rgba(37, 99, 235, 0.15)" : "none",
                 transition: "all 0.2s",
               }}
             >
@@ -484,20 +488,19 @@ export default function TypingPracticePage() {
                 <Box
                   sx={{
                     position: "absolute",
-                    top: 12,
-                    right: 16,
+                    top: 10,
+                    right: 12,
                     backgroundColor: "#2563eb",
                     color: "#ffffff",
-                    fontSize: "0.75rem",
+                    fontSize: { xs: "0.65rem", sm: "0.75rem" },
                     fontWeight: 800,
-                    px: 1.5,
-                    py: 0.5,
+                    px: 1.2,
+                    py: 0.4,
                     borderRadius: 9999,
                     pointerEvents: "none",
-                    animation: "pulse 2s infinite",
                   }}
                 >
-                  Click box or start typing to begin timer
+                  Click or type to begin
                 </Box>
               )}
 
@@ -560,7 +563,7 @@ export default function TypingPracticePage() {
                 alignItems: "center",
                 flexWrap: "wrap",
                 gap: 2,
-                mt: 3,
+                mt: 2.5,
               }}
             >
               <Button
@@ -570,16 +573,17 @@ export default function TypingPracticePage() {
                 sx={{
                   backgroundColor: "#1e40af",
                   fontWeight: 800,
-                  px: 3,
-                  py: 1.2,
-                  borderRadius: 2.5,
+                  px: 2.5,
+                  py: 1,
+                  borderRadius: { xs: "8px", sm: "10px" },
+                  width: { xs: "100%", sm: "auto" },
                   "&:hover": { backgroundColor: "#1d4ed8" },
                 }}
               >
                 Reset / Restart Drill
               </Button>
 
-              <Typography variant="body2" sx={{ color: "#64748b", fontWeight: 600 }}>
+              <Typography variant="body2" sx={{ color: "#64748b", fontWeight: 600, fontSize: { xs: "0.8rem", sm: "0.875rem" } }}>
                 💡 Direct Campus Lab Practice available at <strong>Hartron SD College Panipat</strong>
               </Typography>
             </Box>
@@ -587,41 +591,43 @@ export default function TypingPracticePage() {
 
           {/* Quick Guidance Box */}
           <Paper
+            elevation={0}
             sx={{
-              p: 3,
-              borderRadius: 4,
+              p: { xs: 2, sm: 3 },
+              borderRadius: { xs: "10px", sm: "16px" },
               backgroundColor: "#ffffff",
               border: "1px solid #bfdbfe",
               display: "flex",
               flexDirection: { xs: "column", md: "row" },
               alignItems: "center",
               justifyContent: "space-between",
-              gap: 3,
+              gap: 2,
             }}
           >
             <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
-              <SchoolIcon sx={{ fontSize: 44, color: "#1e40af" }} />
+              <SchoolIcon sx={{ fontSize: { xs: 32, sm: 44 }, color: "#1e40af" }} />
               <Box>
-                <Typography variant="h6" sx={{ fontWeight: 900, color: "#0f172a" }}>
+                <Typography variant="h6" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "0.95rem", sm: "1.1rem" } }}>
                   Want 100% Guaranteed Typing Speed in Govt Exams?
                 </Typography>
-                <Typography variant="body2" sx={{ color: "#475569" }}>
+                <Typography variant="body2" sx={{ color: "#475569", fontSize: { xs: "0.8rem", sm: "0.875rem" } }}>
                   Join Director Vijender Singh Nara's specialized lab batch near SD College Panipat with official HARTRON exam software.
                 </Typography>
               </Box>
             </Box>
 
-            <Link href="/contact?course=typing-speed" style={{ textDecoration: "none" }}>
+            <Link href="/contact?course=typing-speed" style={{ textDecoration: "none", width: "100%" }}>
               <Button
                 variant="contained"
+                fullWidth
                 startIcon={<LocalPhoneIcon />}
                 sx={{
                   backgroundColor: "#16a34a",
                   color: "#ffffff",
                   fontWeight: 900,
                   px: 3,
-                  py: 1.5,
-                  borderRadius: 2.5,
+                  py: 1.2,
+                  borderRadius: { xs: "8px", sm: "10px" },
                   whiteSpace: "nowrap",
                   "&:hover": { backgroundColor: "#15803d" },
                 }}
@@ -640,7 +646,7 @@ export default function TypingPracticePage() {
           fullWidth
           slotProps={{
             paper: {
-              sx: { borderRadius: 4, p: 2, textAlign: "center" },
+              sx: { borderRadius: { xs: "10px", sm: "16px" }, p: { xs: 1.5, sm: 2 }, textAlign: "center" },
             },
           }}
         >

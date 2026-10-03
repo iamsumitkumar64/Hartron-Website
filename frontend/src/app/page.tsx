@@ -130,20 +130,21 @@ export default function HomePage() {
         <DirectorSection />
 
         {/* Featured Courses Section */}
-        <section
-          style={{
-            padding: "80px 24px",
+        <Box
+          component="section"
+          sx={{
+            padding: { xs: "32px 14px", sm: "64px 24px" },
             backgroundColor: "#ffffff",
             borderBottom: "1px solid #e2e8f0",
           }}
         >
           <Box sx={{ maxWidth: 1280, margin: "0 auto" }}>
-            <Box sx={{ textAlign: "center", marginBottom: "56px" }}>
+            <Box sx={{ textAlign: "center", marginBottom: { xs: "24px", sm: "48px" } }}>
               <Typography
                 sx={{
                   color: "#2563eb",
                   fontWeight: 800,
-                  fontSize: "0.9rem",
+                  fontSize: { xs: "0.8rem", sm: "0.9rem" },
                   textTransform: "uppercase",
                   letterSpacing: "0.08em",
                   marginBottom: "8px",
@@ -153,7 +154,7 @@ export default function HomePage() {
               </Typography>
               <Typography
                 variant="h2"
-                sx={{ fontSize: { xs: "1.75rem", sm: "2.25rem" }, fontWeight: 900, color: "#0f172a" }}
+                sx={{ fontSize: { xs: "1.35rem", sm: "1.85rem", md: "2.25rem" }, fontWeight: 900, color: "#0f172a", wordBreak: "break-word" }}
               >
                 Government Recognized & IT Industry Grade Courses
               </Typography>
@@ -179,7 +180,7 @@ export default function HomePage() {
               ))}
             </Box>
           </Box>
-        </section>
+        </Box>
 
         <TypingTestPreview />
 
@@ -189,10 +190,11 @@ export default function HomePage() {
         <Box
           component="section"
           sx={{
-            padding: { xs: "40px 14px", sm: "80px 24px" },
+            padding: { xs: "32px 14px", sm: "64px 24px" },
             backgroundColor: "#ffffff",
             boxSizing: "border-box",
             width: "100%",
+            overflow: "hidden",
           }}
         >
           <Box
@@ -204,15 +206,19 @@ export default function HomePage() {
               gap: { xs: "24px", sm: "48px" },
               alignItems: "stretch",
               width: "100%",
+              boxSizing: "border-box",
             }}
           >
-            <EnquiryForm />
+            <Box sx={{ minWidth: 0, width: "100%", boxSizing: "border-box" }}>
+              <EnquiryForm />
+            </Box>
 
             <Box
               sx={{
+                minWidth: 0,
                 backgroundColor: "#f8fafc",
                 border: "1px solid #e2e8f0",
-                borderRadius: { xs: "16px", sm: "20px" },
+                borderRadius: { xs: "14px", sm: "20px" },
                 padding: { xs: "20px 14px", sm: "36px" },
                 display: "flex",
                 flexDirection: "column",

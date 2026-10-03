@@ -94,10 +94,10 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <Box className={styles.bottomBar}>
-        <Typography variant="body2">
+        <Typography variant="body2" sx={{ color: "#cbd5e1", fontSize: "0.85rem" }}>
           © {new Date().getFullYear()} Hartron Skill Centre SD College Panipat. Director: Vijender Singh Nara. All rights reserved.
         </Typography>
-        <Typography variant="body2">
+        <Typography variant="body2" sx={{ color: "#cbd5e1", fontSize: "0.85rem" }}>
           Developed by Xubble AI
         </Typography>
       </Box>

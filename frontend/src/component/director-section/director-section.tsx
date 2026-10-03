@@ -17,7 +17,7 @@ export default function DirectorSection() {
               📍 Hartron Skill Centre • Near SD College Panipat
             </Box>
           </Link>
-          <Typography variant="body2" sx={{ opacity: 0.9, mt: 1, fontSize: "0.85rem", lineHeight: 1.5 }}>
+          <Typography variant="body2" sx={{ color: "#ffffff", mt: 1, fontSize: "0.85rem", lineHeight: 1.5, opacity: 0.95 }}>
             Dedicated to empowering Haryana's youth with official government computer certifications & IT company grade software skills.
           </Typography>
         </Box>
@@ -25,7 +25,7 @@ export default function DirectorSection() {
         {/* Leadership Vision Content */}
         <Box className={styles.rightContent}>
           <Typography className={styles.subHeading}>Director's Desk</Typography>
-          <Typography variant="h2" className={styles.heading}>
+          <Typography variant="h2">
             Building Skilled Leaders for Government & IT Corporate Careers
           </Typography>
 
@@ -34,7 +34,7 @@ export default function DirectorSection() {
             "Our objective at Hartron Skill Centre SD College Panipat is to build unwavering confidence in every student. Whether you are aiming for a Haryana Govt clerk typing exam or looking to break into full stack web development and cybersecurity, we ensure 100% practical lab practice and individual guidance."
           </Box>
 
-          <Typography className={styles.text}>
+          <Typography variant="body1" sx={{ color: "#475569", lineHeight: 1.65 }}>
             Under the direction of Director <strong>Vijender Singh Nara</strong>, our center has trained thousands of successful students who are currently serving in Haryana State Government departments, courts, banks, and top IT firms across India.
           </Typography>
 

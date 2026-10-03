@@ -329,6 +329,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
             backgroundColor: "#ffffff",
             boxSizing: "border-box",
             width: "100%",
+            overflow: "hidden",
           }}
         >
           <Box
@@ -342,7 +343,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
               boxSizing: "border-box",
             }}
           >
-            <Box sx={{ width: "100%", boxSizing: "border-box" }}>
+            <Box sx={{ minWidth: 0, width: "100%", boxSizing: "border-box" }}>
               <Typography
                 variant="h3"
                 sx={{
@@ -435,7 +436,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
             </Box>
 
             {/* Sidebar Admission Form */}
-            <Box sx={{ width: "100%", boxSizing: "border-box" }}>
+            <Box sx={{ minWidth: 0, width: "100%", boxSizing: "border-box" }}>
               <EnquiryForm defaultCourse={course.slug} />
             </Box>
           </Box>

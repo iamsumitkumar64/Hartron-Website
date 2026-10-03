@@ -46,7 +46,7 @@ export default function WhyChooseUs() {
       <Box className={styles.container}>
         <Box className={styles.header}>
           <Typography className={styles.subHeading}>Why Choose Us</Typography>
-          <Typography variant="h2" className={styles.heading}>
+          <Typography variant="h2">
             Panipat's Premier Government & IT Computer Skill Center
           </Typography>
         </Box>
@@ -55,10 +55,12 @@ export default function WhyChooseUs() {
           {FEATURES.map((feature, idx) => (
             <Box key={idx} className={styles.card}>
               <Box className={styles.iconBox}>{feature.icon}</Box>
-              <Typography variant="h3" className={styles.cardTitle}>
+              <Typography variant="h4" sx={{ color: "#0f172a" }}>
                 {feature.title}
               </Typography>
-              <Typography className={styles.cardText}>{feature.text}</Typography>
+              <Typography variant="body2" sx={{ color: "#475569", lineHeight: 1.6 }}>
+                {feature.text}
+              </Typography>
             </Box>
           ))}
         </Box>

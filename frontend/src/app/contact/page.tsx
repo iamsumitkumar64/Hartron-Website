@@ -50,27 +50,34 @@ export default function ContactPage() {
           </Box>
         </Box>
 
-        <section style={{ padding: "48px 16px", backgroundColor: "#ffffff" }}>
+        <Box component="section" sx={{ padding: { xs: "32px 14px", sm: "64px 24px" }, backgroundColor: "#ffffff", overflow: "hidden", width: "100%", boxSizing: "border-box" }}>
           <Box
             sx={{
               maxWidth: 1280,
               margin: "0 auto",
               display: "grid",
               gridTemplateColumns: { xs: "1fr", md: "1.1fr 0.9fr" },
-              gap: { xs: "32px", md: "48px" },
+              gap: { xs: "24px", sm: "48px" },
+              width: "100%",
+              boxSizing: "border-box",
             }}
           >
-            <EnquiryForm />
+            <Box sx={{ minWidth: 0, width: "100%", boxSizing: "border-box" }}>
+              <EnquiryForm />
+            </Box>
 
             <Box
               sx={{
+                minWidth: 0,
                 backgroundColor: "#f8fafc",
                 border: "1px solid #bfdbfe",
-                borderRadius: "20px",
-                padding: { xs: "20px 16px", md: "36px" },
+                borderRadius: { xs: "14px", sm: "20px" },
+                padding: { xs: "20px 14px", md: "36px" },
                 display: "flex",
                 flexDirection: "column",
                 gap: "24px",
+                width: "100%",
+                boxSizing: "border-box",
               }}
             >
               <Typography variant="h4" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "1.5rem", md: "2rem" } }}>
@@ -131,7 +138,7 @@ export default function ContactPage() {
               </Box>
             </Box>
           </Box>
-        </section>
+        </Box>
       </main>
 
       <Footer />

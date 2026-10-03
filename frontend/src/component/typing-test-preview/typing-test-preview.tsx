@@ -15,11 +15,11 @@ export default function TypingTestPreview() {
             HSSC • HKRN • SSC • High Court Clerical Typing Exam Software
           </Box>
 
-          <Typography variant="h2" className={styles.title}>
+          <Typography variant="h2" sx={{ color: "#ffffff" }}>
             Master Government Exam Typing Speed with 95%+ Accuracy
           </Typography>
 
-          <Typography className={styles.description}>
+          <Typography variant="subtitle1" sx={{ color: "#dbeafe" }}>
             Our Panipat center provides dedicated high-speed typing software that exactly mirrors official government exam interfaces. Practice English and Hindi (Mangal/Kruti Dev) with instant WPM scoring and error diagnostic reports.
           </Typography>
 

@@ -10,7 +10,7 @@ let theme = createTheme({
       contrastText: "#ffffff",
     },
     secondary: {
-      main: "#2563eb", // Bright Accent Blue
+      main: "#2563eb", // Vibrant Blue
       light: "#60a5fa",
       dark: "#1d4ed8",
       contrastText: "#ffffff",
@@ -38,8 +38,8 @@ let theme = createTheme({
       paper: "#f8fafc",
     },
     text: {
-      primary: "#0f172a",
-      secondary: "#475569",
+      primary: "#0f172a", // Dark Slate for high contrast readability
+      secondary: "#334155", // Medium Slate
       disabled: "#94a3b8",
     },
     divider: "#e2e8f0",
@@ -47,56 +47,62 @@ let theme = createTheme({
   typography: {
     fontFamily: "'Public Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
     h1: {
+      fontSize: "clamp(1.75rem, 4vw, 2.75rem)",
       fontWeight: 900,
       color: "#0f172a",
       lineHeight: 1.2,
       letterSpacing: "-0.02em",
     },
     h2: {
+      fontSize: "clamp(1.5rem, 3.2vw, 2.25rem)",
       fontWeight: 900,
       color: "#0f172a",
       lineHeight: 1.25,
       letterSpacing: "-0.01em",
     },
     h3: {
+      fontSize: "clamp(1.25rem, 2.5vw, 1.75rem)",
       fontWeight: 800,
       color: "#0f172a",
       lineHeight: 1.3,
     },
     h4: {
+      fontSize: "clamp(1.1rem, 2vw, 1.4rem)",
       fontWeight: 800,
       color: "#0f172a",
       lineHeight: 1.35,
     },
     h5: {
+      fontSize: "clamp(1rem, 1.6vw, 1.2rem)",
       fontWeight: 700,
       color: "#1e40af",
       lineHeight: 1.4,
     },
     h6: {
+      fontSize: "clamp(0.95rem, 1.4vw, 1.1rem)",
       fontWeight: 700,
       color: "#0f172a",
       lineHeight: 1.4,
     },
     subtitle1: {
-      fontSize: "1.1rem",
+      fontSize: "clamp(0.95rem, 1.5vw, 1.1rem)",
       color: "#334155",
       lineHeight: 1.6,
     },
     subtitle2: {
-      fontSize: "0.95rem",
+      fontSize: "0.9rem",
       fontWeight: 700,
       color: "#1e40af",
     },
     body1: {
-      fontSize: "1rem",
+      fontSize: "clamp(0.9rem, 1.2vw, 1rem)",
       color: "#334155",
-      lineHeight: 1.65,
+      lineHeight: 1.6,
     },
     body2: {
-      fontSize: "0.875rem",
+      fontSize: "0.85rem",
       color: "#475569",
-      lineHeight: 1.6,
+      lineHeight: 1.55,
     },
     button: {
       fontWeight: 800,
@@ -104,7 +110,7 @@ let theme = createTheme({
     },
   },
   shape: {
-    borderRadius: 12,
+    borderRadius: 14,
   },
   components: {
     MuiCssBaseline: {
@@ -126,7 +132,7 @@ let theme = createTheme({
           boxShadow: "none",
           transition: "all 0.2s ease-in-out",
           "&:hover": {
-            boxShadow: "0 4px 12px rgba(30, 64, 175, 0.15)",
+            boxShadow: "0 4px 12px rgba(30, 64, 175, 0.12)",
           },
         },
         contained: {
@@ -137,10 +143,10 @@ let theme = createTheme({
           },
         },
         outlined: {
-          borderColor: "#2563eb",
+          borderColor: "#bfdbfe",
           color: "#1e40af",
           "&:hover": {
-            borderColor: "#1d4ed8",
+            borderColor: "#1e40af",
             backgroundColor: "#eff6ff",
           },
         },
@@ -176,6 +182,20 @@ let theme = createTheme({
         root: {
           "& .MuiOutlinedInput-root": {
             borderRadius: "10px",
+            backgroundColor: "#ffffff",
+            "& fieldset": {
+              borderColor: "#cbd5e1",
+            },
+            "&:hover fieldset": {
+              borderColor: "#2563eb",
+            },
+            "&.Mui-focused fieldset": {
+              borderColor: "#1e40af",
+            },
+          },
+          "& .MuiInputLabel-root": {
+            color: "#475569",
+            fontWeight: 600,
           },
         },
       },

@@ -37,12 +37,12 @@ export default function CourseCard({
             {isItGrade ? "IT Company Grade" : "Govt Recognized"}
           </span>
 
-          <Typography variant="h3" className={styles.title}>
+          <Typography variant="h3" sx={{ wordBreak: "break-word", mb: 1 }}>
             {title}
           </Typography>
         </Box>
 
-        <Typography className={styles.description}>
+        <Typography variant="body1" sx={{ color: "#475569", mb: 2 }}>
           {short_description}
         </Typography>
 
@@ -67,8 +67,9 @@ export default function CourseCard({
         <Link href={`/contact?course=${slug}`} style={{ textDecoration: "none", flex: 1 }}>
           <Button
             variant="contained"
-            className={styles.enrollBtn}
+            color="primary"
             fullWidth
+            sx={{ py: 1.2 }}
           >
             Enquire Now
           </Button>
@@ -77,8 +78,8 @@ export default function CourseCard({
         <Link href={`/courses/${slug}`} style={{ textDecoration: "none" }}>
           <Button
             variant="outlined"
-            className={styles.detailBtn}
             endIcon={<ArrowForwardIcon />}
+            sx={{ py: 1.2, borderColor: "#cbd5e1", color: "#0f172a" }}
           >
             Syllabus
           </Button>
