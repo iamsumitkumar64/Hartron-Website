@@ -7,42 +7,42 @@ export const getAppTheme = (mode: "light" | "dark"): Theme => {
     palette: {
       mode,
       primary: {
-        main: isDark ? "#818cf8" : "#4f46e5", // Modern EdTech Deep Indigo
-        light: "#a5b4fc",
-        dark: "#3730a3",
+        main: isDark ? "#3b82f6" : "#1e40af", // Hartron Royal Blue
+        light: "#60a5fa",
+        dark: "#1e3a8a",
         contrastText: "#ffffff",
       },
       secondary: {
-        main: isDark ? "#2dd4bf" : "#0d9488", // EdTech Energetic Teal
-        light: "#5eead4",
-        dark: "#0f766e",
+        main: "#2563eb",
+        light: "#60a5fa",
+        dark: "#1d4ed8",
         contrastText: "#ffffff",
       },
       success: {
-        main: "#10b981",
-        light: "#34d399",
-        dark: "#059669",
+        main: "#16a34a",
+        light: "#4ade80",
+        dark: "#15803d",
         contrastText: "#ffffff",
       },
       warning: {
-        main: "#f59e0b",
+        main: "#d97706",
         light: "#fbbf24",
-        dark: "#d97706",
+        dark: "#b45309",
         contrastText: "#ffffff",
       },
       error: {
-        main: "#ef4444",
+        main: "#dc2626",
         light: "#f87171",
-        dark: "#dc2626",
+        dark: "#b91c1c",
         contrastText: "#ffffff",
       },
       background: {
-        default: isDark ? "#0f172a" : "#fafafa",
-        paper: isDark ? "#1e293b" : "#ffffff",
+        default: isDark ? "#0f172a" : "#ffffff",
+        paper: isDark ? "#1e293b" : "#f8fafc",
       },
       text: {
         primary: isDark ? "#f8fafc" : "#0f172a",
-        secondary: isDark ? "#94a3b8" : "#475569",
+        secondary: isDark ? "#94a3b8" : "#334155",
         disabled: "#64748b",
       },
       divider: isDark ? "#334155" : "#e2e8f0",
