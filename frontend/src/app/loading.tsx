@@ -9,7 +9,7 @@ export default function Loading() {
         alignItems: "center",
         justifyContent: "center",
         minHeight: "75vh",
-        backgroundColor: "#ffffff",
+        backgroundColor: "background.default",
         gap: 3,
         px: 2,
         textAlign: "center",
@@ -26,7 +26,7 @@ export default function Loading() {
         <CircularProgress
           size={72}
           thickness={4}
-          sx={{ color: "#1e40af" }}
+          sx={{ color: "primary.main" }}
         />
         <Box
           sx={{
@@ -34,8 +34,8 @@ export default function Loading() {
             width: 36,
             height: 36,
             borderRadius: "50%",
-            backgroundColor: "#2563eb",
-            color: "#ffffff",
+            backgroundColor: "primary.main",
+            color: "var(--text-on-dark)",
             fontWeight: 900,
             display: "flex",
             alignItems: "center",
@@ -52,7 +52,7 @@ export default function Loading() {
           variant="h6"
           sx={{
             fontWeight: 900,
-            color: "#0f172a",
+            color: "text.primary",
             letterSpacing: "0.05em",
             mb: 0.5,
           }}
@@ -62,7 +62,7 @@ export default function Loading() {
         <Typography
           variant="body2"
           sx={{
-            color: "#64748b",
+            color: "text.secondary",
             fontWeight: 600,
           }}
         >
