@@ -20,6 +20,7 @@ const NAV_ITEMS = [
   { label: "About Us", href: "/about" },
   { label: "Courses", href: "/courses" },
   { label: "Typing Practice", href: "/typing-practice" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Contact Us", href: "/contact" },
 ];
 

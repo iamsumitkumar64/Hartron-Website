@@ -37,6 +37,9 @@ export default function Footer() {
             <Link href="/typing-practice" className={styles.footerLink}>
               Interactive Typing Demo
             </Link>
+            <Link href="/gallery" className={styles.footerLink}>
+              Campus & Lab Gallery
+            </Link>
             <Link href="/contact" className={styles.footerLink}>
               Admission Enquiry
             </Link>
