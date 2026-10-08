@@ -6,9 +6,9 @@ import { Box, Typography } from "@mui/material";
 import styles from "./courses.module.css";
 
 export const metadata: Metadata = {
-  title: "All Computer Courses | Hartron Skill Centre Panipat | Director Vijender Singh Nara",
+  title: "All Computer Courses | Hartron Skill Centre Panipat | Manager Vijender Singh Nara",
   description:
-    "Explore Web Development, Cybersecurity, Government Typing Speed Test, and DCA Basic Computer Courses offered by Hartron Skill Centre Panipat under Director Vijender Singh Nara.",
+    "Explore Web Development, Cybersecurity, Government Typing Speed Test, and DCA Basic Computer Courses offered by Hartron Skill Centre Panipat under Manager Vijender Singh Nara.",
 };
 
 const COURSES_DATA = [
@@ -84,7 +84,7 @@ export default function CoursesDirectoryPage() {
               Government Recognized & IT Industry Training Courses
             </Typography>
             <Typography className={styles.subTitle}>
-              Study under the direction of Director <strong>Vijender Singh Nara</strong> at Hartron Skill Centre, SD College Road, Panipat.
+              Study under the leadership of Manager <strong>Vijender Singh Nara</strong> at Hartron Skill Centre, SD College Road, Panipat.
             </Typography>
           </Box>
         </Box>

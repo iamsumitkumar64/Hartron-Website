@@ -13,7 +13,7 @@ export default function Hero() {
         <Box className={styles.leftContent}>
           <Box className={styles.accreditationBadge}>
             <VerifiedUserIcon className={styles.badgeIcon} />
-            Official HARTRON Skill Centre • Director: Vijender Singh Nara
+            Official HARTRON Skill Centre • Manager: Vijender Singh Nara
           </Box>
 
           <Typography variant="h1">
@@ -72,7 +72,7 @@ export default function Hero() {
             <Box className={styles.directorAvatar}>VN</Box>
             <Box>
               <Typography variant="h6" className={styles.cardTitle}>
-                Director's Vision
+                Manager's Vision
               </Typography>
               <Typography variant="body2" className={styles.directorName}>
                 Vijender Singh Nara

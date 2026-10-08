@@ -25,8 +25,8 @@ const FEATURES = [
   },
   {
     icon: <SupervisorAccountIcon fontSize="large" />,
-    title: "Director Vijender Singh Nara's Guidance",
-    text: "Direct leadership & mentorship from Director Vijender Singh Nara ensuring individual attention and structured learning progression.",
+    title: "Manager Vijender Singh Nara's Guidance",
+    text: "Direct leadership & mentorship from Manager Vijender Singh Nara ensuring individual attention and structured learning progression.",
   },
   {
     icon: <WorkIcon fontSize="large" />,

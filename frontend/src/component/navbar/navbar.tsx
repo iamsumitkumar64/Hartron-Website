@@ -190,7 +190,7 @@ export default function Navbar() {
             </Link>
 
             <Typography variant="caption" className={styles.drawerFooterText}>
-              Director Vijender Singh Nara • +91 90341-27171
+              Manager Vijender Singh Nara • +91 90341-27171
             </Typography>
           </Box>
         </Box>

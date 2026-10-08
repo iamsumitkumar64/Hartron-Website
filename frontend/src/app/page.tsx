@@ -12,9 +12,9 @@ import { Box, Typography } from "@mui/material";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "Hartron Skill Centre SD College Panipat | Director Vijender Singh Nara",
+  title: "Hartron Skill Centre SD College Panipat | Manager Vijender Singh Nara",
   description:
-    "Official Hartron Skill Centre near SD College Panipat led by Director Vijender Singh Nara. Government typing speed test preparation, IT industry web development, cybersecurity, and DCA computer courses.",
+    "Official Hartron Skill Centre near SD College Panipat led by Manager Vijender Singh Nara. Government typing speed test preparation, IT industry web development, cybersecurity, and DCA computer courses.",
   keywords: [
     "Hartron Panipat",
     "Hartron SD College Panipat",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     "Computer Center near SD College Panipat",
   ],
   openGraph: {
-    title: "Hartron Skill Centre SD College Panipat | Director Vijender Singh Nara",
+    title: "Hartron Skill Centre SD College Panipat | Manager Vijender Singh Nara",
     description:
       "Premier government computer training & IT skill institute near SD College Panipat. Government typing test, Web Dev & Cybersecurity.",
     siteName: "Hartron Skill Centre Panipat",
@@ -111,7 +111,7 @@ export default function HomePage() {
     founder: {
       "@type": "Person",
       name: "Vijender Singh Nara",
-      jobTitle: "Director",
+      jobTitle: "Manager",
     },
     description:
       "Premier computer institute near SD College Panipat providing Government typing test training, IT industry Web Development, Cybersecurity, and DCA courses.",
@@ -175,7 +175,7 @@ export default function HomePage() {
               </Typography>
 
               <Typography className={styles.infoDescription}>
-                Directly walk into our campus opposite SD College Road, Panipat to inspect our high-speed practical computer labs, meet Director Vijender Singh Nara, and get personalized course guidance.
+                Directly walk into our campus opposite SD College Road, Panipat to inspect our high-speed practical computer labs, meet Manager Vijender Singh Nara, and get personalized course guidance.
               </Typography>
 
               <Box className={styles.infoList}>

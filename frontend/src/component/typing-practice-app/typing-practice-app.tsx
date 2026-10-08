@@ -31,9 +31,9 @@ import SchoolIcon from "@mui/icons-material/School";
 import styles from "./typing-practice-app.module.css";
 
 const SAMPLE_PASSAGES = {
-  govt: "The Haryana State Electronics Development Corporation Limited (HARTRON) is the premier agency for promoting IT education and recruitment testing across Haryana state. Under the guidance of Director Vijender Singh Nara at Hartron Skill Centre Panipat, candidate students undergo rigorous daily typing speed practice to clear HSSC, HKRN, and High Court clerical examinations with 100% accuracy and speed exceeding 35 words per minute.",
+  govt: "The Haryana State Electronics Development Corporation Limited (HARTRON) is the premier agency for promoting IT education and recruitment testing across Haryana state. Under the guidance of Manager Vijender Singh Nara at Hartron Skill Centre Panipat, candidate students undergo rigorous daily typing speed practice to clear HSSC, HKRN, and High Court clerical examinations with 100% accuracy and speed exceeding 35 words per minute.",
   sprint: "Speed and accuracy are the core foundation of clearing government clerical computer tests. Hartron Skill Centre Panipat equips students with real-time feedback, touch-typing posture, and backspace restriction drill modes.",
-  hindi: "हरियाणा राज्य इलेक्ट्रॉनिक्स विकास निगम लिमिटेड (हार्ट्रॉन) कंप्यूटर शिक्षा तथा सरकारी भर्ती टाइपिंग परीक्षा का प्रमुख केंद्र है। पानीपत स्थित हार्ट्रॉन स्किल सेंटर में निदेशक विजेंद्र सिंह नारा के नेतृत्व में विद्यार्थी उच्च गति प्राप्त करते हैं।",
+  hindi: "हरियाणा राज्य इलेक्ट्रॉनिक्स विकास निगम लिमिटेड (हार्ट्रॉन) कंप्यूटर शिक्षा तथा सरकारी भर्ती टाइपिंग परीक्षा का प्रमुख केंद्र है। पानीपत स्थित हार्ट्रॉन स्किल सेंटर में प्रबंधक विजेंद्र सिंह नारा के नेतृत्व में विद्यार्थी उच्च गति प्राप्त करते हैं।",
 };
 
 type ExamDuration = 30 | 60 | 120;
@@ -171,7 +171,7 @@ export default function TypingPracticeApp() {
         <Container maxWidth="lg">
           <Box className={styles.accreditationBadge}>
             <VerifiedIcon className={styles.verifiedIcon} />
-            Official Govt Exam Speed Simulator • Director: Vijender Singh Nara
+            Official Govt Exam Speed Simulator • Manager: Vijender Singh Nara
           </Box>
           <Typography
             variant="h1"
@@ -182,7 +182,7 @@ export default function TypingPracticeApp() {
           <Typography
             className={styles.subTitle}
           >
-            Master high-speed touch typing for Haryana Government Recruitment Exams under Director <strong>Vijender Singh Nara</strong> at Hartron Skill Centre Panipat.
+            Master high-speed touch typing for Haryana Government Recruitment Exams under Manager <strong>Vijender Singh Nara</strong> at Hartron Skill Centre Panipat.
           </Typography>
         </Container>
       </Box>
@@ -386,7 +386,7 @@ export default function TypingPracticeApp() {
                 Want 100% Guaranteed Typing Speed in Govt Exams?
               </Typography>
               <Typography variant="body2" className={styles.guidanceSub}>
-                Join Director Vijender Singh Nara's specialized lab batch in Panipat with official HARTRON exam software.
+                Join Manager Vijender Singh Nara's specialized lab batch in Panipat with official HARTRON exam software.
               </Typography>
             </Box>
           </Box>

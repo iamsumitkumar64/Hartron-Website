@@ -84,7 +84,7 @@ export default function TypingTestPreview() {
           <Box className={styles.samplePassage}>
             The Haryana State Electronics Development Corporation Limited (HARTRON) provides state-of-the-art computer education across Haryana.{" "}
             <span className={styles.typedText}>
-              Students at Hartron Skill Centre Panipat under Director Vijender Singh Nara receive intensive typing drills.
+              Students at Hartron Skill Centre Panipat under Manager Vijender Singh Nara receive intensive typing drills.
             </span>
           </Box>
 

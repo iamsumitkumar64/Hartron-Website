@@ -11,7 +11,7 @@ export default function DirectorSection() {
         <Box className={styles.profileCard}>
           <Box className={styles.profileAvatar}>VN</Box>
           <Typography className={styles.name}>Vijender Singh Nara</Typography>
-          <Typography className={styles.title}>Director & Head of Institute</Typography>
+          <Typography className={styles.title}>Manager & Head of Institute</Typography>
           <Link href="/contact" style={{ textDecoration: "none" }}>
             <Box className={styles.locationBadge}>
               <span>🏢 Hartron Skill Centre</span>
@@ -25,7 +25,7 @@ export default function DirectorSection() {
 
         {/* Leadership Vision Content */}
         <Box className={styles.rightContent}>
-          <Typography className={styles.subHeading}>Director's Desk</Typography>
+          <Typography className={styles.subHeading}>Manager's Desk</Typography>
           <Typography variant="h2">
             Building Skilled Leaders for Government & IT Corporate Careers
           </Typography>
@@ -36,7 +36,7 @@ export default function DirectorSection() {
           </Box>
 
           <Typography variant="body1" className={styles.bodyText}>
-            Under the direction of Director <strong>Vijender Singh Nara</strong>, our center has trained thousands of successful students who are currently serving in Haryana State Government departments, courts, banks, and top IT firms across India.
+            Under the leadership of Manager <strong>Vijender Singh Nara</strong>, our center has trained thousands of successful students who are currently serving in Haryana State Government departments, courts, banks, and top IT firms across India.
           </Typography>
 
           <Box className={styles.pillsGrid}>

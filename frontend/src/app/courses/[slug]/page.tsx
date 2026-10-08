@@ -24,7 +24,7 @@ const COURSES_MAP: Record<string, any> = {
       "Database design using PostgreSQL, SQL queries & MongoDB",
       "Version Control with Git & GitHub workflows",
       "100% Hands-on capstone project development & live deployment",
-      "Dedicated job placement & interview preparation with Director Vijender Singh Nara's network",
+      "Dedicated job placement & interview preparation with Manager Vijender Singh Nara's network",
     ],
     syllabus: [
       {
@@ -195,7 +195,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   return {
     title: `${course.title} | Hartron Skill Centre SD College Panipat`,
-    description: `${course.description} Course at Hartron Skill Centre near SD College Panipat led by Director Vijender Singh Nara.`,
+    description: `${course.description} Course at Hartron Skill Centre near SD College Panipat led by Manager Vijender Singh Nara.`,
   };
 }
 

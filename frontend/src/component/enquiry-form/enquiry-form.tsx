@@ -50,7 +50,7 @@ export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: st
     const courseObj = COURSES_OPTIONS.find((c) => c.value === values.course_slug);
     const courseName = courseObj ? courseObj.label : values.course_slug;
 
-    const message = `Hello Director Vijender Singh Nara / Hartron Team,\n\nI want to enquire about admission at Hartron Skill Centre near SD College Panipat:\n\n• Name: ${values.name || "Student"}\n• Phone: ${values.phone || "N/A"}\n• Course: ${courseName}\n• Message: ${values.message || "Please share batch details and fee structure."}`;
+    const message = `Hello Manager Vijender Singh Nara / Hartron Team,\n\nI want to enquire about admission at Hartron Skill Centre near SD College Panipat:\n\n• Name: ${values.name || "Student"}\n• Phone: ${values.phone || "N/A"}\n• Course: ${courseName}\n• Message: ${values.message || "Please share batch details and fee structure.\n\nEnquiry by: Website"}`;
 
     const encoded = encodeURIComponent(message);
     window.open(`https://wa.me/919034127171?text=${encoded}`, "_blank");
@@ -62,12 +62,12 @@ export default function EnquiryForm({ defaultCourse = "" }: { defaultCourse?: st
         Admission / Course Enquiry
       </Typography>
       <Typography variant="body1" className={styles.subtitle}>
-        Fill out your details to receive course syllabus, batch timings, and fee guidance from Director Vijender Singh Nara's team at SD College Panipat.
+        Fill out your details to receive course syllabus, batch timings, and fee guidance from Manager Vijender Singh Nara's team at SD College Panipat.
       </Typography>
 
       {submitted && (
         <Alert severity="success" className={styles.successAlert}>
-          Thank you! Your enquiry has been received. Director Vijender Singh Nara's office at Hartron SD College Panipat will call you shortly.
+          Thank you! Your enquiry has been received. Manager Vijender Singh Nara's office at Hartron SD College Panipat will call you shortly.
         </Alert>
       )}
 

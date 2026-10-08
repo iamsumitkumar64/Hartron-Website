@@ -17,7 +17,7 @@ export default function Footer() {
             <Typography className={styles.subTitle}>Panipat Campus</Typography>
           </Box>
           <Typography className={styles.description}>
-            Authorized government computer training center in Panipat. Under the leadership of Director Vijender Singh Nara, we specialize in government typing speed exams, IT industry web development, cybersecurity, and DCA courses.
+            Authorized government computer training center in Panipat. Under the leadership of Manager Vijender Singh Nara, we specialize in government typing speed exams, IT industry web development, cybersecurity, and DCA courses.
           </Typography>
         </Box>
 
@@ -29,7 +29,7 @@ export default function Footer() {
               Home
             </Link>
             <Link href="/about" className={styles.footerLink}>
-              About Director & Center
+              About Manager & Center
             </Link>
             <Link href="/courses" className={styles.footerLink}>
               All Courses Directory
@@ -78,7 +78,7 @@ export default function Footer() {
             <Box className={styles.infoItem}>
               <PhoneIcon className={styles.icon} />
               <a href="tel:+919034127171" className={styles.footerLink} style={{ color: "inherit", margin: 0 }}>
-                Director Vijender Singh Nara: +91 90341-27171
+                Manager Vijender Singh Nara: +91 90341-27171
               </a>
             </Box>
             <Box className={styles.infoItem}>
@@ -98,7 +98,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <Box className={styles.bottomBar}>
         <Typography variant="body2" className={styles.copyrightText}>
-          © {new Date().getFullYear()} Hartron Skill Centre Panipat. Director: Vijender Singh Nara. All rights reserved.
+          © {new Date().getFullYear()} Hartron Skill Centre Panipat. Manager: Vijender Singh Nara. All rights reserved.
         </Typography>
         <Typography variant="body2" className={styles.copyrightText}>
           Developed by Us

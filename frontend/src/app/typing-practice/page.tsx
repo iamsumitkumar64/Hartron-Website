@@ -6,7 +6,7 @@ import TypingPracticeApp from "@/component/typing-practice-app/typing-practice-a
 export const metadata: Metadata = {
   title: "Interactive Government Typing Speed Test Simulator | Hartron Skill Centre Panipat",
   description:
-    "Practice official HSSC, HKRN & High Court clerical government typing speed test drills online. Developed by Hartron Skill Centre Panipat under Director Vijender Singh Nara.",
+    "Practice official HSSC, HKRN & High Court clerical government typing speed test drills online. Developed by Hartron Skill Centre Panipat under Manager Vijender Singh Nara.",
 };
 
 export default function TypingPracticePage() {

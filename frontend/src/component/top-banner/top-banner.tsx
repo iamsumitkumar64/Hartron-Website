@@ -8,7 +8,7 @@ import styles from "./top-banner.module.css";
 
 export default function TopBanner() {
   const announcementText =
-    "🎯 Admissions Open 2025-26 Batch • Hartron Skill Centre Panipat • Director: Vijender Singh Nara • Govt Recognized DCA & Typing Certification • IT Industry Grade Web Dev & Cybersecurity • Call +91 90341-27171 for Batch Timings & Fee Details";
+    "🎯 Admissions Open 2025-26 Batch • Hartron Skill Centre Panipat • Manager: Vijender Singh Nara • Govt Recognized DCA & Typing Certification • IT Industry Grade Web Dev & Cybersecurity • Call +91 90341-27171 for Batch Timings & Fee Details";
 
   return (
     <Box className={styles.banner}>

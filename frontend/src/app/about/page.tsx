@@ -7,9 +7,9 @@ import { Box, Typography } from "@mui/material";
 import styles from "./about.module.css";
 
 export const metadata: Metadata = {
-  title: "About Us | Director Vijender Singh Nara | Hartron Skill Centre Panipat",
+  title: "About Us | Manager Vijender Singh Nara | Hartron Skill Centre Panipat",
   description:
-    "Learn about Hartron Skill Centre Panipat and Director Vijender Singh Nara's mission to provide government recognized computer courses & IT company grade training.",
+    "Learn about Hartron Skill Centre Panipat and Manager Vijender Singh Nara's mission to provide government recognized computer courses & IT company grade training.",
 };
 
 export default function AboutPage() {
@@ -26,7 +26,7 @@ export default function AboutPage() {
               About Hartron Skill Centre Panipat
             </Typography>
             <Typography className={styles.subTitle}>
-              Directed by <strong>Vijender Singh Nara</strong>, our center is Panipat's premier computer education institution.
+              Managed by <strong>Vijender Singh Nara</strong>, our center is Panipat's premier computer education institution.
             </Typography>
           </Box>
         </Box>
@@ -39,7 +39,7 @@ export default function AboutPage() {
               Our Educational Mission
             </Typography>
             <Typography className={styles.missionText}>
-              For over two decades, Hartron Skill Centre Panipat has stood as a beacon of technological empowerment. Under Director Vijender Singh Nara, we bridge the gap between traditional academic degrees and real-world employment.
+              For over two decades, Hartron Skill Centre Panipat has stood as a beacon of technological empowerment. Under Manager Vijender Singh Nara, we bridge the gap between traditional academic degrees and real-world employment.
             </Typography>
             <Typography className={styles.missionText}>
               We specialize in preparing candidates for Haryana Government competitive exams requiring certified typing speed tests (HSSC / HKRN / High Court Clerical) as well as modern IT Industry grade software careers in Web Development and Cybersecurity.

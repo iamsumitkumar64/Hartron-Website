@@ -7,9 +7,9 @@ import { Box, Typography } from "@mui/material";
 import styles from "./contact.module.css";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Hartron Skill Centre SD College Panipat | Director Vijender Singh Nara",
+  title: "Contact Us | Hartron Skill Centre SD College Panipat | Manager Vijender Singh Nara",
   description:
-    "Contact Director Vijender Singh Nara & Hartron Skill Centre team near SD College Panipat for course details, batch timings, and government typing test practice.",
+    "Contact Manager Vijender Singh Nara & Hartron Skill Centre team near SD College Panipat for course details, batch timings, and government typing test practice.",
 };
 
 export default function ContactPage() {
@@ -55,7 +55,7 @@ export default function ContactPage() {
 
                 <Box>
                   <Typography variant="subtitle2" className={styles.infoGroupTitle}>
-                    DIRECTOR
+                    CENTRE MANAGER
                   </Typography>
                   <Typography variant="body1" className={styles.infoGroupValue}>
                     Vijender Singh Nara
